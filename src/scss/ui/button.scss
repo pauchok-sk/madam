@@ -1,0 +1,35 @@
+.btn-clear {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.btn {
+  @include flex-center;
+  text-align: center;
+  padding: 5px 70px;
+  min-height: 63px;
+  border: 1px solid transparent;
+
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--dark);
+  transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+
+  &._light {
+    background-color: var(--sisal);
+    border-color: var(--sisal);
+    @include hover {
+      border-color: var(--light);
+      background-color: white;
+    }
+    @include pressed {
+      background-color: transparent;
+    }
+  }
+}

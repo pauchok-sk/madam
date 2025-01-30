@@ -1,0 +1,251 @@
+.header {
+  position: fixed;
+  font-weight: 300;
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(2px);
+  color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 100;
+  &._dark {
+    color: var(--dark);
+    background-color: var(--bg);
+    color: var(--dark);
+    border-color: var(--light);
+    .header__logo, .header__btn {
+      border-color: var(--light);
+    }
+    .header__contacts-content {
+      color: var(--dark);
+    }
+    .header__logo-icon {
+      &:first-child {
+        display: none;
+      }
+      &:nth-child(2) {
+        display: block;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+  &__logo {
+    @include flex-center;
+    width: 230px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    @include laptop {
+      width: 190px;
+    }
+    @include tablet {
+      width: 160px;
+      border-right: none;
+    }
+  }
+  &__logo-icon {
+    width: 165px;
+    @include laptop {
+      width: 130px;
+    }
+    @include tablet {
+      width: 120px;
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+  &__nav {
+    @include flex-between;
+    gap: 30px;
+    flex: 1;
+    padding-left: 190px;
+    padding-right: 100px;
+    @media (max-width: 1760px) {
+      padding: 0 30px;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 50px;
+    @include desktop {
+      gap: 20px;
+    }
+    @include laptop-middle {
+      justify-content: center;
+      width: 100%;
+    }
+    @include tablet {
+      @include hidden;
+    }
+
+    a {
+      position: relative;
+      font-size: 16px;
+      @include hover {
+        &::before {
+          left: 0;
+          right: 0;
+        }
+      }
+      @include laptop {
+        font-size: 14px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition:
+          left 0.2s ease,
+          right 0.2s ease;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: start;
+    gap: 50px;
+    @include desktop {
+      gap: 20px;
+    }
+    @include laptop-middle {
+      display: none;
+    }
+  }
+  &__contacts-item {
+    a.header__contacts-content,
+    button.header__contacts-content {
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__contacts-address {
+    font-size: 16px;
+    font-style: normal;
+    line-height: 11px;
+    margin: 0;
+    @include laptop {
+      font-size: 14px;
+    }
+  }
+  &__contacts-content {
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    font-size: 14px;
+    line-height: 10px;
+    color: var(--sisal);
+    margin: 6px 0px 0px auto;
+  }
+  &__contacts-tel {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    line-height: 14px;
+    text-transform: uppercase;
+    @include hover {
+      &::before {
+        right: 0;
+      }
+    }
+    @include laptop {
+      font-size: 16px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      height: 1px;
+      background-color: currentColor;
+      transition: right 0.2s ease;
+    }
+  }
+  &__btn {
+    width: 310px;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    min-height: 108px;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+    @include hover {
+      background-color: var(--dark);
+      border-color: var(--cloudy);
+      color: white;
+    }
+    @include pressed {
+      background-color: var(--light);
+      border-color: var(--cloudy);
+    }
+    @include desktop {
+      width: 245px;
+    }
+    @include laptop {
+      min-height: 80px;
+      width: 200px;
+    }
+    @include laptop-min {
+      min-height: 75px;
+      width: 165px;
+      font-size: 14px
+    }
+    @include tablet {
+      @include hidden;
+    }
+  }
+  &__burger-btn {
+    @include flex-center;
+    width: 110px;
+    min-height: 108px;
+    transition: color .2s ease;
+    @include hover {
+      color: var(--light);
+    }
+    @include laptop {
+      min-height: 80px;
+      width: 80px;
+    }
+    @include laptop-min {
+      min-height: 75px;
+      width: 95px;
+    }
+    @include tablet {
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    &._active {
+      .header__burger-icon {
+        &:first-child {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+  }
+  &__burger-icon {
+    width: 30px;
+    height: 30px;
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}

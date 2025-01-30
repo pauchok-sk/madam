@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Mont", sans-serif;
+  color: var(--dark);
+  background-color: var(--bg);
+}
+
+section {
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--dark);
+  }
+}

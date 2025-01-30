@@ -1,0 +1,55 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  padding: 150px 0px;
+  color: white;
+  z-index: 1;
+  border-bottom: none;
+  &::before {
+    position: absolute;
+    content: "";
+    background: rgba(30, 28, 28, 0.57);
+    inset: 0;
+    z-index: -1;
+  }
+  @include tablet {
+    justify-content: flex-end;
+    padding: 130px 0px 55px 0px;
+  }
+
+  &__container {
+    @include flex-center;
+    flex-direction: column;
+  }
+  &__title {
+    text-align: center;
+    font-size: 64px;
+    line-height: 90px;
+    max-width: 1065px;
+    margin: 0px 0px 70px 0px;
+    @include laptop-middle {
+      font-size: 56px;
+      line-height: 72px;
+    }
+    @include laptop-min {
+      font-size: 46px;
+      line-height: 56px;
+    }
+    @include tablet {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 40px;
+    }
+  }
+  &__btn {
+    @include mobile {
+      width: 100%;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  }
+}

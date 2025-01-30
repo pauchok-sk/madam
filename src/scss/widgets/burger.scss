@@ -1,0 +1,197 @@
+.burger {
+  position: fixed;
+  padding: 160px 0px 65px 0px;
+  background-color: var(--bg);
+  height: 100vh;
+  overflow-y: auto;
+  inset: 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
+  &._open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  @include laptop-min {
+    padding: 130px 0px 40px 0px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1650px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 0 30px;
+    @include laptop-middle {
+      flex-direction: column;
+    }
+    @include tablet {
+      padding: 0 20px;
+    }
+  }
+  &__tab-nav {
+    flex-shrink: 0;
+  }
+  &__tab-buttons {
+    display: none;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 325px;
+    margin-bottom: 50px;
+    @include laptop-min {
+      display: flex;
+    }
+    @include mobile {
+      max-width: none
+    }
+  }
+  &__tab-btn {
+    @include flex-between;
+    gap: 10px;
+    width: 100%;
+
+    font-size: 25px;
+    line-height: 32px;
+    text-transform: uppercase;
+    @include hover {
+      .burger__tab-arrow {
+        transform: translateX(10px);
+      }
+    }
+    @include mobile {
+      padding-right: 10px;
+    }
+  }
+  &__tab-arrow {
+    width: 24px;
+    height: 24px;
+    color: var(--light);
+    transition: transform .2s ease
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    @include laptop-middle {
+      gap: 40px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--light);
+    }
+    @include laptop-min {
+      padding: 50px 0px 0px 0px;
+      border-top: 1px solid var(--light);
+      border-bottom: none;
+    }
+    @include mobile {
+      gap: 30px;
+      flex-direction: column;
+    }
+
+    a {
+      font-family: "CormorantSC", sans-serif;
+      font-size: 32px;
+      line-height: 20px;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--light);
+      }
+      @include laptop-middle {
+        font-size: 25px;
+        line-height: 16px;
+      }
+      @include tablet {
+        font-size: 18px;
+        line-height: 11px;
+      }
+    }
+  }
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    flex: 0 1 1245px;
+    gap: 30px;
+    @include laptop-middle {
+      flex: none;
+      width: 100%;
+    }
+    @include laptop-min {
+      display: block;
+    }
+  }
+  &__col {
+    grid-column: 2 span;
+    @include laptop-min {
+      text-align: center;
+    }
+    @include mobile {
+      text-align: left;
+    }
+  }
+  &__col-item {
+    display: block !important;
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+    @include laptop-min {
+      display: none !important;
+      &._open {
+        display: block !important;
+      }
+    }
+  }
+  &__col-title {
+    margin: 0px 0px 40px 0px;
+    pointer-events: none;
+    @include laptop-min {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      margin: 0px auto 30px auto;
+      gap: 25px;
+      pointer-events: all;
+      color: var(--light);
+    }
+    @include mobile {
+      margin-left: 0;
+    }
+  }
+  &__col-arrow {
+    display: none;
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+    @include laptop-min {
+      display: block;
+    }
+  }
+  &__col-list {
+    a {
+      position: relative;
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: 300;
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition: right 0.2s ease;
+      }
+    }
+  }
+}

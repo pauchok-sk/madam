@@ -1,0 +1,30 @@
+.title {
+  font-family: "CormorantSC", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.title-i {
+  font-family: "CormorantInfant", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.title-l {
+  font-size: 32px;
+  line-height: 32px;
+  text-transform: uppercase;
+  line-height: 20px;
+
+  @include tablet {
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+}
+.title-m {
+  font-size: 38px;
+  line-height: 54px;
+  @include tablet {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}

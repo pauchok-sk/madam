@@ -1,0 +1,6 @@
+[data-tab] {
+  display: none;
+  &._open {
+    display: block;
+  }
+}

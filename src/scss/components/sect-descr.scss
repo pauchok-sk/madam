@@ -1,0 +1,14 @@
+.sect-descr {
+  padding: 100px 0px;
+  @include tablet {
+    padding: 50px 0px;
+  }
+  &__title {
+    max-width: 1305px;
+    text-align: center;
+    margin: 0 auto;
+    @include tablet {
+      text-align: start;
+    }
+  }
+}
