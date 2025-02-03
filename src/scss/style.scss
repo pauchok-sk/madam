@@ -7,12 +7,14 @@
 @import "./base/body-config";
 @import "./base/config-container";
 
-
 // ui
 @import "./ui/button";
 @import "./ui/list";
 @import "./ui/title";
 @import "./ui/tab";
+@import "./ui/scrollable";
+@import "./ui/slider-nav";
+@import "./ui/sect-tag";
 
 // widgets
 @import "./widgets/burger";
@@ -22,5 +24,10 @@
 
 @import "./components/intro";
 @import "./components/sect-descr";
+@import "./components/services";
+@import "./components/sect";
+@import "./components/promo-video";
+@import "./components/guarantee";
+@import "./components/popular-price";
 
 @import "./components/footer";

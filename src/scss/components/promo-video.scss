@@ -1,0 +1,72 @@
+.promo-video {
+  @include flex-center;
+  position: relative;
+  height: 960px;
+  background-color: var(--dark);
+  z-index: 1;
+  @include desktop {
+    height: 720px;
+  }
+  @include laptop {
+    height: 540px;
+  }
+  @include laptop-min {
+    height: 450px;
+  }
+  @include tablet-min {
+    height: 270px;
+  }
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: -2;
+  }
+  &__btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    z-index: 1;
+
+    @include laptop-min {
+      gap: 20px;
+    }
+
+    @include hover {
+      .promo-video__btn-rect {
+        transform: scale(1.07);
+      }
+    }
+
+    span {
+      max-width: 145px;
+    }
+  }
+  &__btn-rect {
+    width: 225px;
+    transition: transform 0.2s ease;
+    @include laptop-min {
+      width: 160px;
+      height: 160px;
+    }
+    @include tablet {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

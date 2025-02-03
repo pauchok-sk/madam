@@ -46,6 +46,10 @@
     }
   }
   &__btn {
+    min-height: 90px;
+    @include tablet {
+      min-height: 75px;
+    }
     @include mobile {
       width: 100%;
       padding-left: 10px !important;

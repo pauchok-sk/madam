@@ -10,6 +10,7 @@
 
 .btn {
   @include flex-center;
+  cursor: pointer;
   text-align: center;
   padding: 5px 70px;
   min-height: 63px;
@@ -19,7 +20,10 @@
   font-weight: 600;
   text-transform: uppercase;
   color: var(--dark);
-  transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
 
   &._light {
     background-color: var(--sisal);
@@ -30,6 +34,20 @@
     }
     @include pressed {
       background-color: transparent;
+    }
+  }
+  &._stroke {
+    background-color: transparent;
+    border-color: var(--light);
+    @include hover {
+      background-color: var(--dark);
+      border-color: var(--dark);
+      color: white;
+    }
+    @include pressed {
+      background-color: var(--light);
+      border-color: var(--light);
+      color: white;
     }
   }
 }

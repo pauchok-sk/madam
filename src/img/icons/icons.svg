@@ -9,4 +9,6 @@
 </symbol><symbol viewBox="0 0 26 26" fill="none" id="icon-close" xmlns="http://www.w3.org/2000/svg">
 <rect width="32" height="2" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 25.0182 23.606)" fill="currentColor"/>
 <rect x="0.979126" y="23.6064" width="32" height="2" transform="rotate(-45 0.979126 23.6064)" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 37 60" fill="none" id="icon-play" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.6719 30.0737L0.548923 59.7528L0.548923 0.394598L36.6719 30.0737Z" fill="currentColor"/>
 </symbol></svg>

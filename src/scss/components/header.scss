@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   font-weight: 300;
   background-color: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(2px);
@@ -14,7 +14,7 @@
     background-color: var(--bg);
     color: var(--dark);
     border-color: var(--light);
-    .header__logo, .header__btn {
+    .header__logo, .header__btn, .header__burger-btn {
       border-color: var(--light);
     }
     .header__contacts-content {

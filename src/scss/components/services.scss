@@ -1,0 +1,146 @@
+.services {
+  overflow: hidden;
+  padding-bottom: 50px;
+  &__nav {
+    display: flex;
+    gap: 275px;
+    padding: 32px 30px;
+    border-bottom: 1px solid var(--dark-m);
+    margin-bottom: 100px;
+    @include laptop {
+      gap: 100px;
+    }
+    @include laptop-min {
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      padding: 16px 15px;
+      gap: 20px;
+    }
+  }
+  &__nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+    &:first-child {
+      margin-left: auto;
+    }
+    &:nth-child(3) {
+      margin-right: auto;
+    }
+
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+  &__btn-title {
+    font-size: 32px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @include tablet {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+  }
+  &__btn-content {
+    font-size: 16px;
+    line-height: 11px;
+    font-weight: 300;
+    color: var(--dark-m);
+    @include tablet {
+      font-size: 12px;
+      line-height: 8px;
+    }
+  }
+  &__slider {
+    max-width: 1840px;
+    width: 100%;
+    padding: 0 30px !important;
+    margin-bottom: 80px;
+    @include tablet {
+      padding: 0 15px !important;
+      margin-bottom: 40px;
+    }
+
+    .swiper-slide {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: var(--dark-m);
+      @include hover {
+        .services__slide-gallery {
+          filter: drop-shadow(0px 10px 32px rgba(75, 64, 54, 0.44));
+        }
+      }
+      @include pressed {
+        .services__slide-gallery {
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      @include laptop {
+        width: 305px !important;
+      }
+      @include tablet {
+        width: 175px !important;
+      }
+    }
+  }
+  &__slide-gallery {
+    position: relative;
+    width: 380px;
+    max-width: 100%;
+    height: 520px;
+    margin-bottom: 32px;
+    transition: filter 0.2s ease;
+    @include desktop {
+      height: 415px;
+    }
+    @include tablet {
+      width: 100%;
+      height: 240px !important;
+      margin-bottom: 16px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: rgba(75, 64, 54, 0.59);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  }
+  &__slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__slide-title {
+    font-size: 32px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 0px 0px 24px 0px;
+    @include tablet {
+      font-size: 20px;
+      line-height: 12px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+  }
+  &__slide-price {
+    font-size: 18px;
+    line-height: 13px;
+    @include tablet {
+      font-size: 16px;
+      line-height: 11px;
+    }
+  }
+}

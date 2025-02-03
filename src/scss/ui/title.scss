@@ -28,3 +28,15 @@
     line-height: 32px;
   }
 }
+.title-d {
+  font-size: 34px;
+  line-height: 50px;
+  @include laptop-middle {
+    font-size: 28px;
+    line-height: 42px;
+  }
+  @include tablet {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
