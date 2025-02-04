@@ -34,3 +34,13 @@
   visibility: hidden;
   z-index: -100;
 }
+
+@mixin width($maxW, $offset) {
+  max-width: calc($maxW + ($offset * 2));
+  padding: 0 $offset;
+  margin: 0 auto;
+  width: 100%;
+  @include tablet {
+    padding: 0 15px;
+  }
+}

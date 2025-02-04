@@ -3,7 +3,15 @@ export default class Scrollable {
     let defaultOptions = {
       wheelScrolling: false,
     };
-    this.container = document.querySelector(selector);
+
+    this.container = null;
+
+    if (typeof selector === "string") {
+      this.container = document.querySelector(selector);
+    } else {
+      this.container = selector;
+    }
+    console.log(this.container)
     this.options = Object.assign(defaultOptions, options);
 
     if (!this.container) {

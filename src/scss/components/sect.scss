@@ -58,8 +58,6 @@
     @include tablet {
       max-width: 90px;
       font-size: 16px;
-    }
-    @include mobile {
       &._min-mobile {
         font-size: 13px;
         line-height: 16px;

@@ -1,0 +1,14 @@
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 1px; /* Ширина всего элемента навигации */
+    height: 1px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--alto); /* Цвет дорожки */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--dark); /* Цвет бегунка */
+  }
+}
