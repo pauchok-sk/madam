@@ -78,4 +78,64 @@ export default function sliders() {
       },
     });
   }
+
+  const portfolioSlider = document.querySelector(".portfolio__slider");
+
+  if (portfolioSlider) {
+    const swiper = new Swiper(portfolioSlider, {
+      speed: 1000,
+      modules: [Autoplay, Scrollbar, Navigation],
+      slidesPerView: "auto",
+      grabCursor: true,
+      scrollbar: {
+        el: ".portfolio .slider-nav__scrollbar",
+        draggable: true
+      },
+      navigation: {
+        nextEl: ".portfolio .slider-nav__btn._next",
+        prevEl: ".portfolio .slider-nav__btn._prev"
+      },
+      autoplay: {
+        delay: 4000,
+      },
+      breakpoints: {
+        1680: {
+          slidesPerView: 5,
+        }
+      }
+    });
+  }
+
+  const stocksSlider = document.querySelector(".stocks__slider");
+
+  if (stocksSlider) {
+    const swiper = new Swiper(stocksSlider, {
+      speed: 1000,
+      modules: [Autoplay, Scrollbar],
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      grabCursor: true,
+      scrollbar: {
+        el: ".stocks__scrollbar",
+        draggable: true
+      },
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        1680: {
+          spaceBetween: 145,
+          slidesPerView: 4,
+        },
+        1366: {
+          spaceBetween: 50,
+          slidesPerView: 4,
+        },
+        993: {
+          spaceBetween: 30,
+          slidesPerView: 3,
+        },
+      },
+    });
+  }
 }

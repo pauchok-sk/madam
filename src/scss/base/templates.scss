@@ -44,3 +44,21 @@
     padding: 0 15px;
   }
 }
+
+@mixin first($num) {
+  @if $num == 1 {
+    &:first-child {
+      @content;
+    }
+  } @else {
+    &:nth-child(-n + #{$num}) {
+      @content;
+    }
+  }
+}
+
+@mixin last($num) {
+  &:nth-last-child(-n + #{$num}) {
+    @content;
+  }
+}

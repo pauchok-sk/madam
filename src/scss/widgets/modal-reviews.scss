@@ -1,0 +1,88 @@
+.modal-reviews {
+  &__rating {
+    margin-bottom: 20px;
+  }
+  &__form-item {
+    margin-bottom: 16px;
+  }
+  &__form-btn {
+    width: 100%;
+    margin-top: 40px;
+    @include tablet {
+      margin-top: 24px;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 22px;
+    @include tablet {
+      flex-wrap: wrap;
+      margin-top: 16px;
+      gap: 16px;
+    }
+  }
+  &__footer-content {
+    max-width: 260px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 27px;
+    margin: 0;
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  &__footer-buttons {
+    flex: 1;
+    display: flex;
+    gap: 24px;
+    @include tablet-min {
+      width: 100%;
+      flex: none;
+    }
+  }
+  &__footer-btn {
+    padding: 5px !important;
+    flex: 1;
+    border-color: var(--cloudy) !important;
+    color: var(--cloudy) !important;
+    min-height: 80px;
+    &:first-child {
+      svg {
+        width: 100px;
+      }
+    }
+    &:nth-child(2) {
+      svg {
+        width: 70px;
+      }
+    }
+    @include hover {
+      color: white !important;
+    }
+    @include pressed {
+      color: white !important;
+    }
+    @include tablet {
+      min-height: 62px;
+      &:first-child {
+        svg {
+          width: 82px;
+        }
+      }
+      &:nth-child(2) {
+        svg {
+          width: 58px;
+        }
+      }
+    }
+  }
+  &__icon-social {
+    height: 30px;
+    @include tablet {
+      height: 24px;
+    }
+  }
+}

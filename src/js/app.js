@@ -7,6 +7,7 @@ import burger from "./files/burger.js";
 import sliders from "./files/sliders.js";
 import fancy from "./files/fancy.js";
 import scrollables from "./files/scrollbales.js";
+import rating from "./files/rating.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -15,3 +16,4 @@ burger();
 sliders();
 fancy();
 scrollables();
+rating();

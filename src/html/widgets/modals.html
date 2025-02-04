@@ -1,0 +1,159 @@
+<div class="modal" id="modal-reviews">
+  <div class="modal__overlay">
+    <div class="modal__window">
+      <button class="btn-clear modal__close">
+        <svg class="modal__close-icon">
+          <use xlink:href="img/icons/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h3 class="title modal__title">Оставить отзыв</h3>
+      <form action="#" class="modal-reviews__form">
+        <div class="rating modal-reviews__rating" data-rating="0">
+          <span class="rating__title">Оценка</span>
+
+          <div class="rating__wrapper">
+            <label for="rating-1" class="rating__label">
+              <svg class="rating__icon">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <label for="rating-2" class="rating__label">
+              <svg class="rating__icon">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <label for="rating-3" class="rating__label">
+              <svg class="rating__icon">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <label for="rating-4" class="rating__label">
+              <svg class="rating__icon">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+            <label for="rating-5" class="rating__label">
+              <svg class="rating__icon">
+                <use xlink:href="img/icons/icons.svg#icon-star"></use>
+              </svg>
+            </label>
+
+            <input
+              type="radio"
+              value="1"
+              name="rating-reviews"
+              id="rating-1"
+              class="rating__input"
+            />
+            <input
+              type="radio"
+              value="2"
+              name="rating-reviews"
+              id="rating-2"
+              class="rating__input"
+            />
+            <input
+              type="radio"
+              value="3"
+              name="rating-reviews"
+              id="rating-3"
+              class="rating__input"
+            />
+            <input
+              type="radio"
+              value="4"
+              name="rating-reviews"
+              id="rating-4"
+              class="rating__input"
+            />
+            <input
+              type="radio"
+              value="5"
+              name="rating-reviews"
+              id="rating-5"
+              class="rating__input"
+            />
+          </div>
+        </div>
+        <div class="modal-reviews__form-item">
+          <input type="text" placeholder="Имя" class="input" />
+        </div>
+        <div class="modal-reviews__form-item">
+          <textarea placeholder="Сообщение" class="input _big"></textarea>
+        </div>
+        <button class="btn modal-reviews__form-btn">Отправить</button>
+      </form>
+      <div class="modal-reviews__footer">
+        <p class="modal-reviews__footer-content">
+          Так-же можете оставить отзыв в соц-сетях
+        </p>
+        <div class="modal-reviews__footer-buttons">
+          <a
+            href="#"
+            target="_blank"
+            class="btn modal-reviews__footer-btn _stroke"
+          >
+            <svg class="modal-reviews__icon-social">
+              <use xlink:href="img/icons/icons.svg#icon-logo-yandex"></use>
+            </svg>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            class="btn modal-reviews__footer-btn _stroke"
+          >
+            <svg class="modal-reviews__icon-social">
+              <use xlink:href="img/icons/icons.svg#icon-logo-2g"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal _open" id="modal-stocks">
+  <div class="modal__overlay">
+    <div class="modal__window modal-stocks__window">
+      <div class="modal-stocks__body">
+        <div class="modal__close">
+          <svg class="modal__close-icon">
+            <use xlink:href="img/icons/icons.svg#icon-close"></use>
+          </svg>
+        </div>
+        <div class="modal-stocks__container">
+          <span class="sect-tag modal-stocks__tag">| запись-онлайн |</span>
+          <h2 class="title title-m modal-stocks__title">
+            Получите скидку <br />
+            на первое посещение салона madam coco.
+          </h2>
+          <p class="modal-stocks__content">
+            Скидка действует на все услуги салона. Заполните форму и мы свяжемся
+            с вами в течении 20 минут.
+          </p>
+          <form action="#" class="modal-stocks__form">
+            <div class="modal-stocks__form-item">
+              <input type="text" placeholder="Имя" class="input" />
+            </div>
+            <div class="modal-stocks__form-item">
+              <input type="tel" placeholder="Телефон" class="input" />
+            </div>
+            <button class="btn modal-stocks__form-btn">Отправить</button>
+          </form>
+          <p class="modal-stocks__form-policy">
+            Нажимая на кнопку “Отправить”, вы соглашаетесь с политикой
+            конфиденциальности и обработку персональных данных.
+          </p>
+          <div class="modal-stocks__contacts">
+            <div>
+              <p class="modal-stocks__address">Пишите и звоните нам с 9:00 до 21:00</p>
+              <a href="tel:+79999999366" class="modal-stocks__tel">+7 (999) 999-93-66</a>
+            </div>
+            <a href="#" class="btn modal-stocks__tg _stroke">Telegram</a>
+          </div>
+        </div>
+      </div>
+      <img src="@img/get-stocks.jpg" alt="image" class="sect-img" />
+    </div>
+  </div>
+</div>

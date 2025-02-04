@@ -1,0 +1,22 @@
+.input {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  width: 100%;
+  padding: 13px 0px;
+  border-bottom: 1px solid rgba(75, 64, 54, 0.32);
+
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 300;
+
+  &._big {
+    resize: none;
+    min-height: 150px;
+  }
+
+  &::placeholder {
+    color: var(--dark);
+  }
+}

@@ -16,9 +16,14 @@
 @import "./ui/slider-nav";
 @import "./ui/sect-tag";
 @import "./ui/scrollbar";
+@import "./ui/modal";
+@import "./ui/rating";
+@import "./ui/input";
 
 // widgets
 @import "./widgets/burger";
+@import "./widgets/modal-reviews";
+@import "./widgets/modal-stocks";
 
 // components
 @import "./components/header";
@@ -30,5 +35,7 @@
 @import "./components/promo-video";
 @import "./components/guarantee";
 @import "./components/popular-price";
+@import "./components/portfolio";
+@import "./components/stocks";
 
 @import "./components/footer";

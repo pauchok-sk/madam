@@ -1,0 +1,44 @@
+.portfolio {
+  padding: 100px 0px 50px 0px;
+  @include tablet {
+    padding: 50px 0px 40px 0px;
+  }
+  &__title {
+    max-width: 895px;
+    text-align: center;
+    margin: 0px auto 100px auto;
+    @include tablet {
+      margin-bottom: 50px;
+      text-align: start;
+    }
+  }
+  &__slider {
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    .swiper-slide {
+      height: 425px !important;
+      transition: opacity .2s ease;
+      @include hover {
+        opacity: 0.7;
+      }
+      @media (max-width: 1679px) {
+        width: 384px !important;
+      }
+      @include laptop-min {
+        width: 305px !important; 
+        height: 340px !important;
+      }
+      @include tablet {
+        width: 275px !important;
+        height: 305px !important;
+      }
+    }
+  }
+  &__slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
