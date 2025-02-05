@@ -8,6 +8,7 @@ import sliders from "./files/sliders.js";
 import fancy from "./files/fancy.js";
 import scrollables from "./files/scrollbales.js";
 import rating from "./files/rating.js";
+import modal from "./files/modal.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -17,3 +18,4 @@ sliders();
 fancy();
 scrollables();
 rating();
+modal();

@@ -1,0 +1,148 @@
+.gift {
+  padding: 50px 0px;
+  &__container {
+    @include width(720px, 30px);
+    @include laptop-min {
+      max-width: none;
+    }
+  }
+  &__tag {
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__title {
+    margin: 0px 0px 40px 0px;
+  }
+  &__content {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 0px 0px 50px 0px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    max-width: 695px;
+    @include desktop {
+      gap: 15px;
+    }
+    @include tablet {
+      gap: 12px;
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-column: 2 span;
+    padding: 30px 15px 65px 15px;
+    text-align: center;
+    border: 1px solid var(--cloudy);
+    z-index: 1;
+
+    @include laptop {
+      grid-column: 3 span;
+      padding: 15px 12px 30px 12px;
+    }
+    @include laptop-min {
+      grid-column: 2 span;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 13px;
+      border: 1px solid rgba(75, 64, 54, 0.07);
+      z-index: -1;
+      @include laptop {
+        inset: 10px;
+      }
+      @include tablet {
+        inset: 5px;
+      }
+    }
+  }
+  &__item-icon {
+    width: 60px;
+    margin-bottom: 20px;
+    @include tablet {
+      width: 30px;
+      margin-bottom: 10px;
+    }
+  }
+  &__item-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    flex: 1;
+    margin: 0px 0px 30px 0px;
+    @include tablet {
+      font-size: 10px;
+      line-height: 10px;
+      margin-bottom: 15px;
+    }
+  }
+  &__item-price {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 14px;
+    @include tablet {
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 16px;
+      margin-bottom: 7px;
+    }
+
+    &._min {
+      font-size: 24px;
+      @include tablet {
+        font-size: 16px;
+      }
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+  }
+  &__item-currency {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    text-transform: uppercase;
+    @include mobile {
+      font-size: 6px;
+      line-height: 7px;
+    }
+  }
+  &__btn {
+    margin-top: 70px;
+    max-width: 350px;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px !important;
+    @include tablet {
+      margin: 40px auto 0px auto;
+    }
+    @include mobile {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}

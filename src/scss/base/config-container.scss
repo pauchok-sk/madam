@@ -17,6 +17,9 @@
   &._middle {
     max-width: calc(1440px + (var(--offset-width) * 2));
   }
+  &._min {
+    max-width: calc(1360px + (var(--offset-width) * 2));
+  }
   @include tablet {
     padding: 0 15px !important;
   }

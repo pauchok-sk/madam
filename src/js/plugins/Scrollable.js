@@ -11,7 +11,6 @@ export default class Scrollable {
     } else {
       this.container = selector;
     }
-    console.log(this.container)
     this.options = Object.assign(defaultOptions, options);
 
     if (!this.container) {

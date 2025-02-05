@@ -113,4 +113,13 @@
       margin-bottom: 40px;
     }
   }
+  &__content-wrapper {
+    overflow: hidden;
+    transition: opacity .4s ease, visibility .4s ease;
+    &._hidden {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
 }

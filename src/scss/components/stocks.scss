@@ -9,7 +9,7 @@
   }
   &__tag {
     text-align: center;
-    margin-bottom: 40px;
+    margin: 0px auto 40px auto;
     @include tablet {
       text-align: start;
     }

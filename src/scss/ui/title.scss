@@ -9,6 +9,21 @@
   font-weight: 400;
 }
 
+.title-big {
+  font-size: 64px;
+  line-height: 64px;
+  @include laptop-middle {
+    font-size: 58px;
+  }
+  @include laptop-min {
+    font-size: 48px;
+  }
+  @include tablet {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
 .title-l {
   font-size: 32px;
   line-height: 32px;

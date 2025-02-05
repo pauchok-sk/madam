@@ -1,8 +1,12 @@
 .sect-tag {
   display: block;
+  width: fit-content;
   font-size: 16px;
   line-height: 17px;
   font-weight: 300;
   text-transform: uppercase;
   color: var(--light);
+  padding: 0 12px;
+  border-left: 1px solid var(--light);
+  border-right: 1px solid var(--light);
 }

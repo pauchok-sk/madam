@@ -23,7 +23,7 @@
 // widgets
 @import "./widgets/burger";
 @import "./widgets/modal-reviews";
-@import "./widgets/modal-stocks";
+@import "./widgets/modal-sect";
 
 // components
 @import "./components/header";
@@ -37,5 +37,7 @@
 @import "./components/popular-price";
 @import "./components/portfolio";
 @import "./components/stocks";
+@import "./components/gift";
+@import "./components/discount";
 
 @import "./components/footer";

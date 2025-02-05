@@ -1,4 +1,4 @@
-<div class="modal" id="modal-reviews">
+<div class="modal" data-modal="modal-reviews">
   <div class="modal__overlay">
     <div class="modal__window">
       <button class="btn-clear modal__close">
@@ -112,48 +112,97 @@
   </div>
 </div>
 
-<div class="modal _open" id="modal-stocks">
+<div class="modal modal-sect" data-modal="modal-record">
   <div class="modal__overlay">
-    <div class="modal__window modal-stocks__window">
-      <div class="modal-stocks__body">
-        <div class="modal__close">
+    <div class="modal__window modal-sect__window">
+      <div class="modal-sect__body">
+        <button class="btn-clear modal__close modal-sect__close">
           <svg class="modal__close-icon">
-            <use xlink:href="img/icons/icons.svg#icon-close"></use>
+            <use xlink:href="img/icons/icons.svg#icon-close-bold"></use>
           </svg>
-        </div>
-        <div class="modal-stocks__container">
-          <span class="sect-tag modal-stocks__tag">| запись-онлайн |</span>
-          <h2 class="title title-m modal-stocks__title">
+        </button>
+        <div class="modal-sect__container">
+          <span class="sect-tag modal-sect__tag">| запись-онлайн |</span>
+          <h2 class="title title-m modal-sect__title">
             Получите скидку <br />
             на первое посещение салона madam coco.
           </h2>
-          <p class="modal-stocks__content">
+          <p class="modal-sect__content">
             Скидка действует на все услуги салона. Заполните форму и мы свяжемся
             с вами в течении 20 минут.
           </p>
-          <form action="#" class="modal-stocks__form">
-            <div class="modal-stocks__form-item">
+          <form action="#" class="modal-sect__form">
+            <div class="modal-sect__form-item">
               <input type="text" placeholder="Имя" class="input" />
             </div>
-            <div class="modal-stocks__form-item">
+            <div class="modal-sect__form-item">
               <input type="tel" placeholder="Телефон" class="input" />
             </div>
-            <button class="btn modal-stocks__form-btn">Отправить</button>
+            <button class="btn modal-sect__form-btn">Отправить</button>
           </form>
-          <p class="modal-stocks__form-policy">
+          <p class="modal-sect__form-policy">
             Нажимая на кнопку “Отправить”, вы соглашаетесь с политикой
             конфиденциальности и обработку персональных данных.
           </p>
-          <div class="modal-stocks__contacts">
+          <div class="modal-sect__contacts _hidden">
             <div>
-              <p class="modal-stocks__address">Пишите и звоните нам с 9:00 до 21:00</p>
-              <a href="tel:+79999999366" class="modal-stocks__tel">+7 (999) 999-93-66</a>
+              <p class="modal-sect__address">
+                Пишите и звоните нам с 9:00 до 21:00
+              </p>
+              <a href="tel:+79999999366" class="modal-sect__tel"
+                >+7 (999) 999-93-66</a
+              >
             </div>
-            <a href="#" class="btn modal-stocks__tg _stroke">Telegram</a>
+            <a href="#" class="btn modal-sect__tg _stroke">Telegram</a>
           </div>
         </div>
       </div>
-      <img src="@img/get-stocks.jpg" alt="image" class="sect-img" />
+      <img
+        src="@img/get-stocks.jpg"
+        alt="image"
+        class="sect__img modal-sect__img"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-sect" data-modal="modal-thank">
+  <div class="modal__overlay">
+    <div class="modal__window modal-sect__window">
+      <div class="modal-sect__body _center">
+        <button class="btn-clear modal__close modal-sect__close">
+          <svg class="modal__close-icon">
+            <use xlink:href="img/icons/icons.svg#icon-close-bold"></use>
+          </svg>
+        </button>
+        <div class="modal-sect__container">
+          <span class="sect-tag modal-sect__thank-tag">| запись-онлайн |</span>
+          <h2 class="title title-big modal-sect__thank-title">
+            Спасибо. <br />
+            Ваша заявка отправлена
+          </h2>
+          <p class="modal-sect__thank-content">
+            Мы свяжемся с вами в течении 20 минут.
+          </p>
+          <a href="/" class="btn modal-sect__thank-btn">Вернуться на сайт</a>
+          <div class="modal-sect__contacts">
+            <div>
+              <p class="modal-sect__address">
+                Пишите и звоните нам с 9:00 до 21:00
+              </p>
+              <a href="tel:+79999999366" class="modal-sect__tel"
+                >+7 (999) 999-93-66</a
+              >
+            </div>
+            <a href="#" class="btn modal-sect__tg _stroke">Telegram</a>
+          </div>
+        </div>
+      </div>
+      <img
+        src="@img/get-stocks.jpg"
+        alt="image"
+        class="sect__img modal-sect__img"
+      />
     </div>
   </div>
 </div>
