@@ -57,7 +57,7 @@ export default function sliders() {
       grabCursor: true,
       scrollbar: {
         el: ".guarantee__scrollbar",
-        draggable: true
+        draggable: true,
       },
       autoplay: {
         delay: 3000,
@@ -74,7 +74,7 @@ export default function sliders() {
         744: {
           spaceBetween: 30,
           slidesPerView: 2,
-        }
+        },
       },
     });
   }
@@ -89,11 +89,11 @@ export default function sliders() {
       grabCursor: true,
       scrollbar: {
         el: ".portfolio .slider-nav__scrollbar",
-        draggable: true
+        draggable: true,
       },
       navigation: {
         nextEl: ".portfolio .slider-nav__btn._next",
-        prevEl: ".portfolio .slider-nav__btn._prev"
+        prevEl: ".portfolio .slider-nav__btn._prev",
       },
       autoplay: {
         delay: 4000,
@@ -101,8 +101,8 @@ export default function sliders() {
       breakpoints: {
         1680: {
           slidesPerView: 5,
-        }
-      }
+        },
+      },
     });
   }
 
@@ -117,7 +117,7 @@ export default function sliders() {
       grabCursor: true,
       scrollbar: {
         el: ".stocks__scrollbar",
-        draggable: true
+        draggable: true,
       },
       autoplay: {
         delay: 3000,
@@ -134,6 +134,35 @@ export default function sliders() {
         993: {
           spaceBetween: 30,
           slidesPerView: 3,
+        },
+      },
+    });
+  }
+
+  const reviewsSlider = document.querySelector(".reviews__slider");
+
+  if (reviewsSlider) {
+    const swiper = new Swiper(reviewsSlider, {
+      speed: 1000,
+      modules: [Autoplay, Scrollbar, Navigation],
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      grabCursor: true,
+      scrollbar: {
+        el: ".reviews .slider-nav__scrollbar",
+        draggable: true,
+      },
+      navigation: {
+        nextEl: ".reviews .slider-nav__btn._next",
+        prevEl: ".reviews .slider-nav__btn._prev"
+      },
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        1540: {
+          spaceBetween: 24,
+          slidesPerView: 1,
         },
       },
     });
