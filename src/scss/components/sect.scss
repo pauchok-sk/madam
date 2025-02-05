@@ -128,7 +128,6 @@
     aspect-ratio: 1/1;
     @include laptop-min {
       margin: 0 auto;
-      max-width: 800px;
       width: 100%;
 
       &._last {

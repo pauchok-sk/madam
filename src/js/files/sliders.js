@@ -167,4 +167,33 @@ export default function sliders() {
       },
     });
   }
+
+  const newsSlider = document.querySelector(".news__slider");
+
+  if (newsSlider) {
+    const swiper = new Swiper(newsSlider, {
+      speed: 800,
+      modules: [Autoplay, Navigation],
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      grabCursor: true,
+      navigation: {
+        nextEl: ".news .slider-nav__btn._next",
+        prevEl: ".news .slider-nav__btn._prev"
+      },
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        1680: {
+          slidesPerView: 4,
+          spaceBetween: 90,
+        },
+        993: {
+          slidesPerView: "auto",
+          spaceBetween: 50,
+        }
+      }
+    });
+  }
 }

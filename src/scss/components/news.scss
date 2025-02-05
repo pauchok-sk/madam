@@ -1,0 +1,110 @@
+.news {
+  padding: 90px 0px 50px 0px;
+  overflow: hidden;
+  @include tablet {
+    padding: 45px 0px 65px 0px;
+  }
+  &__tag {
+    margin: 0px auto 40px auto;
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+    @include tablet {
+      text-align: start;
+      text-transform: none;
+      margin-bottom: 25px;
+    }
+  }
+  &__slider {
+    margin-bottom: 90px;
+    @media (max-width: 1679px) {
+      overflow: visible !important;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+  &__slide {
+    @media (max-width: 1679px) {
+      width: 380px !important;
+    }
+    @include laptop-min {
+      width: 300px !important;
+    }
+  }
+  &__slide-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    @include laptop-min {
+      height: 280px;
+      margin-bottom: 20px;
+    }
+  }
+  &__slide-body {
+    display: flex;
+    gap: 20px;
+    @include laptop-min {
+      gap: 12px;
+    }
+  }
+  &__slide-date {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 10px;
+    @include laptop-min {
+      gap: 8px;
+    }
+  }
+  &__slide-day {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 28px;
+    @include laptop-min {
+      font-size: 30px;
+      line-height: 21px;
+    }
+  }
+  &__slide-date-value {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 10px;
+    @include laptop-min {
+      font-size: 10px;
+      line-height: 8px;
+      &:nth-child(3) {
+        font-size: 12px;
+      }
+    }
+  }
+  &__slide-info {
+    flex: 1;
+  }
+  &__slide-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0px 0px 28px 0px;
+    @include laptop-min {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  &__slide-content {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+    @include laptop-min {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
