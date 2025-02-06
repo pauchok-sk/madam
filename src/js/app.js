@@ -14,6 +14,7 @@ import hiddenText from "./files/hiddenText.js";
 import map from "./files/map.js";
 import validateForms from "./files/validateForms.js";
 import telMask from "./files/telMask.js";
+import headerScroll from "./files/headerScroll.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -28,3 +29,4 @@ hiddenText();
 map();
 validateForms();
 telMask();
+headerScroll();

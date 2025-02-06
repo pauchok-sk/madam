@@ -1,0 +1,76 @@
+.intro-simple {
+  display: flex;
+  @include laptop-min {
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+  &__body {
+    display: flex;
+    padding: 100px 0px;
+    flex: 1;
+    @include laptop {
+      padding: 50px 0px;
+    }
+  }
+  &__container {
+    margin: 0px 90px 0px auto !important;
+    @include width(700px, 30px);
+    @include desktop-big {
+      margin-right: 0 !important;
+    }
+    @include laptop-min {
+      max-width: none;
+    }
+  }
+  &__title {
+    font-weight: 300;
+    margin: 0px 0px 50px 0px;
+    @include laptop-middle {
+      margin-bottom: 30px;
+    }
+  }
+  &__content {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+    color: black;
+    margin-bottom: 70px;
+
+    @include desktop-big {
+      br {
+        display: none;
+      }
+    }
+    @include laptop-middle {
+      margin-bottom: 40px;
+    }
+    @include tablet {
+      line-height: 26px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__btn {
+    max-width: 370px;
+    width: 100%;
+    min-height: 95px;
+    @include mobile {
+      min-height: 60px;
+      max-width: none;
+    }
+  }
+  &__img {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    @include laptop-min {
+      width: 100%;
+    }
+  }
+}

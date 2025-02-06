@@ -29,6 +29,9 @@
       }
     }
   }
+  &._simple {
+    position: sticky;
+  }
 
   &__wrapper {
     display: flex;

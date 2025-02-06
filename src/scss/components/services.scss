@@ -24,7 +24,8 @@
     align-items: center;
     text-align: center;
     white-space: nowrap;
-    transition: opacity 0.2s ease;
+    color: var(--light);
+    transition: color .2s ease;
     &:first-child {
       margin-left: auto;
     }
@@ -33,7 +34,10 @@
     }
 
     @include hover {
-      opacity: 0.5;
+      color: var(--dark);
+    }
+    &._active {
+      color: var(--dark);
     }
   }
   &__btn-title {
@@ -50,10 +54,67 @@
     font-size: 16px;
     line-height: 11px;
     font-weight: 300;
-    color: var(--dark-m);
+    // color: var(--dark-m);
     @include tablet {
       font-size: 12px;
       line-height: 8px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 90px;
+    row-gap: 100px;
+    @include desktop-big {
+      gap: 40px;
+    }
+    @include laptop-min {
+      gap: 24px;
+    }
+    @include tablet-min {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @include mobile {
+      gap: 15px;
+      row-gap: 20px;
+    }
+  }
+  &__item {
+    grid-column: 3 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--dark-m);
+    @include hover {
+      .services__slide-gallery {
+        filter: drop-shadow(0px 10px 32px rgba(75, 64, 54, 0.44));
+      }
+    }
+    @include pressed {
+      .services__slide-gallery {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+    @include laptop-middle {
+      grid-column: 4 span;
+    }
+    @include tablet-min {
+      grid-column: 3 span;
+    }
+
+    .services__slide-gallery{
+      @include laptop-min {
+        height: 325px;
+      }
+      @include tablet-min {
+        height: 320px !important;
+      }
+      @include mobile {
+        height: 225px !important;
+      }
     }
   }
   &__slider {
@@ -106,7 +167,7 @@
     @include tablet {
       width: 100%;
       height: 240px !important;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     &::before {
@@ -132,12 +193,13 @@
       font-size: 20px;
       line-height: 12px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
   }
   &__slide-price {
     font-size: 18px;
     line-height: 13px;
+    font-weight: 300;
     @include tablet {
       font-size: 16px;
       line-height: 11px;
