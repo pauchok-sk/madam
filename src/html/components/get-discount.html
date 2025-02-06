@@ -13,9 +13,20 @@
       <form action="#" class="get-discount__form">
         <div class="get-discount__form-item">
           <input type="text" placeholder="Имя" class="input" />
+          <div class="input-status">
+            <svg class="input-status__icon">
+              <use xlink:href='img/icons/icons.svg#icon-check'></use>
+            </svg>
+          </div>
         </div>
         <div class="get-discount__form-item">
           <input type="tel" placeholder="Телефон" class="input" />
+          <div class="input-status _error">
+            <span>поле не заполнено</span>
+            <svg class="input-status__icon">
+              <use xlink:href='img/icons/icons.svg#icon-close-bold'></use>
+            </svg>
+          </div>
         </div>
         <button class="btn get-discount__form-btn">Отправить</button>
       </form>

@@ -4,7 +4,7 @@
   border-radius: 0px;
   outline: none;
   width: 100%;
-  padding: 13px 0px;
+  padding: 13px 35px 13px 0px;
   border-bottom: 1px solid rgba(75, 64, 54, 0.32);
 
   font-size: 18px;
@@ -18,5 +18,32 @@
 
   &::placeholder {
     color: var(--dark);
+  }
+}
+
+.input-status {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark);
+
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 36px;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &._error {
+    color: var(--red);
+
+    .input-status__icon {
+      width: 18px;
+      height: 18px;
+    }
   }
 }

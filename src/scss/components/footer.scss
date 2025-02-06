@@ -264,12 +264,31 @@
   &__dev-btn {
     display: block;
     width: 115px;
-    transition: opacity .2s ease;
+    transition: opacity 0.2s ease;
     @include hover {
       opacity: 0.5;
     }
   }
   &__dev-icon {
     width: 100%;
+  }
+  &__buttons {
+    display: none;
+    gap: 10px;
+    width: 100%;
+    box-shadow: 0px -1px 8px 0px rgba(75, 64, 54, 0.24);
+    padding: 10px 16px;
+    background-color: var(--dark-s);
+    @include mobile {
+      display: flex;
+    }
+  }
+  &__btn {
+    padding: 10px !important;
+    font-size: 12px !important;
+    flex: 1;
+    background-color: rgba(241, 236, 233, 0.41);
+    border: 1px solid var(--amber);
+    color: white;
   }
 }
