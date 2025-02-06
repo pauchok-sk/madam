@@ -133,11 +133,18 @@
     }
   }
   &__slide-btn {
-    border-color: var(--light);
-    color: var(--light);
+    border-color: var(--light) !important;
+    color: var(--light) !important;
     min-height: 48px;
     width: 100%;
     font-size: 14px;
+    @include hover {
+      color: white !important;
+      border-color: var(--dark) !important;
+    }
+    @include pressed {
+      border-color: var(--light) !important;
+    }
   }
   &__scrollbar {
     display: none;

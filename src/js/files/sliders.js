@@ -154,7 +154,7 @@ export default function sliders() {
       },
       navigation: {
         nextEl: ".reviews .slider-nav__btn._next",
-        prevEl: ".reviews .slider-nav__btn._prev"
+        prevEl: ".reviews .slider-nav__btn._prev",
       },
       autoplay: {
         delay: 3000,
@@ -179,7 +179,7 @@ export default function sliders() {
       grabCursor: true,
       navigation: {
         nextEl: ".news .slider-nav__btn._next",
-        prevEl: ".news .slider-nav__btn._prev"
+        prevEl: ".news .slider-nav__btn._prev",
       },
       autoplay: {
         delay: 3000,
@@ -192,8 +192,8 @@ export default function sliders() {
         993: {
           slidesPerView: "auto",
           spaceBetween: 50,
-        }
-      }
+        },
+      },
     });
   }
 
@@ -208,11 +208,11 @@ export default function sliders() {
       grabCursor: true,
       scrollbar: {
         el: ".salons .slider-nav__scrollbar",
-        draggable: true
+        draggable: true,
       },
       navigation: {
         nextEl: ".salons .slider-nav__btn._next",
-        prevEl: ".salons .slider-nav__btn._prev"
+        prevEl: ".salons .slider-nav__btn._prev",
       },
       autoplay: {
         delay: 3000,
@@ -222,7 +222,36 @@ export default function sliders() {
           slidesPerView: 4,
           spaceBetween: 90,
         },
-      }
+      },
+    });
+  }
+
+  const gallerySliders = document.querySelectorAll(".gallery__slider");
+
+  if (gallerySliders.length) {
+    gallerySliders.forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        speed: 1000,
+        modules: [Autoplay, Scrollbar, Navigation],
+        slidesPerView: "auto",
+        grabCursor: true,
+        scrollbar: {
+          el: ".gallery .slider-nav__scrollbar",
+          draggable: true,
+        },
+        navigation: {
+          nextEl: slider.closest("[data-tab]").querySelector(".slider-nav__btn._next"),
+          prevEl: slider.closest("[data-tab]").querySelector(".slider-nav__btn._prev"),
+        },
+        autoplay: {
+          delay: 4000,
+        },
+        breakpoints: {
+          1680: {
+            slidesPerView: 5,
+          },
+        },
+      });
     });
   }
 }

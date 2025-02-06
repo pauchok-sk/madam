@@ -1,7 +1,12 @@
 .popular-price {
   flex: 1;
   overflow: hidden;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+  &._offset {
+    display: flex;
+    align-items: center;
+    padding: 50px 0px;
+  }
   @include laptop-min {
     flex: none;
     width: 100%;
@@ -9,6 +14,9 @@
   }
   &__container {
     @include width(645px, 30px);
+    @include laptop-min {
+      max-width: none;
+    }
   }
   &__nav {
     display: flex;
@@ -108,7 +116,65 @@
       margin-right: 15px;
     }
   }
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    aspect-ratio: 1/1;
+    @include laptop-min {
+      width: 100%;
+      aspect-ratio: auto;
+      border-bottom: 1px solid var(--dark);
+    }
+  }
   &__img {
-    max-height: 900px;
+    display: block;
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+    object-position: bottom;
+    @include desktop-big {
+      height: 500px;
+    }
+    @include laptop {
+      height: 400px;
+    }
+    @include laptop-middle {
+      height: 340px;
+    }
+    @include laptop-min {
+      height: 500px;
+    }
+    @include tablet {
+      height: 400px;
+    }
+    @include tablet-min {
+      height: 300px;
+    }
+    @include mobile {
+      height: 240px;
+    }
+  }
+  &__gallery-content {
+    padding: 70px 90px 70px 90px;
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    line-height: 32px;
+    flex: 1;
+    border-left: 1px solid var(--dark);
+    @include laptop {
+      padding: 50px 30px;
+    }
+    @include laptop-min {
+      flex: none;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }

@@ -2,6 +2,10 @@
   display: flex;
   @include laptop-min {
     flex-wrap: wrap;
+
+    &._reverse {
+      flex-direction: column-reverse
+    }
   }
   &__info {
     @include flex-center;

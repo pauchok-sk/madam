@@ -3,6 +3,10 @@
   @include laptop-min {
     flex-wrap: wrap;
     padding-bottom: 50px;
+
+    &._bottom-off {
+      padding-bottom: 0;
+    }
   }
   &__body {
     display: flex;
