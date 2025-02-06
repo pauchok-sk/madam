@@ -1,6 +1,7 @@
 import * as functions from "./files/functions.js";
 
 import "../scss/style.scss";
+import "./plugins/inputmask.min.js";
 import spoller from "./files/spoller.js";
 import tab from "./files/tab.js";
 import burger from "./files/burger.js";
@@ -11,6 +12,8 @@ import rating from "./files/rating.js";
 import modal from "./files/modal.js";
 import hiddenText from "./files/hiddenText.js";
 import map from "./files/map.js";
+import validateForms from "./files/validateForms.js";
+import telMask from "./files/telMask.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -23,3 +26,5 @@ rating();
 modal();
 hiddenText();
 map();
+validateForms();
+telMask();

@@ -1,3 +1,8 @@
+.wrapper-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 .input {
   background-color: transparent;
   border: none;
@@ -11,39 +16,35 @@
   line-height: 36px;
   font-weight: 300;
 
-  &._big {
-    resize: none;
-    min-height: 150px;
-  }
-
   &::placeholder {
     color: var(--dark);
   }
+
+  &.just-validate-success-field {
+    background: url('@img/check.svg') center right 8px / 24px auto no-repeat;
+  }
+
+  &._big {
+    resize: none;
+    min-height: 150px;
+    background-position: top 10px right 8px;
+  }
+
 }
 
-.input-status {
+.just-validate-error-label {
   position: absolute;
   right: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
   color: var(--dark);
+  padding-right: 33px;
+  background: url('@img/close.svg') center right / 24px auto no-repeat;
 
   font-size: 18px;
   font-weight: 300;
   line-height: 36px;
 
-  &__icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  &._error {
-    color: var(--red);
-
-    .input-status__icon {
-      width: 18px;
-      height: 18px;
-    }
+  @include tablet {
+    font-size: 16px;
+    line-height: normal;
   }
 }

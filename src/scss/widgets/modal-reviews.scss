@@ -4,6 +4,16 @@
   }
   &__form-item {
     margin-bottom: 16px;
+
+    &:nth-child(3) {
+      .just-validate-error-label {
+        top: 10px;
+        @include tablet {
+          top: auto;
+          bottom: 20px;
+        }
+      }
+    }
   }
   &__form-btn {
     width: 100%;

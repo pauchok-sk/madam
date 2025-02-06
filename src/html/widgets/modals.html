@@ -7,7 +7,7 @@
         </svg>
       </button>
       <h3 class="title modal__title">Оставить отзыв</h3>
-      <form action="#" class="modal-reviews__form">
+      <form action="#" class="modal-reviews__form" id="reviews-form">
         <div class="rating modal-reviews__rating" data-rating="0">
           <span class="rating__title">Оценка</span>
 
@@ -75,11 +75,11 @@
             />
           </div>
         </div>
-        <div class="modal-reviews__form-item">
-          <input type="text" placeholder="Имя" class="input" />
+        <div class="wrapper-input modal-reviews__form-item">
+          <input type="text" placeholder="Имя" class="input" id="reviews-name" />
         </div>
-        <div class="modal-reviews__form-item">
-          <textarea placeholder="Сообщение" class="input _big"></textarea>
+        <div class="wrapper-input modal-reviews__form-item">
+          <textarea placeholder="Сообщение" class="input _big" id="reviews-message"></textarea>
         </div>
         <button class="btn modal-reviews__form-btn">Отправить</button>
       </form>
@@ -131,12 +131,12 @@
             Скидка действует на все услуги салона. Заполните форму и мы свяжемся
             с вами в течении 20 минут.
           </p>
-          <form action="#" class="modal-sect__form">
-            <div class="modal-sect__form-item">
-              <input type="text" placeholder="Имя" class="input" />
+          <form action="#" class="modal-sect__form" id="form-record">
+            <div class="wrapper-input modal-sect__form-item">
+              <input type="text" placeholder="Имя" class="input" id="record-name" />
             </div>
-            <div class="modal-sect__form-item">
-              <input type="tel" placeholder="Телефон" class="input" />
+            <div class="wrapper-input modal-sect__form-item">
+              <input type="tel" placeholder="Телефон" class="input" id="record-tel" />
             </div>
             <button class="btn modal-sect__form-btn">Отправить</button>
           </form>
