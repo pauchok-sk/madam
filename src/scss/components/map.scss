@@ -1,0 +1,12 @@
+.map {
+  &__frame {
+    width: 100%;
+    height: 960px;
+    @include laptop-middle {
+      height: 700px;
+    }
+    @include tablet {
+      height: 510px;
+    }
+  }
+}

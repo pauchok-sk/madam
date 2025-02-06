@@ -196,4 +196,33 @@ export default function sliders() {
       }
     });
   }
+
+  const salonsSlider = document.querySelector(".salons__slider");
+
+  if (salonsSlider) {
+    const swiper = new Swiper(salonsSlider, {
+      speed: 800,
+      modules: [Autoplay, Navigation, Scrollbar],
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      grabCursor: true,
+      scrollbar: {
+        el: ".salons .slider-nav__scrollbar",
+        draggable: true
+      },
+      navigation: {
+        nextEl: ".salons .slider-nav__btn._next",
+        prevEl: ".salons .slider-nav__btn._prev"
+      },
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        1680: {
+          slidesPerView: 4,
+          spaceBetween: 90,
+        },
+      }
+    });
+  }
 }

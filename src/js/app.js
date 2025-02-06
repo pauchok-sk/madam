@@ -10,6 +10,7 @@ import scrollables from "./files/scrollbales.js";
 import rating from "./files/rating.js";
 import modal from "./files/modal.js";
 import hiddenText from "./files/hiddenText.js";
+import map from "./files/map.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -21,3 +22,4 @@ scrollables();
 rating();
 modal();
 hiddenText();
+map();
