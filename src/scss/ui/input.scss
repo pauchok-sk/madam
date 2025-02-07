@@ -2,6 +2,16 @@
   position: relative;
   display: flex;
   align-items: center;
+
+  &._big {
+    .just-validate-error-label {
+      top: 10px;
+      @include tablet {
+        top: auto;
+        bottom: 20px;
+      }
+    }
+  }
 }
 .input {
   background-color: transparent;
@@ -21,7 +31,7 @@
   }
 
   &.just-validate-success-field {
-    background: url('@img/check.svg') center right 8px / 24px auto no-repeat;
+    background: url("@img/check.svg") center right 8px / 24px auto no-repeat;
   }
 
   &._big {
@@ -29,7 +39,6 @@
     min-height: 150px;
     background-position: top 10px right 8px;
   }
-
 }
 
 .just-validate-error-label {
@@ -37,7 +46,7 @@
   right: 10px;
   color: var(--dark);
   padding-right: 33px;
-  background: url('@img/close.svg') center right / 24px auto no-repeat;
+  background: url("@img/close.svg") center right / 24px auto no-repeat;
 
   font-size: 18px;
   font-weight: 300;
@@ -46,5 +55,53 @@
   @include tablet {
     font-size: 16px;
     line-height: normal;
+  }
+}
+
+.input-file {
+  display: none;
+}
+.label-file {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 11px 0px;
+  border-bottom: 1px solid rgba(75, 64, 54, 0.32);
+  &__rect {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--dark);
+    color: var(--wafer);
+  }
+  &__rect-icon {
+    width: 20px;
+    height: 20px;
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 36px;
+    flex: 1;
+    transition: opacity 0.2s ease;
+    @include hiddenText(1);
+    @include hover {
+      opacity: 0.5;
+    }
+  }
+  &__btn {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--dark);
+    transition: background-color .2s ease, color .2s ease;
+    @include hover {
+      color: var(--wafer);
+      background-color: var(--dark);
+    }
+  }
+  &__icon-plus {
+    width: 17px;
+    height: 17px;
   }
 }

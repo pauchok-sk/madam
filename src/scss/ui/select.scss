@@ -1,0 +1,88 @@
+.select {
+  position: relative;
+
+  &._open {
+    .select__list {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    .select__btn-arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    transition: opacity 0.2s ease;
+
+    @include hover {
+      opacity: 0.5;
+    }
+
+    .input {
+      pointer-events: none;
+      width: 100%;
+      padding-right: 50px;
+    }
+  }
+  &__btn-rect {
+    @include flex-center;
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--dark);
+  }
+  &__btn-arrow {
+    width: 13px;
+    height: 13px;
+    transition: transform 0.2s ease;
+  }
+  &__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--wafer);
+    border: 1px solid var(--dark);
+    max-height: 252px;
+    overflow-y: auto;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease,
+      transform 0.4s ease;
+    @include scrollbar;
+  }
+  &__list-item {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: var(--wafer);
+    line-height: 22px;
+    padding: 20px 15px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--dark);
+    }
+
+    @include hover {
+      background-color: var(--dark);
+      color: white;
+    }
+    @include pressed {
+      background-color: var(--light);
+    }
+  }
+}

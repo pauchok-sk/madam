@@ -15,6 +15,8 @@ import map from "./files/map.js";
 import validateForms from "./files/validateForms.js";
 import telMask from "./files/telMask.js";
 import headerScroll from "./files/headerScroll.js";
+import select from "./files/select.js";
+import inputFile from "./files/inputFile.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -30,3 +32,5 @@ map();
 validateForms();
 telMask();
 headerScroll();
+select();
+inputFile();

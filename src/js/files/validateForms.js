@@ -19,10 +19,10 @@ export default function validateForms() {
           errorMessage: "поле не заполнено",
         },
         {
-          rule: 'customRegexp',
+          rule: "customRegexp",
           value: /^((8|\+7)[\- ]?)?(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{5,10}$/,
           errorMessage: "неверный номер",
-        }
+        },
       ]);
   }
 
@@ -69,10 +69,56 @@ export default function validateForms() {
           errorMessage: "поле не заполнено",
         },
         {
-          rule: 'customRegexp',
+          rule: "customRegexp",
           value: /^((8|\+7)[\- ]?)?(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{5,10}$/,
           errorMessage: "неверный номер",
-        }
+        },
+      ]);
+  }
+
+  const connectionForm = document.querySelector("#connection-form");
+
+  if (connectionForm) {
+    const validator = new JustValidate(connectionForm);
+
+    validator
+      .addField("#connection-name", [
+        {
+          rule: "required",
+          errorMessage: "поле не заполнено",
+        },
+      ])
+      .addField("#connection-tel", [
+        {
+          rule: "required",
+          errorMessage: "поле не заполнено",
+        },
+        {
+          rule: "customRegexp",
+          value: /^((8|\+7)[\- ]?)?(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{5,10}$/,
+          errorMessage: "неверный номер",
+        },
+      ])
+      .addField("#connection-email", [
+        {
+          rule: "required",
+          errorMessage: "поле не заполнено",
+        },
+        {
+          rule: "email",
+          errorMessage: "неверный email",
+        },
+      ])
+      .addField("#connection-message", [
+        {
+          rule: "required",
+          errorMessage: "поле не заполнено",
+        },
+        {
+          rule: "minLength",
+          value: 10,
+          errorMessage: "Поле должно содержать минимум 10 символов",
+        },
       ]);
   }
 }

@@ -70,3 +70,17 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+    width: 1px; /* Ширина всего элемента навигации */
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: transparent; /* Цвет дорожки */
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--dark); /* Цвет бегунка */
+  }
+}
