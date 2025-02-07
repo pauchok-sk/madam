@@ -2,9 +2,11 @@ export default function spoller() {
   const spollersArray = document.querySelectorAll("[data-spollers]");
   if (spollersArray.length > 0) {
     // Получение обычных слойлеров
-    const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
-      return !item.dataset.spollers.split(",")[0];
-    });
+    const spollersRegular = Array.from(spollersArray).filter(
+      function (item, index, self) {
+        return !item.dataset.spollers.split(",")[0];
+      }
+    );
     // Инициализация обычных слойлеров
     if (spollersRegular.length) {
       initSpollers(spollersRegular);
@@ -65,7 +67,10 @@ export default function spoller() {
           ? parseInt(spollersBlock.dataset.spollersSpeed)
           : 500;
         if (!spollersBlock.querySelectorAll("._slide").length) {
-          if (oneSpoller && !spollerTitle.classList.contains("_spoller-active")) {
+          if (
+            oneSpoller &&
+            !spollerTitle.classList.contains("_spoller-active")
+          ) {
             hideSpollersBody(spollersBlock);
           }
           spollerTitle.classList.toggle("_spoller-active");
@@ -75,11 +80,16 @@ export default function spoller() {
       }
     }
     function hideSpollersBody(spollersBlock) {
-      const spollerActiveTitle = spollersBlock.querySelector("[data-spoller]._spoller-active");
+      const spollerActiveTitle = spollersBlock.querySelector(
+        "[data-spoller]._spoller-active"
+      );
       const spollerSpeed = spollersBlock.dataset.spollersSpeed
         ? parseInt(spollersBlock.dataset.spollersSpeed)
         : 500;
-      if (spollerActiveTitle && !spollersBlock.querySelectorAll("._slide").length) {
+      if (
+        spollerActiveTitle &&
+        !spollersBlock.querySelectorAll("._slide").length
+      ) {
         spollerActiveTitle.classList.remove("_spoller-active");
         _slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
       }
@@ -124,7 +134,16 @@ export default function spoller() {
       });
       // Получаем уникальные брейкпоинты
       let mdQueries = breakpointsArray.map(function (item) {
-        return "(" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
+        return (
+          "(" +
+          item.type +
+          "-width: " +
+          item.value +
+          "px)," +
+          item.value +
+          "," +
+          item.type
+        );
       });
       mdQueries = uniqArray(mdQueries);
       const mdQueriesArray = [];
@@ -231,4 +250,9 @@ export default function spoller() {
       return _slideUp(target, duration);
     }
   };
+  function uniqArray(array) {
+    return array.filter(function (item, index, self) {
+      return self.indexOf(item) === index;
+    });
+  }
 }

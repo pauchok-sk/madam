@@ -236,7 +236,7 @@ export default function sliders() {
         slidesPerView: "auto",
         grabCursor: true,
         scrollbar: {
-          el: ".gallery .slider-nav__scrollbar",
+          el: slider.closest("[data-tab]").querySelector(".slider-nav__scrollbar"),
           draggable: true,
         },
         navigation: {
@@ -251,6 +251,36 @@ export default function sliders() {
             slidesPerView: 5,
           },
         },
+      });
+    });
+  }
+
+  const contactsSliders = document.querySelectorAll(".contacts__slider");
+
+  if (contactsSliders.length) {
+    contactsSliders.forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        speed: 1000,
+        modules: [Autoplay, Scrollbar, Navigation],
+        grabCursor: true,
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        scrollbar: {
+          el: slider.closest("[data-tab]").querySelector(".slider-nav__scrollbar"),
+          draggable: true,
+        },
+        navigation: {
+          nextEl: slider.closest("[data-tab]").querySelector(".slider-nav__btn._next"),
+          prevEl: slider.closest("[data-tab]").querySelector(".slider-nav__btn._prev"),
+        },
+        autoplay: {
+          delay: 4000,
+        },
+        breakpoints: {
+          1366: {
+            slidesPerView: 1
+          }
+        }
       });
     });
   }
