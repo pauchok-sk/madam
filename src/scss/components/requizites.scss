@@ -1,0 +1,138 @@
+.requisites {
+  flex: 1;
+  padding: 100px 0px;
+  @include laptop-min {
+    padding: 70px 0px;
+  }
+
+  &__container {
+    margin: 0px auto 0px 130px !important;
+    @include width(670px, 30px);
+    @include desktop-big {
+      margin: 0 auto !important;
+    }
+    @include laptop-min {
+      max-width: none;
+    }
+    @include mobile {
+      padding: 0;
+    }
+  }
+  &__tag {
+    margin-bottom: 40px;
+    @include mobile {
+      padding: 0 15px;
+    }
+  }
+  &__title {
+    margin: 0px 0px 60px 0px;
+    @include tablet {
+      margin-bottom: 40px;
+    }
+    @include mobile {
+      padding: 0 15px;
+    }
+  }
+  &__spollers {
+    border-bottom: 1px solid var(--cloudy);
+  }
+  &__spoller {
+    border-top: 1px solid var(--cloudy);
+    @include mobile {
+      padding: 0 15px;
+    }
+  }
+  &__spoller-btn {
+    @include flex-between;
+    cursor: pointer;
+    gap: 15px;
+    padding: 24px 0px;
+    @include hover {
+      .requisites__btn-rect {
+        color: white;
+        background-color: var(--dark);
+        border-color: var(--dark);
+      }
+    }
+
+    &._spoller-active {
+      .requisites__btn-rect {
+        background-color: var(--dark);
+        color: white;
+
+        div {
+          &:first-child {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+  &__btn-title {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    @include tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__btn-rect {
+    @include flex-center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    color: var(--dark);
+    border: 1px solid var(--cloudy);
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+
+    div {
+      position: absolute;
+      width: 17px;
+      height: 1px;
+      background-color: currentColor;
+      transition: transform 0.2s ease;
+
+      &:first-child {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__spoller-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 0px 36px 0px;
+    @include tablet {
+      padding: 0px 0px 24px 0px;
+    }
+  }
+  &__spoller-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    @include tablet {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    span {
+      &:last-child {
+        flex: 0 0 305px;
+        @include laptop-middle {
+          flex-basis: 270px;
+        }
+      }
+      @include laptop-min {
+        flex: 1 !important;
+      }
+    }
+  }
+}

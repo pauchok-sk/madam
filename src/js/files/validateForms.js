@@ -43,11 +43,6 @@ export default function validateForms() {
           rule: "required",
           errorMessage: "поле не заполнено",
         },
-        {
-          rule: "minLength",
-          value: 10,
-          errorMessage: "Поле должно содержать минимум 10 символов",
-        },
       ]);
   }
 
@@ -113,11 +108,6 @@ export default function validateForms() {
         {
           rule: "required",
           errorMessage: "поле не заполнено",
-        },
-        {
-          rule: "minLength",
-          value: 10,
-          errorMessage: "Поле должно содержать минимум 10 символов",
         },
       ]);
   }
