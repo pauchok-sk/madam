@@ -1,0 +1,120 @@
+.stocks-main {
+  display: block;
+  &__item {
+    display: flex;
+    gap: 100px;
+    &:nth-child(odd) {
+      justify-content: end;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--dark);
+    }
+ 
+    @include desktop {
+      gap: 50px;
+    }
+    @include laptop {
+      gap: 0px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__container {
+    margin: 0 !important;
+    @include width(670px, 30px);
+    @include laptop-min {
+      max-width: none;
+    }
+  }
+  &__body {
+    padding: 120px 0px 100px;
+    @include laptop-min {
+      padding: 70px 0px;
+    }
+    @include tablet {
+      padding: 50px 0px;
+    }
+  }
+  &__title {
+    margin: 0px 0px 40px 0px;
+    @include laptop-min {
+      margin-bottom: 24px;
+    }
+  }
+  &__add {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 17px;
+    margin-bottom: 100px;
+    @include laptop {
+      margin-bottom: 50px;
+    }
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 11px;
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 95px;
+    @include laptop {
+      margin-bottom: 50px;
+    }
+
+    span {
+      &:first-child {
+        font-size: 64px;
+        line-height: 40px;
+        font-weight: 500;
+        @include tablet {
+          font-size: 48px;
+          line-height: 30px;
+        }
+      }
+      &:last-child {
+        font-size: 56px;
+        font-weight: 300;
+        line-height: 40px;
+        @include tablet {
+          font-size: 40px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  &__content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 65px;
+    @include laptop {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &__btn {
+    max-width: 325px;
+    width: 100%;
+    min-height: 68px;
+    font-size: 14px;
+    @include mobile {
+      max-width: none;
+    }
+  }
+}
