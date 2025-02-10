@@ -11,10 +11,11 @@ export default function more() {
       const media = parentItems.dataset.media;
       const moreMedia = parentItems.dataset.moreMedia;
       const step = +parentItems.dataset.moreStep;
+      console.log(numberShow)
 
       if (moreMedia) {
         const [number, media] = moreMedia.split(",");
-        console.log(number, media)
+
         if (window.matchMedia(`(max-width: ${media}px)`).matches) {
           numberShow = +number;
         }

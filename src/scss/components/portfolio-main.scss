@@ -1,0 +1,70 @@
+.portfolio-main {
+  &__wrapper {
+    padding: 70px 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    @include tablet {
+      padding: 32px 0px;
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+  &__card {
+    display: block;
+    overflow: hidden;
+    grid-column: 3 span;
+    aspect-ratio: 1/1;
+    @include hover {
+      .portfolio-main__card-img {
+        transform: scale(1.07);
+      }
+    }
+
+    &._hidden {
+      display: none;
+    }
+
+    @include laptop {
+      grid-column: 4 span;
+    }
+    @include mobile {
+      height: 235px;
+      aspect-ratio: auto;
+    }
+  }
+  &__card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  &__tab-nav {
+    position: relative;
+  }
+  &__wrapper-btn {
+    padding: 32px 0px;
+    max-width: 455px;
+    margin: 0 auto;
+    @include tablet {
+      padding: 20px 0px 50px 0px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      height: 1px;
+      top: 1px;
+      background-color: var(--dark);
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  &__more-btn {
+    width: 100%;
+    min-height: 68px;
+    padding: 10px !important;
+  }
+}

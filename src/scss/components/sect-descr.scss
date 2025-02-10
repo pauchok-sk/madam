@@ -16,6 +16,12 @@
     @include tablet {
       text-align: start;
     }
+
+    @include mobile {
+      br {
+        display: none;
+      }
+    }
   }
 
   .breadcrumbs {

@@ -12,6 +12,7 @@
     margin: 0px auto 40px auto;
     @include tablet {
       text-align: start;
+      margin-left: 0;
     }
   }
   &__title {

@@ -16,6 +16,9 @@ export default function scrollables() {
   new Scrollable(".reviews-main__nav", {
     wheelScrolling: true,
   });
+  new Scrollable(".portfolio-main__nav", {
+    wheelScrolling: true,
+  });
 
   const popularWrapperLists = document.querySelectorAll(".popular-price__wrapper-list");
 
