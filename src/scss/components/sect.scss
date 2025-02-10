@@ -11,19 +11,30 @@
     @include flex-center;
     flex-direction: column;
     flex: 1;
-    padding: 50px 30px;
+    padding: 100px 30px;
+    &._start {
+      padding-top: 120px;
+      justify-content: start;
+    }
+
     @include tablet {
-      padding: 50px 16px 40px 16px;
+      padding: 50px 16px 40px 16px !important;
     }
   }
   &__info-body {
     max-width: 720px;
+    width: 100%;
   }
   &__tag {
     margin-bottom: 40px;
   }
   &__title {
     margin: 0;
+    @include tablet {
+      br {
+        display: none;
+      }
+    }
   }
   &__tab-nav {
     display: flex;
@@ -97,6 +108,8 @@
   }
   &__tab-content {
     margin-top: 70px;
+    max-width: 630px;
+    width: 100%;
 
     font-size: 16px;
     font-weight: 300;

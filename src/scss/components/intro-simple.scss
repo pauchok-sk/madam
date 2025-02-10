@@ -48,8 +48,16 @@
     @include laptop-middle {
       margin-bottom: 40px;
     }
+    @include laptop-min {
+      &.hidden-text {
+        @include hiddenText(6);
+      }
+    }
     @include tablet {
       line-height: 26px;
+      &.hidden-text {
+        @include hiddenText(11);
+      }
     }
 
     p {
@@ -59,17 +67,37 @@
       }
     }
   }
+  &__btn-content {
+    display: none;
+    width: fit-content;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 11px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin: 0px 0px 30px auto;
+    @include hover {
+      text-decoration: none;
+    }
+    @include laptop-min {
+      display: block;
+    }
+  }
   &__btn {
     max-width: 370px;
     width: 100%;
     min-height: 95px;
     @include mobile {
-      min-height: 60px;
+      min-height: 60px !important;
       max-width: none !important;
     }
 
     &._min {
       max-width: 335px;
+    }
+    &._middle {
+      min-height: 72px;
+      max-width: 315px;
     }
   }
   &__img {

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header-simple.html')
+    @@include('html/widgets/burger.html')
+    <main>
+      
+      @@include('html/components/intro-about.html')
+      <section class="sect-descr">
+        <div class="container">
+          <h2 class="title title-m sect-descr__title">
+            Мы создаем красоту в атмосфере <br> уюта и профессионализма.
+          </h2>
+        </div>
+      </section>
+      <section class="sect tab-container" id="about-min">
+        <img data-tab-img src="@img/about-min.jpg" alt="image" class="sect__img _last" />
+        <div class="sect__info _start">
+          <div class="sect__info-body">
+            <span class="sect-tag sect__tag">о салоне</span>
+            <h2 class="title title-d sect__title">
+              Мы позаботились о том, чтобы каждый посетитель чувствовал <br> себя как дома.
+            </h2>
+            <div class="sect__tab-nav">
+              <button
+                data-tab-btn="1"
+                data-img="@img/about-min.jpg"
+                class="btn-clear sect__tab-btn _active"
+              >
+                <div class="sect__btn-gallery">
+                  <img
+                    src="@img/sect-tab-btn.jpg"
+                    alt="icon"
+                    class="sect__btn-icon"
+                  />
+                </div>
+                <span class="title">Лаундж-зона</span>
+              </button>
+              <button
+                data-tab-btn="2"
+                data-img="@img/clear.jpg"
+                class="btn-clear sect__tab-btn"
+              >
+                <div class="sect__btn-gallery">
+                  <img
+                    src="@img/sect-tab-btn.jpg"
+                    alt="icon"
+                    class="sect__btn-icon"
+                  />
+                </div>
+                <span class="title">бар</span>
+              </button>
+              <button
+                data-tab-btn="3"
+                data-img="@img/prices.jpg"
+                class="btn-clear sect__tab-btn"
+              >
+                <div class="sect__btn-gallery">
+                  <img
+                    src="@img/sect-tab-btn.jpg"
+                    alt="icon"
+                    class="sect__btn-icon"
+                  />
+                </div>
+                <span class="title">комфорт</span>
+              </button>
+            </div>
+            <div data-tab="1" class="_open">
+              <div class="sect__tab-content">
+                <p>
+                  В нашем салоне красоты мы создали уютную и расслабляющую лаунж-зону,
+                  где каждый посетитель может насладиться покоем и комфортом. Эта зона
+                  предназначена для того, чтобы вы могли отдохнуть после процедур
+                  или просто провести время в приятной атмосфере.
+                </p>
+              </div>
+            </div>
+            <div data-tab="2">
+              <div class="sect__tab-content">
+                <p>
+                  222222В нашем салоне красоты мы создали уютную и расслабляющую лаунж-зону,
+                  где каждый посетитель может насладиться покоем и комфортом. Эта зона
+                  предназначена для того, чтобы вы могли отдохнуть после процедур
+                  или просто провести время в приятной атмосфере.
+                </p>
+              </div>
+            </div>
+            <div data-tab="3">
+              <div class="sect__tab-content">
+                <p>
+                  33333333В нашем салоне красоты мы создали уютную и расслабляющую лаунж-зону,
+                  где каждый посетитель может насладиться покоем и комфортом. Эта зона
+                  предназначена для того, чтобы вы могли отдохнуть после процедур
+                  или просто провести время в приятной атмосфере.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/promo-video.html')
+      @@include('html/components/guarantee.html')
+      <section class="sect tab-container" id="about-min">
+        <img data-tab-img src="@img/clear-2.jpg" alt="image" class="sect__img _last" />
+        <div class="sect__info">
+          <div class="sect__info-body">
+            <span class="sect-tag sect__tag">стерилизация</span>
+            <h2 class="title title-d sect__title">
+              Всегда следуем всем <br> санитарным правилам и <br> нормам
+            </h2>
+            <div class="sect__tab-nav">
+              <button
+                data-tab-btn="1"
+                data-img="@img/clear-2.jpg"
+                class="btn-clear sect__tab-btn _min-mobile _active"
+              >
+                <div class="sect__btn-gallery">
+                  <img
+                    src="@img/clear-2.jpg"
+                    alt="icon"
+                    class="sect__btn-icon"
+                  />
+                </div>
+                <span class="title">Дизенфекция</span>
+              </button>
+              <button
+                data-tab-btn="2"
+                data-img="@img/about-min.jpg"
+                class="btn-clear sect__tab-btn _min-mobile"
+              >
+                <div class="sect__btn-gallery">
+                  <img
+                    src="@img/sect-tab-btn.jpg"
+                    alt="icon"
+                    class="sect__btn-icon"
+                  />
+                </div>
+                <span class="title">стерилизация</span>
+              </button>
+              <button
+                data-tab-btn="3"
+                data-img="@img/prices.jpg"
+                class="btn-clear sect__tab-btn _min-mobile"
+              >
+                <div class="sect__btn-gallery">
+                  <img
+                    src="@img/sect-tab-btn.jpg"
+                    alt="icon"
+                    class="sect__btn-icon"
+                  />
+                </div>
+                <span class="title">Хранение</span>
+              </button>
+            </div>
+            <div data-tab="1" class="_open">
+              <div class="sect__tab-content">
+                <p>
+                  Продинфицированные и стерилизованные инструменты <br> хранятся в стерильных крафт-пакетах и вскрываются <br> только в присутствии гостя
+                </p>
+              </div>
+            </div>
+            <div data-tab="2">
+              <div class="sect__tab-content">
+                <p>
+                  222222В нашем салоне красоты мы создали уютную и расслабляющую
+                  лаунж-зону, где каждый посетитель может насладиться покоем
+                  и комфортом. Эта зона предназначена для того, чтобы вы могли
+                  отдохнуть после процедур или просто провести время в приятной
+                  атмосфере.
+                </p>
+              </div>
+            </div>
+            <div data-tab="3">
+              <div class="sect__tab-content">
+                <p>
+                  33333333В нашем салоне красоты мы создали уютную и расслабляющую
+                  лаунж-зону, где каждый посетитель может насладиться покоем
+                  и комфортом. Эта зона предназначена для того, чтобы вы могли
+                  отдохнуть после процедур или просто провести время в приятной
+                  атмосфере.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sect-descr _intro">
+        <div class="container _min">
+          <h2 class="title title-m sect-descr__title _full _mobile-min">
+            В салоне «Madam Coco» все процедуры и материалы подбираются нашими мастерами с учетом ваших пожеланий и особенностей вашей кожи, что позволяет нам гарантировать превосходный результат работы
+          </h2>
+        </div>
+        <div class="container">
+          <div class="swiper sect-descr__partner-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="@img/partner-1.png" alt="" class="sect-descr__partner-logo">
+              </div>
+              <div class="swiper-slide">
+                <img src="@img/partner-2.png" alt="" class="sect-descr__partner-logo">
+              </div>
+              <div class="swiper-slide">
+                <img src="@img/partner-3.png" alt="" class="sect-descr__partner-logo">
+              </div>
+              <div class="swiper-slide">
+                <img src="@img/partner-4.png" alt="" class="sect-descr__partner-logo">
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav__scrollbar sect-descr__scrollbar"></div>
+        </div>
+      </section>
+      @@include('html/components/reviews.html')
+      @@include('html/components/rating.html')
+      @@include('html/components/get-discount.html')
+
+    </main>
+    @@include('html/components/footer.html')
+    @@include('html/widgets/modals.html')
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

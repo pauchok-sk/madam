@@ -284,4 +284,29 @@ export default function sliders() {
       });
     });
   }
+
+  const sectDescrSlider = document.querySelector(".sect-descr__partner-slider");
+
+  if (sectDescrSlider) {
+    const swiper = new Swiper(sectDescrSlider, {
+      speed: 800,
+      modules: [Autoplay, Scrollbar],
+      slidesPerView: 2,
+      spaceBetween: 40,
+      grabCursor: true,
+      scrollbar: {
+        el: ".sect-descr .slider-nav__scrollbar",
+        draggable: true,
+      },
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        744: {
+          slidesPerView: "auto",
+          spaceBetween: 102,
+        }
+      }
+    });
+  }
 }
