@@ -13,6 +13,10 @@ export default function scrollables() {
     wheelScrolling: true,
   });
 
+  new Scrollable(".reviews-main__nav", {
+    wheelScrolling: true,
+  });
+
   const popularWrapperLists = document.querySelectorAll(".popular-price__wrapper-list");
 
   if (popularWrapperLists.length) {

@@ -17,6 +17,7 @@ import telMask from "./files/telMask.js";
 import headerScroll from "./files/headerScroll.js";
 import select from "./files/select.js";
 import inputFile from "./files/inputFile.js";
+import more from "./files/more.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -34,3 +35,4 @@ telMask();
 headerScroll();
 select();
 inputFile();
+more();

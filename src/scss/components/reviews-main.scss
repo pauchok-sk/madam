@@ -1,0 +1,292 @@
+.reviews-main {
+  position: relative;
+  border-bottom: none !important;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: var(--dark);
+  }
+  &__nav {
+    display: flex;
+    gap: 95px;
+    padding: 30px 20px;
+    border-bottom: 1px solid var(--dark);
+    @include laptop-min {
+      gap: 50px;
+    }
+    @include tablet {
+      gap: 30px;
+      padding: 23px 16px;
+    }
+  }
+  &__nav-btn {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: var(--light);
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--dark);
+    }
+    &._active {
+      color: var(--dark);
+    }
+
+    &:first-child {
+      margin-left: auto;
+    }
+    &:last-child {
+      margin-right: auto;
+    }
+    @include tablet {
+      font-size: 18px;
+      line-height: 11px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  &__card {
+    grid-column: 3 span;
+    padding: 65px 70px 100px 70px;
+    border-top: 1px solid var(--dark);
+    &._hidden {
+      display: none;
+    }
+    &:nth-child(odd) {
+      border-right: 1px solid var(--dark);
+    }
+    @media (min-width: 801px) {
+      @include first(2) {
+        border-top: none;
+      }
+    }
+
+    @include desktop-big {
+      padding: 50px 40px;
+    }
+    @include laptop-min {
+      padding: 30px 20px;
+    }
+    @media (max-width: 800px) {
+      grid-column: 6 span;
+      &:first-child {
+        border-top: none;
+      }
+      &:nth-child(odd) {
+        border-right: none
+      }
+    }
+    @include tablet {
+      padding: 24px 16px 50px 16px;
+    }
+  }
+  &__card-container {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    gap: 35px;
+    @include desktop {
+      padding-left: 0;
+    }
+    @include laptop-min {
+      gap: 0px;
+    }
+  }
+  &__card-content {
+    position: relative;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    padding-top: 20px;
+    z-index: 1;
+    flex: 0 1 calc(100% - (280px + 35px));
+    @include desktop {
+      flex-basis: 100%;
+    }
+    @include laptop {
+      order: 1;
+    }
+    @include laptop-min {
+      &.hidden-text {
+        @include hiddenText(8);
+      }
+    }
+    @media (max-width: 800px) {
+      &.hidden-text {
+        @include hiddenText(5);
+      }
+    }
+    @include tablet {
+      padding-top: 35px;
+    }
+    @include mobile {
+      &.hidden-text {
+        @include hiddenText(8);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 80px;
+      height: 80px;
+      top: 0;
+      left: -50px;
+      background: url("@img/quota.svg") 0 0 / 100% auto no-repeat;
+      z-index: -1;
+      @include desktop {
+        left: 0;
+      }
+    }
+  }
+  &__btn-content {
+    display: none;
+    width: fit-content;
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-top: 20px;
+    @include hover {
+      text-decoration: none;
+    }
+    @include laptop-min {
+      order: 2;
+      display: block;
+    }
+  }
+  &__card-img {
+    width: 280px;
+    height: auto;
+    aspect-ratio: 1/1;
+    @include desktop {
+      width: 350px;
+      margin: 0 auto;
+    }
+    @include laptop {
+      order: 4;
+    }
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+    @include desktop {
+      flex: 0 1 calc(100% - (280px + 35px));
+    }
+    @include laptop {
+      order: 5;
+      flex-basis: 100%;
+    }
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
+  &__profile-avatar {
+    width: 72px;
+    height: 72px;
+  }
+  &__profile-stars {
+    display: flex;
+    gap: 1px;
+    margin-bottom: 4px;
+  }
+  &__profile-star {
+    width: 20px;
+    height: 20px;
+    color: var(--dark);
+  }
+  &__profile-nik {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  &__profile-service {
+  }
+  &__card-list {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 24px;
+    flex: 0 1 280px;
+    @include laptop {
+      order: 3;
+      flex-basis: 100%;
+    }
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
+  &__card-item {
+    display: flex;
+    gap: 16px;
+
+    font-size: 18px;
+    line-height: 13px;
+
+    span {
+      &:last-child {
+        font-weight: 300;
+      }
+    }
+  }
+  &__bottom-nav {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      height: 1px;
+      top: -1px;
+      background-color: var(--dark);
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+  }
+  &__wrapper-more {
+    padding: 30px 0px;
+    @include tablet {
+      padding: 0px 0px 50px 0px;
+    }
+  }
+  &__btn-more {
+    min-height: 68px;
+    padding: 10px !important;
+    max-width: 455px;
+    width: 100%;
+    margin: 0 auto;
+    span {
+      &:first-child {
+        display: block;
+      }
+      &:last-child {
+        display: none;
+      }
+      @include mobile {
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+  }
+}
