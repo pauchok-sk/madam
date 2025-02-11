@@ -1,0 +1,26 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  &__btn {
+    @include flex-center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(172, 160, 149, 0.44);
+
+    font-size: 16px;
+    font-weight: 300;
+    transition: border-color 0.2s ease;
+    @include hover {
+      border-color: var(--dark);
+    }
+    &._active {
+      width: 50px;
+      height: 50px;
+      border-color: var(--light);
+
+      font-weight: 400;
+      font-size: 24px;
+    }
+  }
+}

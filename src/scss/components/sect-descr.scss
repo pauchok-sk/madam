@@ -22,13 +22,16 @@
       text-align: start;
     }
 
+    @include tablet-min {
+      br {
+        display: none;
+      }
+    }
+
     @include mobile {
       &._mobile-min {
         font-size: 20px;
         line-height: 34px;
-      }
-      br {
-        display: none;
       }
     }
   }

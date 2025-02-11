@@ -22,6 +22,7 @@
 @import "./ui/breadcrumbs";
 @import "./ui/select";
 @import "./ui/nav";
+@import "./ui/pagination";
 
 // widgets
 @import "./widgets/burger";
@@ -57,5 +58,6 @@
 @import "./components/reviews-main";
 @import "./components/portfolio-main";
 @import "./components/stocks-main";
+@import "./components/news-main";
 
 @import "./components/footer";

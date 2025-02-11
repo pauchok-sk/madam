@@ -7,7 +7,7 @@ import tab from "./files/tab.js";
 import burger from "./files/burger.js";
 import sliders from "./files/sliders.js";
 import fancy from "./files/fancy.js";
-import scrollables from "./files/scrollbales.js";
+import scrollables from "./files/scrollables.js";
 import rating from "./files/rating.js";
 import modal from "./files/modal.js";
 import hiddenText from "./files/hiddenText.js";

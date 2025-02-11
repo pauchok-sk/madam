@@ -1,0 +1,156 @@
+.news-main {
+  &__nav {
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  &__item {
+    display: block;
+    grid-column: 3 span;
+    padding: 70px;
+    border-bottom: 1px solid var(--dark);
+    transition: background-color 0.2s ease;
+    &:nth-child(odd) {
+      border-right: 1px solid var(--dark);
+    }
+    @include hover {
+      background-color: var(--cloudy);
+    }
+    @media (min-width: 744px) {
+      @include last(2) {
+        border-bottom: none;
+      }
+    }
+    @include desktop-big {
+      padding: 40px;
+    }
+    @include laptop-min {
+      padding: 30px;
+    }
+    @include tablet {
+      grid-column: 6 span;
+      border-bottom: none;
+      &:nth-child(odd) {
+        border-right: none;
+      }
+    }
+    @include tablet-min {
+      padding: 0px 16px 50px 16px;
+    }
+  }
+  &__item-img {
+    width: 100%;
+    height: 755px;
+    object-fit: cover;
+    margin-bottom: 40px;
+    @include laptop {
+      height: 475px;
+    }
+    @include laptop-middle {
+      height: 375px;
+    }
+    @include laptop-min {
+      height: 280px;
+      margin-bottom: 24px;
+    }
+    @include tablet {
+      height: 485px;
+    }
+    @include tablet-min {
+      height: 395px;
+    }
+    @include mobile {
+      height: 315px;
+    }
+  }
+  &__item-body {
+    display: flex;
+    align-items: start;
+    gap: 24px;
+  }
+  &__item-date {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-weight: 300;
+    @include laptop-min {
+      gap: 8px;
+    }
+  }
+  &__item-day {
+    font-size: 48px;
+    line-height: 34px;
+    @include laptop-min {
+      font-size: 30px;
+      line-height: 20px;
+    }
+  }
+  &__item-month {
+    font-size: 16px;
+    line-height: 11px;
+    @include laptop-min {
+      font-size: 14px;
+    }
+    @include tablet {
+      font-size: 10px;
+      line-height: 7px;
+    }
+  }
+  &__item-year {
+    font-size: 16px;
+    line-height: 11px;
+    @include tablet {
+      font-size: 12px;
+      line-height: 8px;
+    }
+  }
+  &__item-info {
+    flex: 1;
+  }
+  &__item-title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 0px 0px 24px 0px;
+
+    @include laptop-middle {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    @include laptop-min {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 18px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__item-content {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    margin: 0;
+    @include laptop-min {
+      font-size: 16px;
+    }
+    @include tablet {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  &__footer {
+    padding: 45px 0px;
+    border-top: 1px solid var(--dark);
+    @include tablet {
+      border-top: none;
+      padding: 20px 0px 80px 0px;
+    }
+  }
+}
