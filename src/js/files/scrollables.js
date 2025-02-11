@@ -25,6 +25,9 @@ export default function scrollables() {
   new Scrollable(".news-main__nav", {
     wheelScrolling: true,
   });
+  new Scrollable(".new-main__nav", {
+    wheelScrolling: true,
+  });
 
   const popularWrapperLists = document.querySelectorAll(".popular-price__wrapper-list");
 

@@ -1,0 +1,171 @@
+.new-main {
+  &__body {
+    display: flex;
+    gap: 105px;
+    @include desktop-big {
+      gap: 0px;
+    }
+    @include laptop-middle {
+      flex-wrap: wrap;
+    }
+  }
+  &__img {
+    @include laptop-middle {
+      width: 100%;
+    }
+    @include mobile {
+      height: 415px;
+    }
+  }
+  &__main {
+    padding: 100px 30px 70px 30px;
+    max-width: 760px;
+    @include desktop-big {
+      max-width: none;
+    }
+    @include desktop {
+      padding-top: 70px;
+    }
+    @include tablet {
+      padding: 30px 15px 50px 15px;
+    }
+  }
+  &__title {
+    font-size: 48px;
+    line-height: 54px;
+    margin: 0px 0px 40px 0px;
+    @include desktop {
+      font-size: 38px;
+    }
+    @include tablet {
+      font-size: 25px;
+      line-height: 32px;
+      margin-bottom: 30px;
+    }
+  }
+  &__nav-list {
+    @include flex-center;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+    gap: 115px;
+    margin-bottom: 40px;
+    border-top: 1px solid var(--cloudy);
+    border-bottom: 1px solid var(--cloudy);
+    @include laptop {
+      gap: 40px;
+    }
+    @include tablet {
+      gap: 30px;
+      justify-content: start;
+      padding: 24px 0px;
+      margin-bottom: 30px;
+    }
+
+    li {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 11px;
+      @include tablet {
+        font-size: 14px;
+      }
+      @include mobile {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+      @include hover {
+        &::before {
+          left: 0;
+          right: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition:
+          left 0.2s ease,
+          right 0.2s ease;
+      }
+    }
+  }
+  &__content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 60px;
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include tablet {
+      gap: 18px;
+    }
+  }
+  &__author-avatar {
+    width: 107px;
+    height: 107px;
+    object-fit: cover;
+    flex-shrink: 0;
+    @include tablet {
+      width: 73px;
+      height: 73px;
+    }
+  }
+  &__author-status {
+    display: block;
+    font-size: 18px;
+    line-height: 13px;
+    font-weight: 300;
+    margin-bottom: 24px;
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 13px;
+      line-height: 10px;
+    }
+  }
+  &__author-name {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 13px;
+    margin: 0px 0px 16px 0px;
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 10px;
+      line-height: 11px;
+    }
+  }
+  &__author-descr {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 300;
+    @include tablet {
+      font-size: 12px;
+    }
+    @include mobile {
+      max-width: 220px;
+    }
+  }
+}

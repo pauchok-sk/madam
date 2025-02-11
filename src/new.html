@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header-simple.html')
+    @@include('html/widgets/burger.html')
+    <main>
+
+      @@include('html/components/intro-new.html')
+      @@include('html/components/new-main.html')
+      <section class="sect-descr _intro">
+        <div class="container _big">
+          <h2 class="title title-m title-n sect-descr__title _full">
+            Вне зависимости от возраста, пола и вкусовых предпочтений ваши руки
+            всегда должны <br />
+            быть аккуратными и ухоженными. Ведь хороший маникюр является не
+            только важным <br />
+            элементом имиджа и стиля, но и показателем заботы о своем здоровье.
+          </h2>
+        </div>
+      </section>
+      @@include('html/components/new-about.html')
+
+    </main>
+    @@include('html/components/footer.html')
+    @@include('html/widgets/modals.html')
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
