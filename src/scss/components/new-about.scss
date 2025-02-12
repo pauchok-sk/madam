@@ -1,0 +1,84 @@
+.new-about {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  &__article {
+    grid-column: 3 span;
+    padding: 100px 100px 140px 160px;
+    &:nth-child(odd) {
+      border-right: 1px solid var(--dark);
+    }
+
+    @include desktop-big {
+      padding: 100px;
+    }
+    @include laptop {
+      padding: 60px;
+    }
+    @include laptop-middle {
+      padding: 50px 30px;
+    }
+    @include laptop-min {
+      grid-column: 6 span;
+      &:nth-child(odd) {
+        border-right: none;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--dark);
+      }
+    }
+    @include tablet {
+      padding: 50px 15px;
+    }
+  }
+  &__article-title {
+    margin: 0px 0px 65px 0px;
+    @include laptop {
+      margin-bottom: 50px;
+    }
+    @include tablet {
+      margin-bottom: 35px;
+    }
+  }
+  &__content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    p {
+      margin: 0;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+    p, ul {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: currentColor;
+        left: 10px;
+        top: 12px;
+        @include tablet {
+          width: 2px;
+          height: 2px;
+          top: 10px;
+        }
+      }
+    }
+  }
+}

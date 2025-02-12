@@ -309,4 +309,31 @@ export default function sliders() {
       }
     });
   }
+
+  const recNewsSlider = document.querySelector(".rec-news__slider");
+
+  if (recNewsSlider) {
+    const swiper = new Swiper(recNewsSlider, {
+      speed: 800,
+      modules: [Autoplay, Scrollbar, Navigation],
+      slidesPerView: "auto",
+      grabCursor: true,
+      scrollbar: {
+        el: ".rec-news .slider-nav__scrollbar",
+        draggable: true,
+      },
+      // autoplay: {
+      //   delay: 3000,
+      // },
+      navigation: {
+        prevEl: ".rec-news .slider-nav__btn._prev",
+        nextEl: ".rec-news .slider-nav__btn._next",
+      },
+      breakpoints: {
+        1366: {
+          slidesPerView: 2,
+        }
+      }
+    });
+  }
 }
