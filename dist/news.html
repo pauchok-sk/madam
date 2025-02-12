@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250212165124" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap&_v=20250212165124" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250212165124" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header _dark _simple">
+		<div class="header__wrapper">
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="logo" class="header__logo-icon">
+				<img src="img/logo-dark.svg" alt="logo" class="header__logo-icon">
+			</a>
+			<nav class="header__nav">
+				<ul class="list header__list">
+					<li><a href="#">Маникюр</a></li>
+					<li><a href="#">Педикюр</a></li>
+					<li><a href="#">Брови</a></li>
+					<li><a href="#">Макияж</a></li>
+				</ul>
+				<div class="header__contacts">
+					<div class="header__contacts-item">
+						<p class="header__contacts-address">Адреса салонов</p>
+						<a href="#" class="header__contacts-content">Посмотреть</a>
+					</div>
+					<div class="header__contacts-item">
+						<a href="tel:+79999999366" class="header__contacts-tel">+7 (999) 999-93-66</a>
+						<button data-modal-btn="modal-record" class="btn-clear header__contacts-content">Заказать звонок</button>
+					</div>
+				</div>
+			</nav>
+			<button data-modal-btn="modal-record" class="btn-clear header__btn">Записаться</button>
+			<button class="btn-clear header__burger-btn" id="burger-btn">
+				<svg class="header__burger-icon">
+					<use xlink:href='img/icons/icons.svg#icon-burger'></use>
+				</svg>
+				<svg class="header__burger-icon">
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</button>
+		</div>
+	</header>
+	<div class="burger" id="burger">
+		<div class="burger__wrapper tab-container">
+			<div data-tab="burger-tab-nav" class="burger__tab-nav _open">
+				<div class="burger__tab-buttons">
+					<button data-tab-btn="1" class="title btn-clear burger__tab-btn">
+						<span>Маникюр</span>
+						<svg class="burger__tab-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<button data-tab-btn="2" class="title btn-clear burger__tab-btn">
+						<span>Педикюр</span>
+						<svg class="burger__tab-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<button data-tab-btn="3" class="title btn-clear burger__tab-btn">
+						<span>Брови</span>
+						<svg class="burger__tab-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<button data-tab-btn="4" class="title btn-clear burger__tab-btn">
+						<span>Макияж</span>
+						<svg class="burger__tab-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+				</div>
+				<ul class="list burger__list">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Наши работы</a></li>
+					<li><a href="#">Прайс</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">контакты</a></li>
+				</ul>
+			</div>
+			<div class="burger__nav">
+				<div class="burger__col">
+					<div data-tab="1" class="burger__col-item">
+						<h5 data-tab-btn="burger-tab-nav" class="title title-l burger__col-title">
+							<svg class="burger__col-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Маникюр</span>
+						</h5>
+						<ul class="list burger__col-list">
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="burger__col">
+					<div data-tab="2" class="burger__col-item">
+						<h5 data-tab-btn="burger-tab-nav" class="title title-l burger__col-title">
+							<svg class="burger__col-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Педикюр</span>
+						</h5>
+						<ul class="list burger__col-list">
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="burger__col">
+					<div data-tab="3" class="burger__col-item">
+						<h5 data-tab-btn="burger-tab-nav" class="title title-l burger__col-title">
+							<svg class="burger__col-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Брови</span>
+						</h5>
+						<ul class="list burger__col-list">
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+						</ul>
+					</div>
+					<div data-tab="4" class="burger__col-item">
+						<h5 data-tab-btn="burger-tab-nav" class="title title-l burger__col-title">
+							<svg class="burger__col-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Макияж</span>
+						</h5>
+						<ul class="list burger__col-list">
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main>
+
+		<section class="sect-descr _intro">
+			<div class="container">
+				<h1 class="title title-m sect-descr__title">
+					рассказываем о трендах, акциях и <br />
+					специальных предложениях.
+				</h1>
+				<div class="breadcrumbs">
+					<div class="aioseo-breadcrumbs">
+						<span class="aioseo-breadcrumb">
+							<a href="/" title="Главная">Главная</a>
+						</span>
+						<span class="aioseo-breadcrumb">
+							<a href="/" title="Главная">Новости/Статьи</a>
+						</span>
+						<span class="aioseo-breadcrumb"> Все о маникюре 2024: виды, техника выполнения и актуальные тренды </span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="news-main">
+			<nav class="nav news-main__nav scrollable">
+				<a href="#" class="title nav__btn">Все</a>
+				<a href="#" class="title nav__btn _active">Маникюр</a>
+				<a href="#" class="title nav__btn">Педикюр</a>
+				<a href="#" class="title nav__btn">Макияж</a>
+				<a href="#" class="title nav__btn">Ресницы</a>
+				<a href="#" class="title nav__btn">Брови</a>
+			</nav>
+			<div class="news-main__wrapper">
+				<a href="#" class="news-main__item">
+					<img src="img/news.webp" alt="image" class="news-main__item-img" />
+					<div class="news-main__item-body">
+						<div class="news-main__item-date">
+							<span class="news-main__item-day">01</span>
+							<span class="news-main__item-month">ноября</span>
+							<span class="news-main__item-year">2024</span>
+						</div>
+						<div class="news-main__item-info">
+							<h5 class="news-main__item-title">
+								Акции ноября в маникюрном салоне “Madam Coco”
+							</h5>
+							<p class="news-main__item-content">
+								Ноябрь — время заботы о себе, и наш салон красоты подготовил для вас
+								невероятные предложения!
+							</p>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="news-main__item">
+					<img src="img/news.webp" alt="image" class="news-main__item-img" />
+					<div class="news-main__item-body">
+						<div class="news-main__item-date">
+							<span class="news-main__item-day">01</span>
+							<span class="news-main__item-month">ноября</span>
+							<span class="news-main__item-year">2024</span>
+						</div>
+						<div class="news-main__item-info">
+							<h5 class="news-main__item-title">
+								Акции ноября в маникюрном салоне “Madam Coco”
+							</h5>
+							<p class="news-main__item-content">
+								Ноябрь — время заботы о себе, и наш салон красоты подготовил для вас
+								невероятные предложения!
+							</p>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="news-main__item">
+					<img src="img/news.webp" alt="image" class="news-main__item-img" />
+					<div class="news-main__item-body">
+						<div class="news-main__item-date">
+							<span class="news-main__item-day">01</span>
+							<span class="news-main__item-month">ноября</span>
+							<span class="news-main__item-year">2024</span>
+						</div>
+						<div class="news-main__item-info">
+							<h5 class="news-main__item-title">
+								Акции ноября в маникюрном салоне “Madam Coco”
+							</h5>
+							<p class="news-main__item-content">
+								Ноябрь — время заботы о себе, и наш салон красоты подготовил для вас
+								невероятные предложения!
+							</p>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="news-main__item">
+					<img src="img/news.webp" alt="image" class="news-main__item-img" />
+					<div class="news-main__item-body">
+						<div class="news-main__item-date">
+							<span class="news-main__item-day">01</span>
+							<span class="news-main__item-month">ноября</span>
+							<span class="news-main__item-year">2024</span>
+						</div>
+						<div class="news-main__item-info">
+							<h5 class="news-main__item-title">
+								Акции ноября в маникюрном салоне “Madam Coco”
+							</h5>
+							<p class="news-main__item-content">
+								Ноябрь — время заботы о себе, и наш салон красоты подготовил для вас
+								невероятные предложения!
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="news-main__footer">
+				<div class="container">
+					<div class="slider-nav">
+						<a href="#" class="btn-clear slider-nav__btn _prev">
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Предыдущая</span>
+						</a>
+						<div class="pagination">
+							<a href="#" class="pagination__btn _active">1</a>
+							<a href="#" class="pagination__btn">2</a>
+							<a href="#" class="pagination__btn">3</a>
+							<a href="#" class="pagination__btn">4</a>
+							<a href="#" class="pagination__btn">...</a>
+						</div>
+						<a href="#" class="btn-clear slider-nav__btn _next">
+							<span>Следующая</span>
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="get-discount">
+			<div class="get-discount__body">
+				<div class="get-discount__container">
+					<span class="sect-tag get-discount__tag">запись-онлайн</span>
+					<h2 class="title title-m get-discount__title">
+						Получите скидку <br />
+						на первое посещение салона madam coco.
+					</h2>
+					<p class="get-discount__content">
+						Скидка действует на все услуги салона. Заполните форму и мы свяжемся с
+						вами в течении 20 минут.
+					</p>
+					<form action="#" class="get-discount__form" id="form-get-discount">
+						<div class="wrapper-input get-discount__form-item">
+							<input type="text" placeholder="Имя" class="input" id="get-discount-name" />
+						</div>
+						<div class="wrapper-input get-discount__form-item">
+							<input type="tel" placeholder="Телефон" class="input" id="get-discount-tel" />
+						</div>
+						<button class="btn get-discount__form-btn">Отправить</button>
+					</form>
+					<p class="get-discount__form-policy">
+						Нажимая на кнопку “Отправить”, вы соглашаетесь с политикой
+						конфиденциальности и обработку персональных данных.
+					</p>
+					<div class="get-discount__contacts">
+						<div>
+							<p class="get-discount__address">
+								Пишите и звоните нам с 9:00 до 21:00
+							</p>
+							<a href="tel:+79999999366" class="get-discount__tel">+7 (999) 999-93-66</a>
+						</div>
+						<a href="#" class="btn get-discount__tg _stroke">Telegram</a>
+					</div>
+				</div>
+			</div>
+			<img src="img/get-stocks.webp" alt="image" class="sect__img get-discount__img" />
+		</section>
+
+		<section class="stocks">
+			<div class="stocks__container">
+				<span class="sect-tag stocks__tag">акции</span>
+				<h2 class="title title-m stocks__title">
+					Запишитесь на комплекс и получите подарок.
+				</h2>
+				<div class="swiper stocks__slider">
+					<div class="swiper-wrapper">
+						<article class="swiper-slide">
+							<div class="stocks__slide-gallery">
+								<img src="img/stocks.webp" alt="image" class="stocks__slide-img" />
+							</div>
+							<div class="stocks__slide-info">
+								<h5 class="title stocks__slide-title">Маникюр покрытием Lixuo</h5>
+								<div class="title stocks__slide-price">2 700 <span>₽</span></div>
+							</div>
+							<div class="stocks__slide-addition">+ наращивание до 2-ки</div>
+							<button data-modal-btn="modal-record" class="btn stocks__slide-btn _stroke">Записаться</button>
+						</article>
+						<article class="swiper-slide">
+							<div class="stocks__slide-gallery">
+								<img src="img/stocks.webp" alt="image" class="stocks__slide-img" />
+							</div>
+							<div class="stocks__slide-info">
+								<h5 class="title stocks__slide-title">Маникюр покрытием Lixuo</h5>
+								<div class="title stocks__slide-price">2 700 <span>₽</span></div>
+							</div>
+							<div class="stocks__slide-addition">+ наращивание до 2-ки</div>
+							<button data-modal-btn="modal-record" class="btn stocks__slide-btn _stroke">Записаться</button>
+						</article>
+						<article class="swiper-slide">
+							<div class="stocks__slide-gallery">
+								<img src="img/stocks.webp" alt="image" class="stocks__slide-img" />
+							</div>
+							<div class="stocks__slide-info">
+								<h5 class="title stocks__slide-title">
+									Маникюр <br />
+									и педикюр
+								</h5>
+								<div class="title stocks__slide-price">2 700 <span>₽</span></div>
+							</div>
+							<div class="stocks__slide-addition">+ наращивание до 2-ки</div>
+							<button data-modal-btn="modal-record" class="btn stocks__slide-btn _stroke">Записаться</button>
+						</article>
+						<article class="swiper-slide">
+							<div class="stocks__slide-gallery">
+								<img src="img/stocks.webp" alt="image" class="stocks__slide-img" />
+							</div>
+							<div class="stocks__slide-info">
+								<h5 class="title stocks__slide-title">Маникюр покрытием Lixuo</h5>
+								<div class="title stocks__slide-price">2 700 <span>₽</span></div>
+							</div>
+							<div class="stocks__slide-addition">+ наращивание до 2-ки</div>
+							<button data-modal-btn="modal-record" class="btn stocks__slide-btn _stroke">Записаться</button>
+						</article>
+						<article class="swiper-slide">
+							<div class="stocks__slide-gallery">
+								<img src="img/stocks.webp" alt="image" class="stocks__slide-img" />
+							</div>
+							<div class="stocks__slide-info">
+								<h5 class="title stocks__slide-title">
+									Маникюр <br />
+									и педикюр
+								</h5>
+								<div class="title stocks__slide-price">2 700 <span>₽</span></div>
+							</div>
+							<div class="stocks__slide-addition">+ наращивание до 2-ки</div>
+							<button data-modal-btn="modal-record" class="btn stocks__slide-btn _stroke">Записаться</button>
+						</article>
+					</div>
+				</div>
+				<div class="slider-nav__scrollbar stocks__scrollbar"></div>
+			</div>
+		</section>
+
+		<section class="trands">
+			<div class="container _middle">
+				<h2 class="title title-m trands__title">Актуальные тренды 2024 года</h2>
+				<div class="trands__content">
+					<p>
+						По мнению экспертов, лидирующей тенденцией в 2024 году является
+						маникюр-натюрель в спокойных, сдержанных тонах, отличающийся удобством и
+						универсальностью.
+					</p>
+					<p>
+						Главный оттенок этого года по версии Института цвета Pantone — Peach
+						Fuzz, «персиковый пух». Он соответствует неустаревающим тенденциям
+						минималистичного маникюра, а также внесезонным трендам на пастельные
+						тона.
+					</p>
+					<p>Маникюр без маникюра</p>
+					<p>
+						Мода на «тихую роскошь» добралась и до нейл-индустрии. Главный принцип
+						«голого» маникюра — красивые ногти правильной формы и аккуратная
+						кутикула. Отказ от декоративного покрытия не отменяет проведение
+						гигиенических и уходовых мероприятий, поэтому для поддержания такого
+						эффекта требуется регулярный поход в салон, как минимум раз в 2 недели.
+						Не следует забывать о регулярном увлажнении кожи рук.
+					</p>
+					<h4>Нюд</h4>
+					<p>
+						Нюдовый маникюр играет роль базовых вещей в гардеробе: он отлично
+						смотрится в любое время года, подходит на все случаи жизни, великолепно
+						выглядит на ногтях различной длины и формы. Для создания универсального
+						дизайна подходят бежевые, молочные, нежно-розовые, кремовые, телесные,
+						коричнево-серые оттенки.
+					</p>
+					<p>
+						Многие считают нюдовый маникюр слишком тривиальным, однако его всегда
+						можно разнообразить с учетом актуальных тенденций. Сегодня в моде такие
+						интересные варианты декора, как:
+					</p>
+					<ul>
+						<li>
+							стразы. Минималистичные акценты и аккуратные узоры подчеркивают изгиб
+							ногтя;
+						</li>
+						<li>
+							серебристые, золотые, бронзовые блестки на кончиках ногтей. С их
+							помощью можно создать изысканный вариант френча;
+						</li>
+						<li>
+							монохромные, минималистичные рисунки, тонкие линии и точки.
+							Черно-белые узоры добавят утонченный акцент к классическому маникюру;
+						</li>
+						<li>
+							втирка: фарфоровая, жемчужная, зеркальная. Она создает легкое сияние и
+							притягивает к ногтям восхищенные взгляды.
+						</li>
+					</ul>
+				</div>
+			</div>
+			<img src="img/trand-img.webp" alt="image" class="trands__img" />
+			<div class="container _middle">
+				<div class="trands__bottom-content">
+					<h4>Желейный маникюр</h4>
+					<p>
+						Этот новый, необычный дизайн выглядит достаточно нежно, поэтому не стоит
+						бояться экспериментов. Ногти с желейным покрытием выглядят так, словно
+						их облили ягодным сиропом или медом: сквозь полупрозрачный гель заметен
+						естественный цвет ногтей, что придает свежести и объема.
+					</p>
+					<p>
+						Желейный дизайн самодостаточен, поэтому в дополнительном декорировании
+						обычно нет необходимости.
+					</p>
+					<h4>Красный маникюр</h4>
+					<p>
+						Смелый и яркий цвет никогда не потеряет своей актуальности. На пике моды
+						не только классический оттенок, но и более яркие, бордовые и морковные
+						тона. Выгодно смотрится как однотонное покрытие, так и элементы дизайна,
+						выполненные в этом цвете: к примеру, красный френч будет выглядеть
+						необычно, но не вульгарно.
+					</p>
+					<h4>Металлические акценты</h4>
+					<p>
+						Футуристические ногти с эффектом расплавленного металла по-прежнему
+						популярны в этом году. Любые вариации хромированного маникюра прекрасно
+						дополнят повседневный образ: «кошачий глаз», сочетание френча и
+						геометрических узоров из металлических линий, полноценное
+						металлик-покрытие в золотом, серебряном, бронзовом или платиновом цвете.
+					</p>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container _min footer__container">
+			<div class="footer__main">
+				<div class="footer__main-menu">
+					<div class="footer__menu-item">
+						<a href="#" class="title-i footer__menu-title">Услуги</a>
+						<ul class="list footer__menu-list">
+							<li><a href="#">Маникюр</a></li>
+							<li><a href="#">Педикюр</a></li>
+							<li><a href="#">В 4 руки</a></li>
+							<li><a href="#">Брови</a></li>
+							<li><a href="#">Макияж</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu-item">
+						<a href="#" class="title-i footer__menu-title">Информация</a>
+						<ul class="list footer__menu-list">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Наши работы</a></li>
+							<li><a href="#">Прайс</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="list footer__apps">
+					<li>
+						<a href="#" target="_blank">
+							<img src="img/app-gallery.svg" alt="icon" />
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="img/google-play.svg" alt="icon" />
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="img/app-store.svg" alt="icon" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__middle">
+				<a href="/" class="footer__logo">
+					<img src="img/footer-logo.svg" alt="logo" class="footer__logo-img" />
+				</a>
+				<p class="footer__middle-content">Подпишитесь на новости</p>
+				<form action="#" class="footer__middle-form">
+					<input type="email" placeholder="E-mail" class="input footer__input" />
+					<button class="btn-clear footer__form-btn">
+						<svg class="footer__icon-send">
+							<use xlink:href="img/icons/icons.svg#icon-send"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="footer__main">
+				<div data-da=".footer__main-menu,1199" class="footer__menu-item">
+					<a href="#" class="title footer__menu-title">КОнтакты</a>
+					<ul class="list footer__contacts-list">
+						<li>
+							<div class="footer__contacts-address">пр-кт Чекистов, 3/2</div>
+							<a href="tel:+79999999366" class="footer__contacts-tel">+7 (999) 999-93-66</a>
+						</li>
+						<li>
+							<div class="footer__contacts-address">пр-кт Чекистов, 3/2</div>
+							<a href="tel:+79999999366" class="footer__contacts-tel">+7 (999) 999-93-66</a>
+						</li>
+						<li>
+							<div class="footer__contacts-address">пр-кт Чекистов, 3/2</div>
+							<a href="tel:+79999999366" class="footer__contacts-tel">+7 (999) 999-93-66</a>
+						</li>
+						<li>
+							<div class="footer__contacts-address">пр-кт Чекистов, 3/2</div>
+							<a href="tel:+79999999366" class="footer__contacts-tel">+7 (999) 999-93-66</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__contacts-buttons">
+					<a href="#" target="_blank" class="btn footer__contacts-btn _stroke">WhatsApp</a>
+					<a href="#" target="_blank" class="btn footer__contacts-btn _stroke">Telegram</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container _min footer__bottom-container">
+				<p class="footer__copyright">
+					© Мадам КоКо, 2024 / Политика конфиденциальности
+				</p>
+				<div class="footer__dev">
+					<p class="footer__dev-content">Разработка и продвижение</p>
+					<a href="#" target="_blank" class="footer__dev-btn">
+						<img src="img/dev-logo.svg" alt="logo" class="footer__dev-icon" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__buttons">
+			<button data-modal-btn="modal-record" class="btn footer__btn">
+				Записаться онлайн
+			</button>
+			<a href="tel:+79965336111" class="btn footer__btn">Позвонить</a>
+		</div>
+	</footer>
+
+	<div class="modal" data-modal="modal-reviews">
+		<div class="modal__overlay">
+			<div class="modal__window">
+				<button class="btn-clear modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<h3 class="title modal__title">Оставить отзыв</h3>
+				<form action="#" class="modal-reviews__form" id="reviews-form">
+					<div class="rating modal-reviews__rating" data-rating="0">
+						<span class="rating__title">Оценка</span>
+
+						<div class="rating__wrapper">
+							<label for="rating-1" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+							<label for="rating-2" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+							<label for="rating-3" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+							<label for="rating-4" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+							<label for="rating-5" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+
+							<input type="radio" value="1" name="rating-reviews" id="rating-1" class="rating__input" />
+							<input type="radio" value="2" name="rating-reviews" id="rating-2" class="rating__input" />
+							<input type="radio" value="3" name="rating-reviews" id="rating-3" class="rating__input" />
+							<input type="radio" value="4" name="rating-reviews" id="rating-4" class="rating__input" />
+							<input type="radio" value="5" name="rating-reviews" id="rating-5" class="rating__input" />
+						</div>
+					</div>
+					<div class="wrapper-input modal-reviews__form-item">
+						<input type="text" placeholder="Имя" class="input" id="reviews-name" />
+					</div>
+					<div class="wrapper-input modal-reviews__form-item">
+						<textarea placeholder="Сообщение" class="input _big" id="reviews-message"></textarea>
+					</div>
+					<button class="btn modal-reviews__form-btn">Отправить</button>
+				</form>
+				<div class="modal-reviews__footer">
+					<p class="modal-reviews__footer-content">
+						Так-же можете оставить отзыв в соц-сетях
+					</p>
+					<div class="modal-reviews__footer-buttons">
+						<a href="#" target="_blank" class="btn modal-reviews__footer-btn _stroke">
+							<svg class="modal-reviews__icon-social">
+								<use xlink:href="img/icons/icons.svg#icon-logo-yandex"></use>
+							</svg>
+						</a>
+						<a href="#" target="_blank" class="btn modal-reviews__footer-btn _stroke">
+							<svg class="modal-reviews__icon-social">
+								<use xlink:href="img/icons/icons.svg#icon-logo-2g"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal modal-sect" data-modal="modal-record">
+		<div class="modal__overlay">
+			<div class="modal__window modal-sect__window">
+				<div class="modal-sect__body">
+					<button class="btn-clear modal__close modal-sect__close">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/icons/icons.svg#icon-close-bold"></use>
+						</svg>
+					</button>
+					<div class="modal-sect__container">
+						<span class="sect-tag modal-sect__tag">запись-онлайн</span>
+						<h2 class="title title-m modal-sect__title">
+							Получите скидку <br />
+							на первое посещение салона madam coco.
+						</h2>
+						<p class="modal-sect__content">
+							Скидка действует на все услуги салона. Заполните форму и мы свяжемся
+							с вами в течении 20 минут.
+						</p>
+						<form action="#" class="modal-sect__form" id="form-record">
+							<div class="wrapper-input modal-sect__form-item">
+								<input type="text" placeholder="Имя" class="input" id="record-name" />
+							</div>
+							<div class="wrapper-input modal-sect__form-item">
+								<input type="tel" placeholder="Телефон" class="input" id="record-tel" />
+							</div>
+							<button class="btn modal-sect__form-btn">Отправить</button>
+						</form>
+						<p class="modal-sect__form-policy">
+							Нажимая на кнопку “Отправить”, вы соглашаетесь с политикой
+							конфиденциальности и обработку персональных данных.
+						</p>
+						<div class="modal-sect__contacts _hidden">
+							<div>
+								<p class="modal-sect__address">
+									Пишите и звоните нам с 9:00 до 21:00
+								</p>
+								<a href="tel:+79999999366" class="modal-sect__tel">+7 (999) 999-93-66</a>
+							</div>
+							<a href="#" class="btn modal-sect__tg _stroke">Telegram</a>
+						</div>
+					</div>
+				</div>
+				<img src="img/get-stocks.webp" alt="image" class="sect__img modal-sect__img" />
+			</div>
+		</div>
+	</div>
+
+	<div class="modal modal-sect" data-modal="modal-thank">
+		<div class="modal__overlay">
+			<div class="modal__window modal-sect__window">
+				<div class="modal-sect__body _center">
+					<button class="btn-clear modal__close modal-sect__close">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/icons/icons.svg#icon-close-bold"></use>
+						</svg>
+					</button>
+					<div class="modal-sect__container">
+						<span class="sect-tag modal-sect__thank-tag">запись-онлайн</span>
+						<h2 class="title title-big modal-sect__thank-title">
+							Спасибо. <br />
+							Ваша заявка отправлена
+						</h2>
+						<p class="modal-sect__thank-content">
+							Мы свяжемся с вами в течении 20 минут.
+						</p>
+						<a href="/" class="btn modal-sect__thank-btn">Вернуться на сайт</a>
+						<div class="modal-sect__contacts">
+							<div>
+								<p class="modal-sect__address">
+									Пишите и звоните нам с 9:00 до 21:00
+								</p>
+								<a href="tel:+79999999366" class="modal-sect__tel">+7 (999) 999-93-66</a>
+							</div>
+							<a href="#" class="btn modal-sect__tg _stroke">Telegram</a>
+						</div>
+					</div>
+				</div>
+				<img src="img/get-stocks.webp" alt="image" class="sect__img modal-sect__img" />
+			</div>
+		</div>
+	</div>
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250212165124" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20250212165124"></script>
+</body>
+
+</html>

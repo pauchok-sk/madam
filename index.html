@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <title>pauchoo0k</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250212164335"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap&_v=20250212164335"
+      rel="stylesheet"
+    />
+    <style>
+      .main-list {
+        display: flex;
+        padding: 50px 20px;
+      }
+      .main-list li {
+        font-size: 22px;
+      }
+
+      .main-list a {
+        position: relative;
+      }
+      .main-list a:hover::before {
+        left: 0;
+        right: 0;
+      }
+      .main-list a::before {
+          position: absolute;
+          content: "";
+          left: 50%;
+          right: 50%;
+          bottom: 0;
+          height: 1px;
+          background-color: currentColor;
+          transition:
+            left 0.2s ease,
+            right 0.2s ease;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <ul class="list main-list">
+      <li>
+        <a href="/dist/index.html">Главная</a>
+      </li>
+      <li>
+        <a href="/dist/services.html">Услуги</a>
+      </li>
+      <li>
+        <a href="/dist/service.html">Страница услуги</a>
+      </li>
+      <li>
+        <a href="/dist/prices.html">Цены</a>
+      </li>
+      <li>
+        <a href="/dist/contacts.html">Контакты</a>
+      </li>
+      <li>
+        <a href="/dist/reviews.html">Отзывы</a>
+      </li>
+      <li>
+        <a href="/dist/our-works.html">Наши работы</a>
+      </li>
+      <li>
+        <a href="/dist/stocks.html">Акции</a>
+      </li>
+      <li>
+        <a href="/dist/about.html">О компании</a>
+      </li>
+      <li>
+        <a href="/dist/news.html">Новости</a>
+      </li>
+      <li>
+        <a href="/dist/new.html">Страница новости</a>
+      </li>
+      <li>
+        <a href="/dist/404.html">404</a>
+      </li>
+    </ul>
+  </body>
+</html>

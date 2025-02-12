@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250212165124" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap&_v=20250212165124" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250212165124" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header _dark _simple">
+		<div class="header__wrapper">
+			<a href="/" class="header__logo">
+				<img src="img/logo.svg" alt="logo" class="header__logo-icon">
+				<img src="img/logo-dark.svg" alt="logo" class="header__logo-icon">
+			</a>
+			<nav class="header__nav">
+				<ul class="list header__list">
+					<li><a href="#">Маникюр</a></li>
+					<li><a href="#">Педикюр</a></li>
+					<li><a href="#">Брови</a></li>
+					<li><a href="#">Макияж</a></li>
+				</ul>
+				<div class="header__contacts">
+					<div class="header__contacts-item">
+						<p class="header__contacts-address">Адреса салонов</p>
+						<a href="#" class="header__contacts-content">Посмотреть</a>
+					</div>
+					<div class="header__contacts-item">
+						<a href="tel:+79999999366" class="header__contacts-tel">+7 (999) 999-93-66</a>
+						<button data-modal-btn="modal-record" class="btn-clear header__contacts-content">Заказать звонок</button>
+					</div>
+				</div>
+			</nav>
+			<button data-modal-btn="modal-record" class="btn-clear header__btn">Записаться</button>
+			<button class="btn-clear header__burger-btn" id="burger-btn">
+				<svg class="header__burger-icon">
+					<use xlink:href='img/icons/icons.svg#icon-burger'></use>
+				</svg>
+				<svg class="header__burger-icon">
+					<use xlink:href='img/icons/icons.svg#icon-close'></use>
+				</svg>
+			</button>
+		</div>
+	</header>
+	<div class="burger" id="burger">
+		<div class="burger__wrapper tab-container">
+			<div data-tab="burger-tab-nav" class="burger__tab-nav _open">
+				<div class="burger__tab-buttons">
+					<button data-tab-btn="1" class="title btn-clear burger__tab-btn">
+						<span>Маникюр</span>
+						<svg class="burger__tab-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<button data-tab-btn="2" class="title btn-clear burger__tab-btn">
+						<span>Педикюр</span>
+						<svg class="burger__tab-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<button data-tab-btn="3" class="title btn-clear burger__tab-btn">
+						<span>Брови</span>
+						<svg class="burger__tab-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+					<button data-tab-btn="4" class="title btn-clear burger__tab-btn">
+						<span>Макияж</span>
+						<svg class="burger__tab-arrow">
+							<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+						</svg>
+					</button>
+				</div>
+				<ul class="list burger__list">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Наши работы</a></li>
+					<li><a href="#">Прайс</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Акции</a></li>
+					<li><a href="#">контакты</a></li>
+				</ul>
+			</div>
+			<div class="burger__nav">
+				<div class="burger__col">
+					<div data-tab="1" class="burger__col-item">
+						<h5 data-tab-btn="burger-tab-nav" class="title title-l burger__col-title">
+							<svg class="burger__col-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Маникюр</span>
+						</h5>
+						<ul class="list burger__col-list">
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="burger__col">
+					<div data-tab="2" class="burger__col-item">
+						<h5 data-tab-btn="burger-tab-nav" class="title title-l burger__col-title">
+							<svg class="burger__col-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Педикюр</span>
+						</h5>
+						<ul class="list burger__col-list">
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="burger__col">
+					<div data-tab="3" class="burger__col-item">
+						<h5 data-tab-btn="burger-tab-nav" class="title title-l burger__col-title">
+							<svg class="burger__col-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Брови</span>
+						</h5>
+						<ul class="list burger__col-list">
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+						</ul>
+					</div>
+					<div data-tab="4" class="burger__col-item">
+						<h5 data-tab-btn="burger-tab-nav" class="title title-l burger__col-title">
+							<svg class="burger__col-arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Макияж</span>
+						</h5>
+						<ul class="list burger__col-list">
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+							<li><a href="#">Комбинированный маникюр</a></li>
+							<li><a href="#">Аппаратный маникюр</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<main>
+
+		<section class="sect-descr _intro">
+			<div class="container">
+				<h1 class="title title-m sect-descr__title">
+					Мы всегда рады видеть вас в салонах <br />
+					маникюра и педикюра Madam Coco.
+				</h1>
+				<div class="breadcrumbs">
+					<div class="aioseo-breadcrumbs">
+						<span class="aioseo-breadcrumb">
+							<a href="/" title="Главная">Главная</a>
+						</span>
+						<span class="aioseo-breadcrumb"> Цены </span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="sect tab-container contacts">
+			<div data-spollers="1366,min" data-one-spoller class="contacts__body">
+				<div class="contacts__container">
+					<span class="sect-tag contacts__tag">Салоны</span>
+				</div>
+				<div class="contacts__spoller" id="contacts-spoller-1">
+					<div class="contacts__container">
+						<button data-spoller data-tab-btn="1" class="title btn-clear contacts__spoller-btn _spoller-active">
+							Тургенева, 55
+						</button>
+						<div class="contacts__spoller-item">
+							<p class="contacts__spoller-address">Ежедневно с 9:00 до 21:00</p>
+							<a href="tel:+79999999366" class="contacts__spoller-tel">+7 999 999-93-66</a>
+							<div class="contacts__spoller-nav">
+								<button data-modal-btn="modal-record" class="btn contacts__nav-btn">
+									записаться онлайн
+								</button>
+								<a href="#" class="btn contacts__nav-btn _stroke">Проложить маршрут</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__spoller" id="contacts-spoller-2">
+					<div class="contacts__container">
+						<button data-spoller data-tab-btn="2" class="title btn-clear contacts__spoller-btn">
+							Уральская, 71
+						</button>
+						<div class="contacts__spoller-item">
+							<p class="contacts__spoller-address">Ежедневно с 9:00 до 21:00</p>
+							<a href="tel:+79999999366" class="contacts__spoller-tel">+7 999 999-93-66</a>
+							<div class="contacts__spoller-nav">
+								<button data-modal-btn="modal-record" class="btn contacts__nav-btn">
+									записаться онлайн
+								</button>
+								<a href="#" class="btn contacts__nav-btn _stroke">Проложить маршрут</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__spoller" id="contacts-spoller-3">
+					<div class="contacts__container">
+						<button data-spoller data-tab-btn="3" class="title btn-clear contacts__spoller-btn">
+							П. Метальникова, 58А
+						</button>
+						<div class="contacts__spoller-item">
+							<p class="contacts__spoller-address">Ежедневно с 9:00 до 21:00</p>
+							<a href="tel:+79999999366" class="contacts__spoller-tel">+7 999 999-93-66</a>
+							<div class="contacts__spoller-nav">
+								<button data-modal-btn="modal-record" class="btn contacts__nav-btn">
+									записаться онлайн
+								</button>
+								<a href="#" class="btn contacts__nav-btn _stroke">Проложить маршрут</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contacts__spoller" id="contacts-spoller-4">
+					<div class="contacts__container">
+						<button data-spoller data-tab-btn="4" class="title btn-clear contacts__spoller-btn">
+							пр-д Чекистов, 3/2
+						</button>
+						<div class="contacts__spoller-item">
+							<p class="contacts__spoller-address">Ежедневно с 9:00 до 21:00</p>
+							<a href="tel:+79999999366" class="contacts__spoller-tel">+7 999 999-93-66</a>
+							<div class="contacts__spoller-nav">
+								<button data-modal-btn="modal-record" class="btn contacts__nav-btn">
+									записаться онлайн
+								</button>
+								<a href="#" class="btn contacts__nav-btn _stroke">Проложить маршрут</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-tab="1" data-da="#contacts-spoller-1,1365" class="contacts__gallery _open">
+				<div class="swiper contacts__slider">
+					<div class="swiper-wrapper">
+						<a href="img/contacts.webp" data-fancybox="address-1" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+						<a href="img/contacts.webp" data-fancybox="address-1" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+						<a href="img/contacts.webp" data-fancybox="address-1" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+					</div>
+				</div>
+				<div class="contacts__slider-nav">
+					<div class="slider-nav">
+						<div class="slider-nav__scrollbar"></div>
+						<button class="btn-clear slider-nav__btn _prev">
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Предыдущая</span>
+						</button>
+						<button class="btn-clear slider-nav__btn _next">
+							<span>Следующая</span>
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-tab="2" data-da="#contacts-spoller-2,1365" class="contacts__gallery">
+				<div class="swiper contacts__slider">
+					<div class="swiper-wrapper">
+						<a href="img/intro-services.webp" data-fancybox="address-2" class="swiper-slide">
+							<img src="img/intro-services.webp" alt="image" class="contacts__slide-img" />
+						</a>
+						<a href="img/contacts.webp" data-fancybox="address-2" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+						<a href="img/contacts.webp" data-fancybox="address-2" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+					</div>
+				</div>
+				<div class="contacts__slider-nav">
+					<div class="slider-nav">
+						<div class="slider-nav__scrollbar"></div>
+						<button class="btn-clear slider-nav__btn _prev">
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Предыдущая</span>
+						</button>
+						<button class="btn-clear slider-nav__btn _next">
+							<span>Следующая</span>
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-tab="3" data-da="#contacts-spoller-3,1365" class="contacts__gallery">
+				<div class="swiper contacts__slider">
+					<div class="swiper-wrapper">
+						<a href="img/contacts.webp" data-fancybox="address-3" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+						<a href="img/contacts.webp" data-fancybox="address-3" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+						<a href="img/contacts.webp" data-fancybox="address-3" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+					</div>
+				</div>
+				<div class="contacts__slider-nav">
+					<div class="slider-nav">
+						<div class="slider-nav__scrollbar"></div>
+						<button class="btn-clear slider-nav__btn _prev">
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Предыдущая</span>
+						</button>
+						<button class="btn-clear slider-nav__btn _next">
+							<span>Следующая</span>
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-tab="4" data-da="#contacts-spoller-4,1365" class="contacts__gallery">
+				<div class="swiper contacts__slider">
+					<div class="swiper-wrapper">
+						<a href="img/intro-services.webp" data-fancybox="address-4" class="swiper-slide">
+							<img src="img/intro-services.webp" alt="image" class="contacts__slide-img" />
+						</a>
+						<a href="img/contacts.webp" data-fancybox="address-4" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+						<a href="img/contacts.webp" data-fancybox="address-4" class="swiper-slide">
+							<img src="img/contacts.webp" alt="image" class="contacts__slide-img" />
+						</a>
+					</div>
+				</div>
+				<div class="contacts__slider-nav">
+					<div class="slider-nav">
+						<div class="slider-nav__scrollbar"></div>
+						<button class="btn-clear slider-nav__btn _prev">
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+							<span>Предыдущая</span>
+						</button>
+						<button class="btn-clear slider-nav__btn _next">
+							<span>Следующая</span>
+							<svg class="slider-nav__arrow">
+								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="map">
+			<div class="map__frame" data-centers="[[53.82728957070973,87.18308849999995], [53.82709521009427,87.17998233635124], [53.83198253390497,87.17745634640703]]" data-zoom="16" id="map"></div>
+		</section>
+		<section class="connections">
+			<div class="container">
+				<div class="connections__head">
+					<span class="sect-tag connections__tag">запись-онлайн</span>
+					<h2 class="title title-d connections__title">
+						Возникли вопросы, <br />
+						есть идеи или предложения?
+					</h2>
+					<p class="connections__content">
+						Смело пишите нам, мы рады любой обратной связи и ответим вам в течение
+						рабочего дня
+					</p>
+				</div>
+				<form action="#" class="connections__form" id="connection-form">
+					<div class="wrapper-input connections__form-item">
+						<input type="text" placeholder="Имя" class="input" id="connection-name" />
+					</div>
+					<div class="connections__form-item">
+						<div class="select">
+							<div class="select__btn">
+								<input type="Выберите тему" placeholder="Выберите тему" class="input select__input" />
+								<div class="select__btn-rect">
+									<svg class="select__btn-arrow">
+										<use xlink:href="img/icons/icons.svg#icon-triangle"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="select__list">
+								<span class="select__list-item">У тебя там темы</span>
+								<span class="select__list-item">У меня проблемы</span>
+								<span class="select__list-item">Смотртите аниме?</span>
+								<span class="select__list-item">Надо еще что то спросить</span>
+								<span class="select__list-item">Кофе или чай по утрам?</span>
+								<span class="select__list-item">Я предпочитаю кофе</span>
+							</div>
+						</div>
+					</div>
+					<div class="connections__form-item">
+						<div class="wrapper-input">
+							<input type="tel" placeholder="Телефон" class="input" id="connection-tel" />
+						</div>
+						<div class="wrapper-input">
+							<input type="email" placeholder="E-mail" class="input" id="connection-email" />
+						</div>
+					</div>
+					<div class="wrapper-input connections__form-item _big">
+						<textarea id="connection-message" placeholder="Текст сообщения" class="input _big"></textarea>
+					</div>
+					<div class="connections__form-item">
+						<input type="file" class="input-file" id="connection-file" />
+						<label for="connection-file" class="label-file">
+							<div class="label-file__rect">
+								<svg class="label-file__rect-icon">
+									<use xlink:href='img/icons/icons.svg#icon-attached'></use>
+								</svg>
+							</div>
+							<span class="label-file__title">Прикрепить файл</span>
+							<div class="label-file__btn">
+								<svg class="label-file__icon-plus">
+									<use xlink:href='img/icons/icons.svg#icon-plus'></use>
+								</svg>
+							</div>
+						</label>
+					</div>
+					<div class="connections__form-item">
+						<button class="btn connections__form-btn">Отправить</button>
+					</div>
+				</form>
+				<p class="connections__form-policy">Нажимая на кнопку “Отправить”, вы соглашаетесь с политикой конфиденциальности и обработку персональных данных.</p>
+				<div class="connections__contacts">
+					<div>
+						<p class="connections__address">
+							Пишите и звоните нам с 9:00 до 21:00
+						</p>
+						<a href="tel:+79999999366" class="connections__tel">+7 (999) 999-93-66</a>
+					</div>
+					<a href="#" target="_blank" class="btn connections__tg _stroke">Telegram</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="sect">
+			<img src="img/requisites.webp" alt="image" class="sect__img _last" />
+			<div class="requisites">
+				<div class="requisites__container">
+					<div class="sect-tag requisites__tag">реквизиты</div>
+					<h2 class="title title-d requisites__title">Реквизиты компании</h2>
+					<div data-spollers data-one-spoller class="requisites__spollers">
+						<div class="requisites__spoller">
+							<div data-spoller class="requisites__spoller-btn _spoller-active">
+								<h3 class="title requisites__btn-title">Юридическая информация</h3>
+								<div class="requisites__btn-rect">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div>
+								<div class="requisites__spoller-body">
+									<div class="requisites__spoller-item">
+										<span>Полное наименование</span>
+										<span>Индивидуальный предприниматель Горкунова Кристина
+											Владимировна</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>Руководитель организации</span>
+										<span>Горкунова Кристина Владимировна</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>Дата регистрации</span>
+										<span>25.08.2016</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>ИНН</span>
+										<span>230812298770</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>ОГРНИП</span>
+										<span>316237500047485</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>ОКВЭД</span>
+										<span>96.02</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>Система налогообложения</span>
+										<span>ПСН</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="requisites__spoller">
+							<div data-spoller class="requisites__spoller-btn">
+								<h3 class="title requisites__btn-title">Адрес</h3>
+								<div class="requisites__btn-rect">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div>
+								<div class="requisites__spoller-body">
+									<div class="requisites__spoller-item">
+										<span>Юридический адрес</span>
+										<span>350049, Краснодарский край, г. Краснодар, ул. Тургенева, д.
+											128, кв.25.</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>Почтовый адрес</span>
+										<span>350049, Краснодарский край, г. Краснодар, ул. Тургенева, д.
+											128, кв.25.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="requisites__spoller">
+							<div data-spoller class="requisites__spoller-btn">
+								<h3 class="title requisites__btn-title">Банковские данный</h3>
+								<div class="requisites__btn-rect">
+									<div></div>
+									<div></div>
+								</div>
+							</div>
+							<div>
+								<div class="requisites__spoller-body">
+									<div class="requisites__spoller-item">
+										<span>Банк</span>
+										<span>ФИЛИАЛ «РОСТОВСКИЙ» АО «АЛЬФА-БАНК» г. Ростов-на-Дону</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>Расчетный счет</span>
+										<span>30233810714000000919</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>Корреспондентский счет</span>
+										<span>30302810100180000000</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>ОГРН</span>
+										<span>серия 23 №312231502500018</span>
+									</div>
+									<div class="requisites__spoller-item">
+										<span>БИК</span>
+										<span>046015207</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="container _min footer__container">
+			<div class="footer__main">
+				<div class="footer__main-menu">
+					<div class="footer__menu-item">
+						<a href="#" class="title-i footer__menu-title">Услуги</a>
+						<ul class="list footer__menu-list">
+							<li><a href="#">Маникюр</a></li>
+							<li><a href="#">Педикюр</a></li>
+							<li><a href="#">В 4 руки</a></li>
+							<li><a href="#">Брови</a></li>
+							<li><a href="#">Макияж</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu-item">
+						<a href="#" class="title-i footer__menu-title">Информация</a>
+						<ul class="list footer__menu-list">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Наши работы</a></li>
+							<li><a href="#">Прайс</a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Акции</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="list footer__apps">
+					<li>
+						<a href="#" target="_blank">
+							<img src="img/app-gallery.svg" alt="icon" />
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="img/google-play.svg" alt="icon" />
+						</a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="img/app-store.svg" alt="icon" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__middle">
+				<a href="/" class="footer__logo">
+					<img src="img/footer-logo.svg" alt="logo" class="footer__logo-img" />
+				</a>
+				<p class="footer__middle-content">Подпишитесь на новости</p>
+				<form action="#" class="footer__middle-form">
+					<input type="email" placeholder="E-mail" class="input footer__input" />
+					<button class="btn-clear footer__form-btn">
+						<svg class="footer__icon-send">
+							<use xlink:href="img/icons/icons.svg#icon-send"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="footer__main">
+				<div data-da=".footer__main-menu,1199" class="footer__menu-item">
+					<a href="#" class="title footer__menu-title">КОнтакты</a>
+					<ul class="list footer__contacts-list">
+						<li>
+							<div class="footer__contacts-address">пр-кт Чекистов, 3/2</div>
+							<a href="tel:+79999999366" class="footer__contacts-tel">+7 (999) 999-93-66</a>
+						</li>
+						<li>
+							<div class="footer__contacts-address">пр-кт Чекистов, 3/2</div>
+							<a href="tel:+79999999366" class="footer__contacts-tel">+7 (999) 999-93-66</a>
+						</li>
+						<li>
+							<div class="footer__contacts-address">пр-кт Чекистов, 3/2</div>
+							<a href="tel:+79999999366" class="footer__contacts-tel">+7 (999) 999-93-66</a>
+						</li>
+						<li>
+							<div class="footer__contacts-address">пр-кт Чекистов, 3/2</div>
+							<a href="tel:+79999999366" class="footer__contacts-tel">+7 (999) 999-93-66</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__contacts-buttons">
+					<a href="#" target="_blank" class="btn footer__contacts-btn _stroke">WhatsApp</a>
+					<a href="#" target="_blank" class="btn footer__contacts-btn _stroke">Telegram</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container _min footer__bottom-container">
+				<p class="footer__copyright">
+					© Мадам КоКо, 2024 / Политика конфиденциальности
+				</p>
+				<div class="footer__dev">
+					<p class="footer__dev-content">Разработка и продвижение</p>
+					<a href="#" target="_blank" class="footer__dev-btn">
+						<img src="img/dev-logo.svg" alt="logo" class="footer__dev-icon" />
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__buttons">
+			<button data-modal-btn="modal-record" class="btn footer__btn">
+				Записаться онлайн
+			</button>
+			<a href="tel:+79965336111" class="btn footer__btn">Позвонить</a>
+		</div>
+	</footer>
+
+	<div class="modal" data-modal="modal-reviews">
+		<div class="modal__overlay">
+			<div class="modal__window">
+				<button class="btn-clear modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+				<h3 class="title modal__title">Оставить отзыв</h3>
+				<form action="#" class="modal-reviews__form" id="reviews-form">
+					<div class="rating modal-reviews__rating" data-rating="0">
+						<span class="rating__title">Оценка</span>
+
+						<div class="rating__wrapper">
+							<label for="rating-1" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+							<label for="rating-2" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+							<label for="rating-3" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+							<label for="rating-4" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+							<label for="rating-5" class="rating__label">
+								<svg class="rating__icon">
+									<use xlink:href="img/icons/icons.svg#icon-star"></use>
+								</svg>
+							</label>
+
+							<input type="radio" value="1" name="rating-reviews" id="rating-1" class="rating__input" />
+							<input type="radio" value="2" name="rating-reviews" id="rating-2" class="rating__input" />
+							<input type="radio" value="3" name="rating-reviews" id="rating-3" class="rating__input" />
+							<input type="radio" value="4" name="rating-reviews" id="rating-4" class="rating__input" />
+							<input type="radio" value="5" name="rating-reviews" id="rating-5" class="rating__input" />
+						</div>
+					</div>
+					<div class="wrapper-input modal-reviews__form-item">
+						<input type="text" placeholder="Имя" class="input" id="reviews-name" />
+					</div>
+					<div class="wrapper-input modal-reviews__form-item">
+						<textarea placeholder="Сообщение" class="input _big" id="reviews-message"></textarea>
+					</div>
+					<button class="btn modal-reviews__form-btn">Отправить</button>
+				</form>
+				<div class="modal-reviews__footer">
+					<p class="modal-reviews__footer-content">
+						Так-же можете оставить отзыв в соц-сетях
+					</p>
+					<div class="modal-reviews__footer-buttons">
+						<a href="#" target="_blank" class="btn modal-reviews__footer-btn _stroke">
+							<svg class="modal-reviews__icon-social">
+								<use xlink:href="img/icons/icons.svg#icon-logo-yandex"></use>
+							</svg>
+						</a>
+						<a href="#" target="_blank" class="btn modal-reviews__footer-btn _stroke">
+							<svg class="modal-reviews__icon-social">
+								<use xlink:href="img/icons/icons.svg#icon-logo-2g"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal modal-sect" data-modal="modal-record">
+		<div class="modal__overlay">
+			<div class="modal__window modal-sect__window">
+				<div class="modal-sect__body">
+					<button class="btn-clear modal__close modal-sect__close">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/icons/icons.svg#icon-close-bold"></use>
+						</svg>
+					</button>
+					<div class="modal-sect__container">
+						<span class="sect-tag modal-sect__tag">запись-онлайн</span>
+						<h2 class="title title-m modal-sect__title">
+							Получите скидку <br />
+							на первое посещение салона madam coco.
+						</h2>
+						<p class="modal-sect__content">
+							Скидка действует на все услуги салона. Заполните форму и мы свяжемся
+							с вами в течении 20 минут.
+						</p>
+						<form action="#" class="modal-sect__form" id="form-record">
+							<div class="wrapper-input modal-sect__form-item">
+								<input type="text" placeholder="Имя" class="input" id="record-name" />
+							</div>
+							<div class="wrapper-input modal-sect__form-item">
+								<input type="tel" placeholder="Телефон" class="input" id="record-tel" />
+							</div>
+							<button class="btn modal-sect__form-btn">Отправить</button>
+						</form>
+						<p class="modal-sect__form-policy">
+							Нажимая на кнопку “Отправить”, вы соглашаетесь с политикой
+							конфиденциальности и обработку персональных данных.
+						</p>
+						<div class="modal-sect__contacts _hidden">
+							<div>
+								<p class="modal-sect__address">
+									Пишите и звоните нам с 9:00 до 21:00
+								</p>
+								<a href="tel:+79999999366" class="modal-sect__tel">+7 (999) 999-93-66</a>
+							</div>
+							<a href="#" class="btn modal-sect__tg _stroke">Telegram</a>
+						</div>
+					</div>
+				</div>
+				<img src="img/get-stocks.webp" alt="image" class="sect__img modal-sect__img" />
+			</div>
+		</div>
+	</div>
+
+	<div class="modal modal-sect" data-modal="modal-thank">
+		<div class="modal__overlay">
+			<div class="modal__window modal-sect__window">
+				<div class="modal-sect__body _center">
+					<button class="btn-clear modal__close modal-sect__close">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/icons/icons.svg#icon-close-bold"></use>
+						</svg>
+					</button>
+					<div class="modal-sect__container">
+						<span class="sect-tag modal-sect__thank-tag">запись-онлайн</span>
+						<h2 class="title title-big modal-sect__thank-title">
+							Спасибо. <br />
+							Ваша заявка отправлена
+						</h2>
+						<p class="modal-sect__thank-content">
+							Мы свяжемся с вами в течении 20 минут.
+						</p>
+						<a href="/" class="btn modal-sect__thank-btn">Вернуться на сайт</a>
+						<div class="modal-sect__contacts">
+							<div>
+								<p class="modal-sect__address">
+									Пишите и звоните нам с 9:00 до 21:00
+								</p>
+								<a href="tel:+79999999366" class="modal-sect__tel">+7 (999) 999-93-66</a>
+							</div>
+							<a href="#" class="btn modal-sect__tg _stroke">Telegram</a>
+						</div>
+					</div>
+				</div>
+				<img src="img/get-stocks.webp" alt="image" class="sect__img modal-sect__img" />
+			</div>
+		</div>
+	</div>
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250212165124" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20250212165124"></script>
+</body>
+
+</html>

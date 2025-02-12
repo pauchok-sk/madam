@@ -1,0 +1,166 @@
+.sect-error {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include tablet {
+    border-bottom: 1px solid var(--dark);
+  }
+  &__gallery {
+    display: flex;
+    align-items: center;
+    padding: 50px 130px;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--wafer);
+    z-index: 1;
+    @include laptop {
+      padding: 50px 40px;
+      width: 485px;
+    }
+    @include tablet {
+      width: 325px;
+    }
+  }
+  &__logo {
+    width: 645px;
+    @include laptop {
+      width: 375px;
+    }
+    @include tablet {
+      width: 220px;
+    }
+  }
+  &__num {
+    position: absolute;
+    font-size: 368px;
+    line-height: 355px;
+    writing-mode: vertical-rl;
+    color: var(--cloudy);
+    z-index: -1;
+
+    &._gallery {
+      right: 0;
+      color: var(--dark);
+      transform: translateX(61%);
+    }
+    &._info {
+      left: 0;
+      top: 50%;
+      transform: translate(-39%, -50%);
+    }
+
+    @include desktop-big {
+      font-size: 268px;
+    }
+    @include laptop {
+      &._gallery {
+        transform: translateX(220px);
+      }
+      &._info {
+        left: auto;
+        right: -358px;
+      }
+    }
+    @include tablet {
+      font-size: 124px;
+      line-height: normal;
+
+      &._gallery {
+        transform: translateX(85px);
+      }
+      &._info {
+        right: -145px;
+      }
+    }
+  }
+  &__info {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    max-width: 880px;
+    padding: 0 30px 0px 150px;
+    z-index: 1;
+    @include desktop-big {
+      padding-left: 110px;
+    }
+    @include laptop {
+      padding: 70px 30px;
+      max-width: none;
+      width: 100%;
+    }
+    @include tablet {
+      padding: 50px 15px;
+    }
+
+    .breadcrumbs {
+      margin-bottom: 120px;
+      @include desktop {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  &__title {
+    margin: 0px 0px 40px 0px;
+
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 54px;
+    @include desktop {
+      font-size: 38px;
+      line-height: 44px;
+    }
+    @include tablet {
+      font-size: 25px;
+      line-height: 32px;
+      margin-bottom: 30px;
+    }
+  }
+  &__gallery-wrapper {
+    @include laptop {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 40px;
+      margin: 0 auto 40px auto;
+      z-index: 1;
+    }
+    @include tablet {
+      margin-left: 0;
+    }
+    @include mobile {
+      margin-left: -15px;
+    }
+  }
+  &__content {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 130px;
+    @include desktop {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 50px;
+    }
+
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__btn {
+    min-height: 68px;
+    @include mobile {
+      min-height: 62px;
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
