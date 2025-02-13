@@ -3516,16 +3516,27 @@ section:not(:last-child) {
 .footer__main-menu {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   margin-bottom: 55px
 }
 .footer__menu-title {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  gap: 10px;
   font-size: 20px;
   line-height: 13px;
   margin-bottom: 45px;
   transition: opacity .2s ease
+}
+.footer__menu-arrow {
+  width: 20px;
+  height: 20px;
+  display: none;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease,-webkit-transform .2s ease
 }
 .footer__menu-list {
   display: flex;
@@ -5911,6 +5922,7 @@ html.with-fancybox body.hide-scrollbar {
   }
   .footer__main-menu {
     justify-content: center;
+    flex-wrap: wrap;
     gap: 50px;
     margin-bottom: 40px
   }
@@ -7287,14 +7299,29 @@ html.with-fancybox body.hide-scrollbar {
     padding: 0 15px
   }
   .footer__main-menu {
-    flex-wrap: wrap
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 40px
+  }
+  .footer__menu-item {
+    width: 100%
   }
   .footer__menu-title {
     font-size: 24px;
-    margin-bottom: 0
+    margin-bottom: 0;
+    pointer-events: all;
+    width: 100%
+  }
+  .footer__menu-title._spoller-active .footer__menu-arrow {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+  .footer__menu-arrow {
+    display: block
   }
   .footer__menu-list {
-    display: none
+    padding-top: 20px
   }
   .footer__apps {
     gap: 6px
@@ -7313,7 +7340,8 @@ html.with-fancybox body.hide-scrollbar {
     padding: 10px 12px
   }
   .footer__contacts-list {
-    display: none
+    padding-top: 20px;
+    gap: 30px
   }
 }
 @media (max-width:576px) {
@@ -7489,11 +7517,6 @@ html.with-fancybox body.hide-scrollbar {
   }
   .footer__main:last-child {
     display: none
-  }
-  .footer__main-menu {
-    flex-direction: column;
-    align-items: start;
-    justify-content: start
   }
   .footer__contacts-buttons {
     display: none
