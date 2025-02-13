@@ -2,7 +2,7 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
   @include tablet {
-    padding-bottom: 40px 0px 50px 0px !important;
+    padding: 40px 0px 50px 0px !important;
   }
   &__container {
     @include width(690px, 30px);
