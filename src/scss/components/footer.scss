@@ -154,13 +154,12 @@
     font-size: 24px;
     font-weight: 300;
     text-align: center;
-    margin: 0px 0px 35px 0px;
+    margin: 0px 0px 45px 0px;
   }
   &__middle-form {
     @include flex-between;
     max-width: 455px;
     width: 100%;
-    flex: 1;
     gap: 15px;
     border-bottom: 1px solid var(--dark);
     padding: 10px 15px 10px 30px;
@@ -252,6 +251,13 @@
     font-size: 14px;
     line-height: 22px;
     margin: 0;
+
+    a {
+      transition: opacity .2s ease;
+      @include hover {
+        opacity: 0.5;
+      }
+    }
   }
   &__dev {
     display: flex;

@@ -15,6 +15,9 @@
   &__title {
     text-align: center;
     margin-bottom: 20px;
+    @include mobile {
+      text-align: start;
+    }
   }
   &__content {
     font-size: 20px;
@@ -26,6 +29,9 @@
       font-size: 18px;
       line-height: 28px;
       margin-bottom: 40px;
+    }
+    @include mobile {
+      text-align: start;
     }
   }
   &__wrapper {
@@ -131,8 +137,9 @@
   }
   &__contacts-btn {
     padding: 10px;
-    flex: 0 1 125px;
+    // flex: 0 1 125px;
     flex-shrink: 0;
+    width: 125px;
     min-height: 55px;
 
     font-size: 14px;

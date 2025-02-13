@@ -63,4 +63,7 @@
       color: white;
     }
   }
+  &._stroke-dark {
+    border-color: var(--dark);
+  }
 }

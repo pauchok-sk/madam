@@ -7,12 +7,18 @@ export default function headerScroll() {
     if (isSimple) return;
 
     if (
-      window.scrollY >= header.clientHeight * 2
+      window.scrollY >= header.clientHeight * 2 &&
+      !header.classList.contains("_fixed")
     ) {
-      header.classList.add("_simple");
-      header.classList.add("_dark");
-    } else {
-      header.classList.remove("_simple");
+      header.style.transform = `translateY(-${header.clientHeight}px)`;
+
+      setTimeout(() => {
+        header.classList.add("_fixed");
+        header.classList.add("_dark");
+        header.style.transform = `translateY(0px)`;
+      }, 800);
+    } else if (window.scrollY === 0) {
+      header.classList.remove("_fixed");
       header.classList.remove("_dark");
     }
   });

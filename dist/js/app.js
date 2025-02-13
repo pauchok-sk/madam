@@ -3087,10 +3087,11 @@
                 if (burger.classList.contains("_open")) burgerClose(); else burgerOpen();
             }));
             function burgerClose() {
+                const isHeaderFixed = header.classList.contains("_fixed");
                 burger.classList.remove("_open");
                 burgerBtn.classList.remove("_active");
                 document.body.classList.remove("body-hidden");
-                if (!isHeaderSimple) header.classList.remove("_dark");
+                if (!isHeaderSimple && !isHeaderFixed) header.classList.remove("_dark");
                 document.body.removeEventListener("click", burgerClose);
             }
             function burgerOpen() {
@@ -3100,6 +3101,12 @@
                 header.classList.add("_dark");
                 document.body.addEventListener("click", burgerClose);
             }
+            function updateHeightBurger() {
+                burger.style.maxHeight = `${window.visualViewport.height}px`;
+            }
+            window.visualViewport.addEventListener("resize", updateHeightBurger);
+            window.visualViewport.addEventListener("scroll", updateHeightBurger);
+            updateHeightBurger();
         }
     }
     function ssr_window_esm_isObject(obj) {
@@ -16252,11 +16259,15 @@
         const isSimple = header.classList.contains("_simple");
         window.addEventListener("scroll", (() => {
             if (isSimple) return;
-            if (window.scrollY >= header.clientHeight * 2) {
-                header.classList.add("_simple");
-                header.classList.add("_dark");
-            } else {
-                header.classList.remove("_simple");
+            if (window.scrollY >= header.clientHeight * 2 && !header.classList.contains("_fixed")) {
+                header.style.transform = `translateY(-${header.clientHeight}px)`;
+                setTimeout((() => {
+                    header.classList.add("_fixed");
+                    header.classList.add("_dark");
+                    header.style.transform = `translateY(0px)`;
+                }), 800);
+            } else if (window.scrollY === 0) {
+                header.classList.remove("_fixed");
                 header.classList.remove("_dark");
             }
         }));

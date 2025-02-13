@@ -9,8 +9,8 @@
   right: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 100;
+  transition: transform .4s ease, background-color .4s ease, color .4s ease, border-color .4s ease;
   &._dark {
-    color: var(--dark);
     background-color: var(--bg);
     color: var(--dark);
     border-color: var(--light);
@@ -31,6 +31,9 @@
   }
   &._simple {
     position: sticky;
+  }
+  &._fixed {
+    position: fixed;
   }
 
   &__wrapper {
@@ -126,15 +129,30 @@
   &__contacts-item {
     a.header__contacts-content,
     button.header__contacts-content {
+      position: relative;
       @include hover {
-        text-decoration: underline;
+        &::before {
+          left: 0;
+          right: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        right: 50%;
+        height: 1px;
+        bottom: -2px;
+        background-color: currentColor;
+        transition: left .2s ease, right .2s ease;
       }
     }
   }
   &__contacts-address {
     font-size: 16px;
     font-style: normal;
-    line-height: 11px;
+    line-height: 17px;
     margin: 0;
     @include laptop {
       font-size: 14px;
@@ -153,7 +171,7 @@
     position: relative;
     display: block;
     font-size: 20px;
-    line-height: 14px;
+    line-height: 20px;
     text-transform: uppercase;
     @include hover {
       &::before {

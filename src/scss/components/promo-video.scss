@@ -57,8 +57,22 @@
       max-width: 145px;
     }
   }
+  &__icon-play {
+    width: 40px;
+    @include laptop-min {
+      width: 30px;
+    }
+    @include tablet {
+      width: 20px;
+    }
+  }
   &__btn-rect {
+    @include flex-center;
     width: 225px;
+    height: 225px;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6px);
     transition: transform 0.2s ease;
     @include laptop-min {
       width: 160px;

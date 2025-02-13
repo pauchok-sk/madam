@@ -67,9 +67,11 @@
     transition: box-shadow 0.2s ease;
     @include laptop-min {
       height: 265px;
+      margin-bottom: 25px;
     }
     @include tablet {
       height: 185px;
+      margin-bottom: 14px;
     }
 
     &::before {

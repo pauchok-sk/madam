@@ -19,10 +19,11 @@ export default function burger() {
     });
 
     function burgerClose() {
+      const isHeaderFixed = header.classList.contains("_fixed");
       burger.classList.remove("_open");
       burgerBtn.classList.remove("_active");
-      document.body.classList.remove("body-hidden")
-      if (!isHeaderSimple) header.classList.remove("_dark");
+      document.body.classList.remove("body-hidden");
+      if (!isHeaderSimple && !isHeaderFixed) header.classList.remove("_dark");
 
       document.body.removeEventListener("click", burgerClose);
     }
@@ -30,10 +31,19 @@ export default function burger() {
     function burgerOpen() {
       burger.classList.add("_open");
       burgerBtn.classList.add("_active");
-      document.body.classList.add("body-hidden")
+      document.body.classList.add("body-hidden");
       header.classList.add("_dark");
 
       document.body.addEventListener("click", burgerClose);
     }
+
+    function updateHeightBurger() {
+      burger.style.maxHeight = `${window.visualViewport.height}px`;
+    }
+
+    window.visualViewport.addEventListener("resize", updateHeightBurger);
+    window.visualViewport.addEventListener("scroll", updateHeightBurger);
+
+    updateHeightBurger();
   }
 }

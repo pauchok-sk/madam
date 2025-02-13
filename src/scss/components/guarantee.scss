@@ -13,10 +13,11 @@
     @include tablet {
       text-align: start;
       margin-bottom: 40px;
+      margin-left: 0;
     }
   }
   &__title {
-    max-width: 980px;
+    max-width: 965px;
     text-align: center;
     margin: 0px auto 125px auto;
     @include laptop-min {

@@ -325,6 +325,9 @@ section:not(:last-child) {
   border-color: var(--light);
   color: #fff
 }
+.btn._stroke-dark {
+  border-color: var(--dark)
+}
 .list {
   padding-left: 0;
   margin: 0;
@@ -1126,10 +1129,12 @@ section:not(:last-child) {
   left: 0;
   right: 0;
   border-bottom: 1px solid hsla(0,0%,100%,.3);
-  z-index: 100
+  z-index: 100;
+  transition: background-color .4s ease,color .4s ease,border-color .4s ease,-webkit-transform .4s ease;
+  transition: transform .4s ease,background-color .4s ease,color .4s ease,border-color .4s ease;
+  transition: transform .4s ease,background-color .4s ease,color .4s ease,border-color .4s ease,-webkit-transform .4s ease
 }
 .header._dark {
-  color: var(--dark);
   background-color: var(--bg);
   color: var(--dark);
   border-color: var(--light)
@@ -1150,6 +1155,9 @@ section:not(:last-child) {
 }
 .header._simple {
   position: sticky
+}
+.header._fixed {
+  position: fixed
 }
 .header__wrapper {
   display: flex;
@@ -1200,10 +1208,25 @@ section:not(:last-child) {
   align-items: start;
   gap: 50px
 }
+.header__contacts-item a.header__contacts-content,
+.header__contacts-item button.header__contacts-content {
+  position: relative
+}
+.header__contacts-item a.header__contacts-content::before,
+.header__contacts-item button.header__contacts-content::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  right: 50%;
+  height: 1px;
+  bottom: -2px;
+  background-color: currentColor;
+  transition: left .2s ease,right .2s ease
+}
 .header__contacts-address {
   font-size: 16px;
   font-style: normal;
-  line-height: 11px;
+  line-height: 17px;
   margin: 0
 }
 .header__contacts-content {
@@ -1221,7 +1244,7 @@ section:not(:last-child) {
   position: relative;
   display: block;
   font-size: 20px;
-  line-height: 14px;
+  line-height: 20px;
   text-transform: uppercase
 }
 .header__contacts-tel::before {
@@ -1442,6 +1465,9 @@ section:not(:last-child) {
   line-height: 13px;
   font-weight: 300
 }
+.services .slider-nav__btn-middle {
+  border-color: var(--amber)
+}
 .sect {
   display: flex
 }
@@ -1573,8 +1599,18 @@ section:not(:last-child) {
 .promo-video__btn span {
   max-width: 145px
 }
+.promo-video__icon-play {
+  width: 40px
+}
 .promo-video__btn-rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 225px;
+  height: 225px;
+  border: 1px solid hsla(0,0%,100%,.33);
+  background: hsla(0,0%,100%,.04);
+  backdrop-filter: blur(6px);
   transition: -webkit-transform .2s ease;
   transition: transform .2s ease;
   transition: transform .2s ease,-webkit-transform .2s ease
@@ -1588,7 +1624,7 @@ section:not(:last-child) {
   margin: 0 auto 16px auto
 }
 .guarantee__title {
-  max-width: 980px;
+  max-width: 965px;
   text-align: center;
   margin: 0 auto 125px auto
 }
@@ -1839,40 +1875,40 @@ section:not(:last-child) {
   display: none;
   margin-bottom: 0
 }
-.webpt {
-  padding: 50px 0
+.gift {
+  padding: 50px 0!important
 }
-.webpt__container {
+.gift__container {
   max-width: 780px;
   padding: 0 30px;
   margin: 0 auto;
   width: 100%
 }
-.webpt__tag {
+.gift__tag {
   margin-bottom: 40px
 }
-.webpt__title {
+.gift__title {
   margin: 0 0 40px 0
 }
-.webpt__content {
+.gift__content {
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
   margin: 0 0 50px 0
 }
-.webpt__content p {
+.gift__content p {
   margin: 0
 }
-.webpt__content p:not(:last-child) {
+.gift__content p:not(:last-child) {
   margin-bottom: 20px
 }
-.webpt__wrapper {
+.gift__wrapper {
   display: grid;
   grid-template-columns: repeat(6,1fr);
   gap: 24px;
   max-width: 695px
 }
-.webpt__item {
+.gift__item {
   position: relative;
   display: flex;
   align-items: center;
@@ -1883,40 +1919,40 @@ section:not(:last-child) {
   border: 1px solid var(--cloudy);
   z-index: 1
 }
-.webpt__item::before {
+.gift__item::before {
   position: absolute;
   content: "";
   inset: 13px;
   border: 1px solid rgba(75,64,54,.07);
   z-index: -1
 }
-.webpt__item-icon {
+.gift__item-icon {
   width: 60px;
   margin-bottom: 20px
 }
-.webpt__item-title {
+.gift__item-title {
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
   flex: 1;
   margin: 0 0 30px 0
 }
-.webpt__item-price {
+.gift__item-price {
   font-size: 48px;
   font-weight: 500;
   line-height: 30px;
   margin-bottom: 14px
 }
-.webpt__item-price._min {
+.gift__item-price._min {
   font-size: 24px
 }
-.webpt__item-currency {
+.gift__item-currency {
   font-size: 14px;
   font-weight: 300;
   line-height: 16px;
   text-transform: uppercase
 }
-.webpt__btn {
+.gift__btn {
   margin-top: 70px;
   max-width: 350px;
   font-weight: 600;
@@ -2006,8 +2042,8 @@ section:not(:last-child) {
 }
 .discount__contacts-btn {
   padding: 10px;
-  flex: 0 1 125px;
   flex-shrink: 0;
+  width: 125px;
   min-height: 55px;
   font-size: 14px;
   font-weight: 300;
@@ -2121,8 +2157,8 @@ section:not(:last-child) {
   padding: 32px 30px
 }
 .rating-sect {
-  padding-left: 0;
-  padding-right: 0
+  padding-left: 0!important;
+  padding-right: 0!important
 }
 .rating-sect__container {
   max-width: 750px;
@@ -3546,7 +3582,7 @@ section:not(:last-child) {
   font-size: 24px;
   font-weight: 300;
   text-align: center;
-  margin: 0 0 35px 0
+  margin: 0 0 45px 0
 }
 .footer__middle-form {
   display: flex;
@@ -3554,7 +3590,6 @@ section:not(:last-child) {
   justify-content: space-between;
   max-width: 455px;
   width: 100%;
-  flex: 1;
   gap: 15px;
   border-bottom: 1px solid var(--dark);
   padding: 10px 15px 10px 30px
@@ -3617,6 +3652,9 @@ section:not(:last-child) {
   font-size: 14px;
   line-height: 22px;
   margin: 0
+}
+.footer__copyright a {
+  transition: opacity .2s ease
 }
 .footer__dev {
   display: flex;
@@ -5466,7 +5504,7 @@ html.with-fancybox body.hide-scrollbar {
   .promo-video {
     height: 720px
   }
-  .webpt__wrapper {
+  .gift__wrapper {
     gap: 15px
   }
   .reviews {
@@ -5500,17 +5538,17 @@ html.with-fancybox body.hide-scrollbar {
   .reviews__title {
     font-size: 25px;
     line-height: 34px;
-    margin-bottom: 35px
+    margin-bottom: 8px
   }
   .reviews__content {
-    padding: 0;
+    padding: 30px 0 0 0;
     font-size: 18px;
     line-height: 28px;
     margin-bottom: 22px
   }
   .reviews__content::before {
     left: 0;
-    top: -30px
+    top: 0
   }
   .reviews__footer {
     padding-left: 0
@@ -5518,7 +5556,7 @@ html.with-fancybox body.hide-scrollbar {
   .reviews__img {
     width: 100%;
     height: 365px;
-    margin-bottom: 30px
+    margin-bottom: 30px!important
   }
   .reviews__slider-nav {
     padding: 0;
@@ -5620,11 +5658,11 @@ html.with-fancybox body.hide-scrollbar {
   .popular-price__gallery-content {
     padding: 50px 30px
   }
-  .webpt__item {
+  .gift__item {
     grid-column: 3 span;
     padding: 15px 12px 30px 12px
   }
-  .webpt__item::before {
+  .gift__item::before {
     inset: 10px
   }
   .discount__wrapper {
@@ -5992,6 +6030,9 @@ html.with-fancybox body.hide-scrollbar {
   .promo-video__btn {
     gap: 20px
   }
+  .promo-video__icon-play {
+    width: 30px
+  }
   .promo-video__btn-rect {
     width: 160px;
     height: 160px
@@ -6046,7 +6087,8 @@ html.with-fancybox body.hide-scrollbar {
     width: 250px!important
   }
   .stocks__slide-gallery {
-    height: 265px
+    height: 265px;
+    margin-bottom: 25px
   }
   .stocks__slide-info {
     margin-bottom: 16px;
@@ -6064,10 +6106,10 @@ html.with-fancybox body.hide-scrollbar {
     line-height: 16px;
     margin-bottom: 16px
   }
-  .webpt__container {
+  .gift__container {
     max-width: none
   }
-  .webpt__item {
+  .gift__item {
     grid-column: 2 span
   }
   .discount {
@@ -6119,7 +6161,7 @@ html.with-fancybox body.hide-scrollbar {
   }
   .news__slide-content {
     font-size: 14px;
-    line-height: 18px
+    line-height: 22px
   }
   .get-discount {
     flex-wrap: wrap
@@ -6567,6 +6609,9 @@ html.with-fancybox body.hide-scrollbar {
     max-width: none;
     margin: 40px 16px
   }
+  .promo-video__icon-play {
+    width: 20px
+  }
   .promo-video__btn-rect {
     width: 100px;
     height: 100px
@@ -6576,7 +6621,8 @@ html.with-fancybox body.hide-scrollbar {
   }
   .guarantee__tag {
     text-align: start;
-    margin-bottom: 40px
+    margin-bottom: 40px;
+    margin-left: 0
   }
   .guarantee__title {
     margin-bottom: 45px;
@@ -6646,48 +6692,49 @@ html.with-fancybox body.hide-scrollbar {
     width: 175px!important
   }
   .stocks__slide-gallery {
-    height: 185px
+    height: 185px;
+    margin-bottom: 14px
   }
   .stocks__scrollbar {
     display: block
   }
-  .webpt__container {
+  .gift__container {
     padding: 0 15px
   }
-  .webpt__tag {
+  .gift__tag {
     margin-bottom: 30px
   }
-  .webpt__content {
+  .gift__content {
     margin-bottom: 40px
   }
-  .webpt__wrapper {
+  .gift__wrapper {
     gap: 12px;
     max-width: 360px;
     margin-left: auto;
     margin-right: auto
   }
-  .webpt__item::before {
+  .gift__item::before {
     inset: 5px
   }
-  .webpt__item-icon {
+  .gift__item-icon {
     width: 30px;
     margin-bottom: 10px
   }
-  .webpt__item-title {
+  .gift__item-title {
     font-size: 10px;
     line-height: 10px;
     margin-bottom: 15px
   }
-  .webpt__item-price {
+  .gift__item-price {
     font-size: 26px;
     font-weight: 500;
     line-height: 16px;
     margin-bottom: 7px
   }
-  .webpt__item-price._min {
+  .gift__item-price._min {
     font-size: 16px
   }
-  .webpt__btn {
+  .gift__btn {
     margin: 40px auto 0 auto
   }
   .discount {
@@ -6761,7 +6808,7 @@ html.with-fancybox body.hide-scrollbar {
     display: block
   }
   .rating-sect {
-    padding-bottom: 50px
+    padding-bottom: 50px!important
   }
   .rating-sect__container {
     padding: 0 15px
@@ -6850,7 +6897,8 @@ html.with-fancybox body.hide-scrollbar {
     margin-left: 0
   }
   .salons__title {
-    margin-bottom: 40px
+    margin-bottom: 40px;
+    text-align: start
   }
   .salons__slider {
     margin-bottom: 24px
@@ -7351,16 +7399,22 @@ html.with-fancybox body.hide-scrollbar {
   .popular-price__img {
     height: 240px
   }
-  .webpt__item-price._min {
+  .gift__item-price._min {
     font-size: 12px
   }
-  .webpt__item-currency {
+  .gift__item-currency {
     font-size: 6px;
     line-height: 7px
   }
-  .webpt__btn {
+  .gift__btn {
     max-width: none;
     width: 100%
+  }
+  .discount__title {
+    text-align: start
+  }
+  .discount__content {
+    text-align: start
   }
   .intro-simple__btn {
     min-height: 60px!important;
@@ -7510,9 +7564,10 @@ html.with-fancybox body.hide-scrollbar {
     left: 0;
     right: 0
   }
-  .header__contacts-item a.header__contacts-content:hover,
-  .header__contacts-item button.header__contacts-content:hover {
-    text-decoration: underline
+  .header__contacts-item a.header__contacts-content:hover::before,
+  .header__contacts-item button.header__contacts-content:hover::before {
+    left: 0;
+    right: 0
   }
   .header__contacts-tel:hover::before {
     right: 0
@@ -7626,6 +7681,9 @@ html.with-fancybox body.hide-scrollbar {
   .footer__contacts-tel:hover {
     opacity: .5
   }
+  .footer__copyright a:hover {
+    opacity: .5
+  }
   .footer__dev-btn:hover {
     opacity: .5
   }
@@ -7695,9 +7753,10 @@ html.with-fancybox body.hide-scrollbar {
     left: 0;
     right: 0
   }
-  .header__contacts-item a.header__contacts-content:active,
-  .header__contacts-item button.header__contacts-content:active {
-    text-decoration: underline
+  .header__contacts-item a.header__contacts-content:active::before,
+  .header__contacts-item button.header__contacts-content:active::before {
+    left: 0;
+    right: 0
   }
   .header__contacts-tel:active::before {
     right: 0
@@ -7809,6 +7868,9 @@ html.with-fancybox body.hide-scrollbar {
     opacity: .5
   }
   .footer__contacts-tel:active {
+    opacity: .5
+  }
+  .footer__copyright a:active {
     opacity: .5
   }
   .footer__dev-btn:active {
