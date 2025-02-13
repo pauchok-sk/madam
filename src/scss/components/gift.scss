@@ -1,5 +1,8 @@
 .gift {
   padding: 50px 0px !important;
+  @include tablet {
+    padding: 50px 0px !important;
+  }
   &__container {
     @include width(720px, 30px);
     @include laptop-min {

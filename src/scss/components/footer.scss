@@ -13,6 +13,9 @@
       flex-wrap: wrap;
       padding: 0px 0px 40px 0px !important;
     }
+    @include tablet {
+      padding: 0px 0px 40px 0px !important;
+    }
   }
   &__main {
     flex: 1;
