@@ -2,7 +2,7 @@
   overflow: hidden;
   padding: 60px 0px 120px 0px;
   @include tablet {
-    padding: 50px 0px;
+    padding: 50px 0px 40px 0px;
   }
   &__container {
     @include width(1740px, 30px);

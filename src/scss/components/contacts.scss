@@ -9,6 +9,7 @@
     @include laptop {
       flex: none;
       width: 100%;
+      border-right: none;
     }
     @include tablet {
       padding-top: 50px;

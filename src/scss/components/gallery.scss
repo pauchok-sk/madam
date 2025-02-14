@@ -47,7 +47,7 @@
   &__slider {
     margin-bottom: 50px;
     @include tablet {
-      padding-bottom: 24px;
+      margin-bottom: 24px;
     }
 
     .swiper-slide {

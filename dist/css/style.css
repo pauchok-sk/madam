@@ -1553,6 +1553,10 @@ section:not(:last-child) {
   max-width: 280px;
   width: 100%
 }
+.sect__btn._mobile {
+  display: none;
+  order: 3
+}
 .sect__img {
   width: 50%;
   height: auto;
@@ -2915,7 +2919,7 @@ section:not(:last-child) {
   display: flex;
   gap: 16px;
   font-size: 18px;
-  line-height: 13px
+  line-height: 18px
 }
 .reviews-main__card-item span:last-child {
   font-weight: 300
@@ -3090,7 +3094,8 @@ section:not(:last-child) {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  font-weight: 300
+  font-weight: 300;
+  padding-top: 8px
 }
 .news-main__item-day {
   font-size: 48px;
@@ -3360,7 +3365,7 @@ section:not(:last-child) {
 }
 .rec-news__slide-title {
   margin: 0 0 18px 0;
-  line-height: 40px
+  line-height: 40px!important
 }
 .rec-news__slide-list {
   display: flex;
@@ -5401,6 +5406,9 @@ html.with-fancybox body.hide-scrollbar {
     width: -moz-fit-content!important;
     width: fit-content!important
   }
+  .services._bottom-line-mobile {
+    border-bottom: none!important
+  }
   .news-main__item:nth-last-child(-n+2) {
     border-bottom: none
   }
@@ -5697,7 +5705,8 @@ html.with-fancybox body.hide-scrollbar {
   }
   .contacts__body {
     flex: none;
-    width: 100%
+    width: 100%;
+    border-right: none
   }
   .contacts__container {
     max-width: none
@@ -5772,8 +5781,8 @@ html.with-fancybox body.hide-scrollbar {
     margin-bottom: 20px
   }
   .rec-news__slide-title {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 16px!important;
+    line-height: 24px!important;
     margin-bottom: 20px
   }
   .rec-news__slide-content {
@@ -5784,6 +5793,9 @@ html.with-fancybox body.hide-scrollbar {
   .rec-news__author-status {
     font-size: 14px;
     padding-bottom: 6px
+  }
+  .rec-news__slider-nav {
+    border-top: none
   }
   .sect-error__gallery {
     padding: 50px 40px;
@@ -5813,7 +5825,6 @@ html.with-fancybox body.hide-scrollbar {
     align-items: center;
     position: relative;
     margin-bottom: 40px;
-    margin: 0 auto 40px auto;
     z-index: 1
   }
   .footer__middle-form {
@@ -6202,6 +6213,9 @@ html.with-fancybox body.hide-scrollbar {
   .intro-simple._bottom-off {
     padding-bottom: 0
   }
+  .intro-simple._bottom-border-mobile-off {
+    border-bottom: none
+  }
   .intro-simple__container {
     max-width: none
   }
@@ -6276,6 +6290,9 @@ html.with-fancybox body.hide-scrollbar {
   .reviews-main__card-list {
     margin-top: 30px
   }
+  .stocks-main__item .sect__img {
+    order: 1
+  }
   .stocks-main__item {
     flex-wrap: wrap
   }
@@ -6283,7 +6300,8 @@ html.with-fancybox body.hide-scrollbar {
     max-width: none
   }
   .stocks-main__body {
-    padding: 70px 0
+    padding: 70px 0;
+    order: 2
   }
   .stocks-main__title {
     margin-bottom: 24px
@@ -6299,7 +6317,8 @@ html.with-fancybox body.hide-scrollbar {
     margin-bottom: 24px
   }
   .news-main__item-date {
-    gap: 8px
+    gap: 8px;
+    padding-top: 6px
   }
   .news-main__item-day {
     font-size: 30px;
@@ -6621,6 +6640,9 @@ html.with-fancybox body.hide-scrollbar {
     max-width: none;
     margin: 40px 16px
   }
+  .sect__btn._mobile {
+    display: flex
+  }
   .promo-video__icon-play {
     width: 20px
   }
@@ -6684,7 +6706,7 @@ html.with-fancybox body.hide-scrollbar {
     height: 305px!important
   }
   .stocks {
-    padding: 50px 0
+    padding: 50px 0 40px 0
   }
   .stocks__container {
     padding: 0 15px
@@ -6900,7 +6922,7 @@ html.with-fancybox body.hide-scrollbar {
   .get-discount__contacts {
     flex-wrap: wrap;
     justify-content: center;
-    margin: 50px auto 0 auto
+    margin: 30px auto 0 auto
   }
   .get-discount__tg {
     max-width: none
@@ -6969,7 +6991,7 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 18px
   }
   .gallery__slider {
-    padding-bottom: 24px
+    margin-bottom: 24px
   }
   .gallery__slider .swiper-slide {
     width: 160px!important;
@@ -7221,6 +7243,9 @@ html.with-fancybox body.hide-scrollbar {
   }
   .trands {
     padding: 50px 0 30px 0
+  }
+  .trands__title {
+    text-align: start
   }
   .trands__content {
     font-size: 16px;
@@ -7646,6 +7671,9 @@ html.with-fancybox body.hide-scrollbar {
   .reviews__content-btn:hover {
     text-decoration: none
   }
+  .get-discount__form-policy a:hover {
+    text-decoration: underline
+  }
   .get-discount__tel:hover {
     opacity: .5
   }
@@ -7834,6 +7862,9 @@ html.with-fancybox body.hide-scrollbar {
   }
   .reviews__content-btn:active {
     text-decoration: none
+  }
+  .get-discount__form-policy a:active {
+    text-decoration: underline
   }
   .get-discount__tel:active {
     opacity: .5

@@ -77,8 +77,10 @@
     flex-direction: column;
     gap: 12px;
     font-weight: 300;
+    padding-top: 8px;
     @include laptop-min {
       gap: 8px;
+      padding-top: 6px;
     }
   }
   &__item-day {

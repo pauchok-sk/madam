@@ -44,10 +44,10 @@
   }
   &__slide-title {
     margin: 0px 0px 18px 0px;
-    line-height: 40px;
+    line-height: 40px !important;
     @include laptop {
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 16px !important;
+      line-height: 24px !important;
       margin-bottom: 20px;
     }
   }
@@ -125,6 +125,9 @@
     padding: 30px 0px;
     border-top: 1px solid var(--dark);
 
+    @include laptop {
+      border-top: none;
+    }
     @include tablet {
       padding-bottom: 90px;
       .slider-nav__scrollbar {

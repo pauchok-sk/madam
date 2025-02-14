@@ -7,6 +7,9 @@
     &._bottom-off {
       padding-bottom: 0;
     }
+    &._bottom-border-mobile-off {
+      border-bottom: none;
+    }
   }
   &__body {
     display: flex;

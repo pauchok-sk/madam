@@ -1,6 +1,11 @@
 .services {
   overflow: hidden;
   padding-bottom: 50px;
+  &._bottom-line-mobile {
+    @media (min-width: 744px) {
+      border-bottom: none !important;
+    }
+  }
   &__nav {
     display: flex;
     gap: 275px;

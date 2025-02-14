@@ -17,6 +17,11 @@
       gap: 0px;
     }
     @include laptop-min {
+      .sect__img {
+        order: 1;
+      }
+    }
+    @include laptop-min {
       flex-wrap: wrap;
     }
   }
@@ -31,6 +36,7 @@
     padding: 120px 0px 100px;
     @include laptop-min {
       padding: 70px 0px;
+      order: 2;
     }
     @include tablet {
       padding: 50px 0px;
