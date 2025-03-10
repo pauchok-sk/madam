@@ -127,8 +127,12 @@ export default function sliders() {
           spaceBetween: 145,
           slidesPerView: 4,
         },
+        1540: {
+          spaceBetween: 100,
+          slidesPerView: 4,
+        },
         1366: {
-          spaceBetween: 50,
+          spaceBetween: 80,
           slidesPerView: 4,
         },
         993: {
@@ -160,7 +164,7 @@ export default function sliders() {
         delay: 3000,
       },
       breakpoints: {
-        1540: {
+        1366: {
           spaceBetween: 24,
           slidesPerView: 1,
         },
@@ -221,6 +225,10 @@ export default function sliders() {
         1680: {
           slidesPerView: 4,
           spaceBetween: 90,
+        },
+        1366: {
+          slidesPerView: 4,
+          spaceBetween: 50,
         },
       },
     });

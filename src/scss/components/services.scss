@@ -111,7 +111,7 @@
     }
 
     .services__slide-gallery{
-      @include laptop-min {
+      @include desktop-big {
         height: 325px;
       }
       @include tablet-min {
@@ -166,7 +166,8 @@
     height: 520px;
     margin-bottom: 32px;
     transition: filter 0.2s ease;
-    @include desktop {
+    @include desktop-big {
+      width: 305px;
       height: 415px;
     }
     @include tablet {

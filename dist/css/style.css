@@ -369,6 +369,12 @@ section:not(:last-child) {
 [data-tab]._open {
   display: block
 }
+[data-tab-addition] {
+  display: none
+}
+[data-tab-addition]._open {
+  display: block
+}
 [data-tab-img] {
   transition: opacity .4s ease
 }
@@ -1015,7 +1021,7 @@ section:not(:last-child) {
 .modal-sect__body {
   position: relative;
   flex: 1;
-  padding: 90px 0 75px 0
+  padding: 70px 0
 }
 .modal-sect__body._center {
   display: flex;
@@ -1044,13 +1050,13 @@ section:not(:last-child) {
   margin-bottom: 40px
 }
 .modal-sect__title {
-  margin: 0 0 60px 0
+  margin: 0 0 45px 0
 }
 .modal-sect__content {
   font-size: 18px;
   font-weight: 300;
   line-height: 31px;
-  margin: 0 0 50px 0
+  margin: 0 0 40px 0
 }
 .modal-sect__form {
   max-width: 470px
@@ -1064,7 +1070,7 @@ section:not(:last-child) {
   margin-top: 50px
 }
 .modal-sect__form-policy {
-  margin: 30px 0 0 0;
+  margin: 25px 0 0 0;
   max-width: 395px;
   font-size: 12px;
   font-weight: 300;
@@ -1077,7 +1083,7 @@ section:not(:last-child) {
   max-width: 470px;
   width: 100%;
   gap: 30px;
-  margin-top: 70px
+  margin-top: 60px
 }
 .modal-sect__address {
   font-size: 16px;
@@ -1102,6 +1108,9 @@ section:not(:last-child) {
   font-weight: 300;
   line-height: 10px;
   text-transform: none
+}
+.modal-sect__img {
+  max-height: 100vh
 }
 .modal-sect__thank-tag {
   margin-bottom: 40px
@@ -1191,7 +1200,8 @@ section:not(:last-child) {
 }
 .header__list a {
   position: relative;
-  font-size: 16px
+  font-size: 16px;
+  font-weight: 200
 }
 .header__list a::before {
   position: absolute;
@@ -1495,6 +1505,7 @@ section:not(:last-child) {
 }
 .sect__tab-nav {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 160px;
   gap: 110px;
@@ -1595,7 +1606,7 @@ section:not(:last-child) {
   gap: 32px;
   font-size: 20px;
   line-height: 32px;
-  font-weight: 300;
+  font-weight: 200;
   color: #fff;
   text-align: center;
   z-index: 1
@@ -1931,7 +1942,7 @@ section:not(:last-child) {
   z-index: -1
 }
 .gift__item-icon {
-  width: 60px;
+  width: 64px;
   margin-bottom: 20px
 }
 .gift__item-title {
@@ -2727,7 +2738,7 @@ section:not(:last-child) {
 }
 .requisites {
   flex: 1;
-  padding: 100px 0
+  padding: 80px 0 30px 0
 }
 .requisites__container {
   margin: 0 auto 0 130px!important;
@@ -5436,8 +5447,19 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (max-width:1679px) {
+  .burger__nav {
+    max-width: 1100px;
+    margin-left: auto
+  }
   .services__wrapper {
     gap: 40px
+  }
+  .services__item .services__slide-gallery {
+    height: 325px
+  }
+  .services__slide-gallery {
+    width: 305px;
+    height: 415px
   }
   .popular-price__img {
     height: 500px
@@ -5449,9 +5471,6 @@ html.with-fancybox body.hide-scrollbar {
     overflow: visible!important
   }
   .news__slide {
-    width: 380px!important
-  }
-  .salons__slider .swiper-slide {
     width: 380px!important
   }
   .intro-simple__container {
@@ -5507,9 +5526,6 @@ html.with-fancybox body.hide-scrollbar {
   .header__btn {
     width: 245px
   }
-  .services__slide-gallery {
-    height: 415px
-  }
   .sect__tab-nav {
     margin-top: 100px;
     gap: 50px
@@ -5526,60 +5542,11 @@ html.with-fancybox body.hide-scrollbar {
   .gift__wrapper {
     gap: 15px
   }
-  .reviews {
-    overflow: hidden;
-    padding: 70px 0
-  }
-  .reviews__wrapper {
-    padding: 0 30px
-  }
-  .reviews__tag-main {
-    display: block
-  }
-  .reviews__slider {
-    border-bottom: none;
-    overflow: visible!important
-  }
-  .reviews__slider .swiper-slide {
-    width: 420px!important
-  }
-  .reviews__slider .swiper-slide .sect-tag {
-    display: none
-  }
-  .reviews__container {
-    padding: 0!important;
-    align-items: start
-  }
-  .reviews__slide-body {
-    align-items: start;
-    padding: 0
-  }
-  .reviews__title {
-    font-size: 25px;
-    line-height: 34px;
-    margin-bottom: 8px
-  }
   .reviews__content {
-    padding: 30px 0 0 0;
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 22px
-  }
-  .reviews__content::before {
-    left: 0;
-    top: 0
+    padding-left: 0
   }
   .reviews__footer {
     padding-left: 0
-  }
-  .reviews__img {
-    width: 100%;
-    height: 365px;
-    margin-bottom: 30px!important
-  }
-  .reviews__slider-nav {
-    padding: 0;
-    margin-top: 40px
   }
   .reviews-main__card-container {
     padding-left: 0
@@ -5687,8 +5654,63 @@ html.with-fancybox body.hide-scrollbar {
   .discount__wrapper {
     gap: 60px
   }
+  .reviews {
+    overflow: hidden;
+    padding: 70px 0
+  }
+  .reviews__wrapper {
+    padding: 0 30px
+  }
+  .reviews__tag-main {
+    display: block
+  }
+  .reviews__slider {
+    border-bottom: none;
+    overflow: visible!important
+  }
+  .reviews__slider .swiper-slide {
+    width: 420px!important
+  }
+  .reviews__slider .swiper-slide .sect-tag {
+    display: none
+  }
+  .reviews__container {
+    padding: 0!important;
+    align-items: start
+  }
+  .reviews__slide-body {
+    align-items: start;
+    padding: 0
+  }
+  .reviews__title {
+    font-size: 25px;
+    line-height: 34px;
+    margin-bottom: 8px
+  }
+  .reviews__content {
+    padding: 30px 0 0 0;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 22px
+  }
+  .reviews__content::before {
+    left: 0;
+    top: 0
+  }
+  .reviews__img {
+    width: 100%;
+    height: 365px;
+    margin-bottom: 30px!important
+  }
+  .reviews__slider-nav {
+    padding: 0;
+    margin-top: 40px
+  }
   .rating-sect__services {
     gap: 30px
+  }
+  .salons__slider .swiper-slide {
+    width: 380px!important
   }
   .intro-simple__body {
     padding: 50px 0
@@ -6030,9 +6052,6 @@ html.with-fancybox body.hide-scrollbar {
   }
   .services__wrapper {
     gap: 24px
-  }
-  .services__item .services__slide-gallery {
-    height: 325px
   }
   .sect {
     flex-wrap: wrap

@@ -27,7 +27,7 @@
     .swiper-slide {
       display: flex !important;
       flex-direction: column;
-      @include desktop-big {
+      @include laptop {
         width: 380px !important;
       }
       @include tablet {

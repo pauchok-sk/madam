@@ -91,6 +91,7 @@
     a {
       position: relative;
       font-size: 16px;
+      font-weight: 200;
       @include hover {
         &::before {
           left: 0;

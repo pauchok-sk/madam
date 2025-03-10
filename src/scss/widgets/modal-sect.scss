@@ -10,7 +10,7 @@
   &__body {
     position: relative;
     flex: 1;
-    padding: 90px 0px 75px 0px;
+    padding: 70px 0px;
     &._center {
       @include flex-center;
     }
@@ -45,7 +45,7 @@
     }
   }
   &__title {
-    margin: 0px 0px 60px 0px;
+    margin: 0px 0px 45px 0px;
     @include tablet {
       margin-bottom: 30px;
     }
@@ -54,7 +54,7 @@
     font-size: 18px;
     font-weight: 300;
     line-height: 31px;
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 40px 0px;
     @include tablet {
       font-size: 16px;
       line-height: 24px;
@@ -79,7 +79,7 @@
     }
   }
   &__form-policy {
-    margin: 30px 0px 0px 0px;
+    margin: 25px 0px 0px 0px;
     max-width: 395px;
     font-size: 12px;
     font-weight: 300;
@@ -93,7 +93,7 @@
     max-width: 470px;
     width: 100%;
     gap: 30px;
-    margin-top: 70px;
+    margin-top: 60px;
     @include tablet {
       flex-wrap: wrap;
       justify-content: center;
@@ -137,6 +137,7 @@
     }
   }
   &__img {
+    max-height: 100vh;
     @include laptop-min {
       display: none;
     }

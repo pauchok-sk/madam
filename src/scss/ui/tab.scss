@@ -5,6 +5,13 @@
   }
 }
 
+[data-tab-addition] {
+  display: none;
+  &._open {
+    display: block;
+  }
+}
+
 [data-tab-img] {
   transition: opacity 0.4s ease;
 }

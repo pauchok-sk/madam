@@ -3053,6 +3053,7 @@
     }
     function tab() {
         const buttonsTab = document.querySelectorAll("[data-tab-btn]");
+        const tabsAdditions = document.querySelectorAll("[data-tab-addition]");
         if (buttonsTab.length) buttonsTab.forEach((btn => {
             const parent = btn.closest(".tab-container");
             const currentTabs = parent.querySelectorAll("[data-tab]");
@@ -3061,8 +3062,14 @@
             if (currentImg) currentImg.src = currentButtons[0].dataset.img;
             btn.addEventListener("click", (() => {
                 const idTab = btn.dataset.tabBtn;
+                const idTabAddition = btn.dataset.tabBtnAddition;
                 const srcImg = btn.dataset.img;
                 const currentTab = parent.querySelector(`[data-tab="${idTab}"]`);
+                const tabAddition = document.querySelector(`[data-tab-addition="${idTabAddition}"]`);
+                if (tabAddition) {
+                    tabsAdditions.forEach((t => t.classList.remove("_open")));
+                    tabAddition.classList.add("_open");
+                }
                 if (currentImg) {
                     currentImg.style.opacity = 0;
                     currentImg.src = srcImg;
@@ -9966,8 +9973,12 @@
                         spaceBetween: 145,
                         slidesPerView: 4
                     },
+                    1540: {
+                        spaceBetween: 100,
+                        slidesPerView: 4
+                    },
                     1366: {
-                        spaceBetween: 50,
+                        spaceBetween: 80,
                         slidesPerView: 4
                     },
                     993: {
@@ -9997,7 +10008,7 @@
                     delay: 3e3
                 },
                 breakpoints: {
-                    1540: {
+                    1366: {
                         spaceBetween: 24,
                         slidesPerView: 1
                     }
@@ -10054,6 +10065,10 @@
                     1680: {
                         slidesPerView: 4,
                         spaceBetween: 90
+                    },
+                    1366: {
+                        slidesPerView: 4,
+                        spaceBetween: 50
                     }
                 }
             });
@@ -15047,7 +15062,6 @@
                 htmlMap.controls.remove("trafficControl");
                 htmlMap.controls.remove("typeSelector");
                 htmlMap.controls.remove("fullscreenControl");
-                htmlMap.controls.remove("zoomControl");
                 htmlMap.controls.remove("rulerControl");
                 htmlMap.behaviors.disable([ "scrollZoom" ]);
             }

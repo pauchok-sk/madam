@@ -31,7 +31,7 @@ export default function map() {
       htmlMap.controls.remove("trafficControl"); // удаляем контроль трафика
       htmlMap.controls.remove("typeSelector"); // удаляем тип
       htmlMap.controls.remove("fullscreenControl"); // удаляем кнопку перехода в полноэкранный режим
-      htmlMap.controls.remove("zoomControl"); // удаляем контрол зуммирования
+      // htmlMap.controls.remove("zoomControl"); // удаляем контрол зуммирования
       htmlMap.controls.remove("rulerControl"); // удаляем контрол правил
       htmlMap.behaviors.disable(["scrollZoom"]);
     }
