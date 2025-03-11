@@ -350,6 +350,11 @@ section:not(:last-child) {
   text-transform: uppercase;
   font-weight: 400
 }
+.title-f {
+  font-family: Foglihten,sans-serif;
+  text-transform: uppercase;
+  font-weight: 400
+}
 .title-n {
   text-transform: none
 }
@@ -2287,7 +2292,7 @@ section:not(:last-child) {
 }
 .news__slide-title {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 32px;
   margin: 0 0 28px 0
 }
@@ -2460,7 +2465,7 @@ section:not(:last-child) {
   width: 100%
 }
 .intro-simple__title {
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0 50px 0
 }
 .intro-simple__title._min {
@@ -3294,7 +3299,8 @@ section:not(:last-child) {
   padding: 0 10px
 }
 .trands__content h4 {
-  font-size: 24px
+  font-size: 24px;
+  font-weight: 400
 }
 .trands__content h4,
 .trands__content p {
@@ -6141,7 +6147,8 @@ html.with-fancybox body.hide-scrollbar {
     height: 500px
   }
   .popular-price__gallery-content {
-    flex: none
+    flex: none;
+    line-height: 26px
   }
   .portfolio__slider .swiper-slide {
     width: 305px!important;
@@ -6879,7 +6886,7 @@ html.with-fancybox body.hide-scrollbar {
   }
   .reviews__footer-body {
     flex-direction: column-reverse;
-    gap: 6px;
+    gap: 10px;
     align-items: start
   }
   .reviews__img {
@@ -6909,7 +6916,7 @@ html.with-fancybox body.hide-scrollbar {
     inset: 6px
   }
   .rating-sect__service-value {
-    font-size: 43.043px;
+    font-size: 43px;
     font-weight: 500;
     line-height: 47.078px;
     margin-bottom: 3px
@@ -7295,6 +7302,9 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 16px;
     line-height: 24px;
     padding: 0
+  }
+  .trands__content h4 {
+    font-size: 20px
   }
   .trands__content li::before {
     width: 2px;
