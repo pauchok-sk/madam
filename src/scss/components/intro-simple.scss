@@ -35,6 +35,10 @@
     @include laptop-middle {
       margin-bottom: 30px;
     }
+
+    &._min {
+      max-width: 495px;
+    }
   }
   &__content {
     font-size: 16px;

@@ -28,6 +28,9 @@
   &__container {
     margin: 0 !important;
     @include width(670px, 30px);
+    @include desktop-big {
+      max-width: 600px;
+    }
     @include laptop-min {
       max-width: none;
     }

@@ -31,7 +31,9 @@
     height: auto;
     object-fit: cover;
     @include desktop-big {
-      width: 320px;
+      // width: 320px;
+      width: 330px;
+      height: 330px;
     }
     @include laptop {
       width: 100%;

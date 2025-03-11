@@ -1,11 +1,4 @@
 @font-face {
-  font-family: CormorantSC;
-  font-display: swap;
-  src: url(../fonts/CormorantSC-Light.woff2) format("woff2");
-  font-weight: 300;
-  font-style: normal
-}
-@font-face {
   font-family: CormorantInfant;
   font-display: swap;
   src: url(../fonts/CormorantInfant-Regular.woff2) format("woff2");
@@ -22,8 +15,8 @@
 @font-face {
   font-family: CormorantSC;
   font-display: swap;
-  src: url(../fonts/CormorantSC-Regular.woff2) format("woff2");
-  font-weight: 400;
+  src: url(../fonts/CormorantSC-Light.woff2) format("woff2");
+  font-weight: 300;
   font-style: normal
 }
 @font-face {
@@ -34,10 +27,10 @@
   font-style: normal
 }
 @font-face {
-  font-family: Mont;
+  font-family: CormorantSC;
   font-display: swap;
-  src: url(../fonts/Mont-Light.woff2) format("woff2");
-  font-weight: 300;
+  src: url(../fonts/CormorantSC-Regular.woff2) format("woff2");
+  font-weight: 400;
   font-style: normal
 }
 @font-face {
@@ -52,6 +45,20 @@
   font-display: swap;
   src: url(../fonts/Mont-ExtraLight.woff2) format("woff2");
   font-weight: 200;
+  font-style: normal
+}
+@font-face {
+  font-family: Foglihten;
+  font-display: swap;
+  src: url(../fonts/Foglihten-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal
+}
+@font-face {
+  font-family: Mont;
+  font-display: swap;
+  src: url(../fonts/Mont-Light.woff2) format("woff2");
+  font-weight: 300;
   font-style: normal
 }
 @font-face {
@@ -1658,7 +1665,7 @@ section:not(:last-child) {
 }
 .guarantee__slide-title {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 26px;
   text-transform: uppercase;
   margin: 0 0 30px 0
@@ -1700,7 +1707,7 @@ section:not(:last-child) {
 .popular-price__tab-btn {
   color: var(--light);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 32px;
   transition: color .2s ease
 }
@@ -1970,7 +1977,7 @@ section:not(:last-child) {
 .gift__btn {
   margin-top: 70px;
   max-width: 350px;
-  font-weight: 600;
+  font-weight: 300;
   width: 100%;
   padding: 15px!important
 }
@@ -2013,9 +2020,11 @@ section:not(:last-child) {
   font-size: 16px;
   line-height: 10px;
   font-weight: 300;
-  -webkit-writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-  writing-mode: sideways-lr
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
 }
 .discount__item-value {
   text-align: right;
@@ -2148,7 +2157,6 @@ section:not(:last-child) {
 .reviews__profile-name {
   display: block;
   font-size: 18px;
-  font-weight: 600;
   line-height: 13px;
   margin-bottom: 10px
 }
@@ -2454,6 +2462,9 @@ section:not(:last-child) {
 .intro-simple__title {
   font-weight: 300;
   margin: 0 0 50px 0
+}
+.intro-simple__title._min {
+  max-width: 495px
 }
 .intro-simple__content {
   font-size: 16px;
@@ -3090,8 +3101,10 @@ section:not(:last-child) {
   border-right: 1px solid var(--dark)
 }
 .news-main__item-img {
+  display: block;
   width: 100%;
   height: 755px;
+  margin: 0 auto;
   -o-object-fit: cover;
   object-fit: cover;
   margin-bottom: 40px
@@ -5451,6 +5464,9 @@ html.with-fancybox body.hide-scrollbar {
     max-width: 1100px;
     margin-left: auto
   }
+  .sect-descr__title._br-adp-none br {
+    display: none
+  }
   .services__wrapper {
     gap: 40px
   }
@@ -5461,11 +5477,17 @@ html.with-fancybox body.hide-scrollbar {
     width: 305px;
     height: 415px
   }
+  .sect__info-body {
+    max-width: 620px
+  }
   .popular-price__img {
     height: 500px
   }
   .portfolio__slider .swiper-slide {
     width: 384px!important
+  }
+  .gift__container {
+    max-width: 685px!important
   }
   .news__slider {
     overflow: visible!important
@@ -5494,8 +5516,21 @@ html.with-fancybox body.hide-scrollbar {
   .reviews-main__card {
     padding: 50px 40px
   }
+  .reviews-main__card-container {
+    padding-left: 0
+  }
+  .reviews-main__card-content::before {
+    left: 0
+  }
+  .stocks-main__container {
+    max-width: 600px
+  }
   .news-main__item {
     padding: 40px
+  }
+  .news-main__item-img {
+    width: 530px;
+    height: 475px
   }
   .new-main__body {
     gap: 0
@@ -5507,7 +5542,8 @@ html.with-fancybox body.hide-scrollbar {
     padding: 100px
   }
   .rec-news__slide-img {
-    width: 320px
+    width: 330px;
+    height: 330px
   }
   .sect-error__num {
     font-size: 268px
@@ -5547,19 +5583,6 @@ html.with-fancybox body.hide-scrollbar {
   }
   .reviews__footer {
     padding-left: 0
-  }
-  .reviews-main__card-container {
-    padding-left: 0
-  }
-  .reviews-main__card-content {
-    flex-basis: 100%
-  }
-  .reviews-main__card-content::before {
-    left: 0
-  }
-  .reviews-main__card-img {
-    width: 350px;
-    margin: 0 auto
   }
   .reviews-main__profile {
     flex: 0 1 calc(100% - 315px)
@@ -5746,9 +5769,14 @@ html.with-fancybox body.hide-scrollbar {
     height: 525px!important
   }
   .reviews-main__card-content {
+    flex-basis: 100%
+  }
+  .reviews-main__card-content {
     order: 1
   }
   .reviews-main__card-img {
+    width: 350px;
+    margin: 0 auto;
     order: 4
   }
   .reviews-main__profile {
@@ -5773,9 +5801,6 @@ html.with-fancybox body.hide-scrollbar {
   }
   .stocks-main__content {
     margin-bottom: 50px
-  }
-  .news-main__item-img {
-    height: 475px
   }
   .new-main__nav-list {
     gap: 40px

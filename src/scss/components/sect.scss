@@ -24,6 +24,9 @@
   &__info-body {
     max-width: 720px;
     width: 100%;
+    @include desktop-big {
+      max-width: 620px;
+    }
   }
   &__tag {
     margin-bottom: 40px;

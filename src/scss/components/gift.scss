@@ -5,6 +5,9 @@
   }
   &__container {
     @include width(720px, 30px);
+    @include desktop-big {
+      max-width: 685px !important;
+    }
     @include laptop-min {
       max-width: none;
     }
@@ -137,7 +140,7 @@
   &__btn {
     margin-top: 70px;
     max-width: 350px;
-    font-weight: 600;
+    font-weight: 300;
     width: 100%;
     padding: 15px !important;
     @include tablet {

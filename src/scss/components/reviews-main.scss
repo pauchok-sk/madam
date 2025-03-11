@@ -55,7 +55,7 @@
     flex-wrap: wrap;
     padding-left: 50px;
     gap: 35px;
-    @include desktop {
+    @include desktop-big {
       padding-left: 0;
     }
     @include laptop-min {
@@ -71,7 +71,7 @@
     padding-top: 20px;
     z-index: 1;
     flex: 0 1 calc(100% - (280px + 35px));
-    @include desktop {
+    @include laptop {
       flex-basis: 100%;
     }
     @include laptop {
@@ -105,7 +105,7 @@
       left: -50px;
       background: url("@img/quota.svg") 0 0 / 100% auto no-repeat;
       z-index: -1;
-      @include desktop {
+      @include desktop-big {
         left: 0;
       }
     }
@@ -132,11 +132,9 @@
     width: 280px;
     height: auto;
     aspect-ratio: 1/1;
-    @include desktop {
+    @include laptop {
       width: 350px;
       margin: 0 auto;
-    }
-    @include laptop {
       order: 4;
     }
     @include laptop-min {
