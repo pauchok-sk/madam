@@ -9,50 +9,57 @@
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250311202602"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250316193840"
     rel="stylesheet"
   />
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap&_v=20250311202602" rel="stylesheet"> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250311202602" />
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap&_v=20250316193840" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250316193840" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body class="body">
-	<header class="header _dark _simple">
-		<div class="header__wrapper">
-			<a href="/" class="header__logo">
-				<img src="img/logo.svg" alt="logo" class="header__logo-icon">
-				<img src="img/logo-dark.svg" alt="logo" class="header__logo-icon">
-			</a>
-			<nav class="header__nav">
-				<ul class="list header__list">
-					<li><a href="#">Маникюр</a></li>
-					<li><a href="#">Педикюр</a></li>
-					<li><a href="#">Брови</a></li>
-					<li><a href="#">Макияж</a></li>
-				</ul>
-				<div class="header__contacts">
-					<div class="header__contacts-item">
-						<p class="header__contacts-address">Адреса салонов</p>
-						<a href="#" class="header__contacts-content">Посмотреть</a>
+	<div class="header-wrapper">
+		<header class="header _dark _simple">
+			<div class="header__wrapper">
+				<a href="/" class="header__logo">
+					<img src="img/logo.svg" alt="logo" class="header__logo-icon" />
+					<img src="img/logo-dark.svg" alt="logo" class="header__logo-icon" />
+				</a>
+				<nav class="header__nav">
+					<ul class="list header__list">
+						<li><a href="#">Маникюр</a></li>
+						<li><a href="#">Педикюр</a></li>
+						<li><a href="#">Брови</a></li>
+						<li><a href="#">Макияж</a></li>
+					</ul>
+					<div class="header__contacts">
+						<div class="header__contacts-item">
+							<p class="header__contacts-address">Адреса салонов</p>
+							<a href="#" class="header__contacts-content">Посмотреть</a>
+						</div>
+						<div class="header__contacts-item">
+							<a href="tel:+79999999366" class="header__contacts-tel">+7 (999) 999-93-66</a>
+							<button data-modal-btn="modal-record" class="btn-clear header__contacts-content">
+								Заказать звонок
+							</button>
+						</div>
 					</div>
-					<div class="header__contacts-item">
-						<a href="tel:+79999999366" class="header__contacts-tel">+7 (999) 999-93-66</a>
-						<button data-modal-btn="modal-record" class="btn-clear header__contacts-content">Заказать звонок</button>
-					</div>
-				</div>
-			</nav>
-			<button data-modal-btn="modal-record" class="btn-clear header__btn">Записаться</button>
-			<button class="btn-clear header__burger-btn" id="burger-btn">
-				<svg class="header__burger-icon">
-					<use xlink:href='img/icons/icons.svg#icon-burger'></use>
-				</svg>
-				<svg class="header__burger-icon">
-					<use xlink:href='img/icons/icons.svg#icon-close'></use>
-				</svg>
-			</button>
-		</div>
-	</header>
+				</nav>
+				<button data-modal-btn="modal-record" class="btn-clear header__btn">
+					Записаться
+				</button>
+				<button class="btn-clear header__burger-btn" id="burger-btn">
+					<svg class="header__burger-icon">
+						<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+					</svg>
+					<svg class="header__burger-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+		</header>
+	</div>
+
 	<div class="burger" id="burger">
 		<div class="burger__wrapper tab-container">
 			<div data-tab="burger-tab-nav" class="burger__tab-nav _open">
@@ -2624,7 +2631,7 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20250311202602"></script>
+	<script src="js/app.min.js?_v=20250316193840"></script>
 </body>
 
 </html>

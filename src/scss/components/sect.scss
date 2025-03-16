@@ -41,17 +41,16 @@
   }
   &__tab-nav {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     margin-top: 160px;
     gap: 110px;
     row-gap: 50px;
     @include desktop {
       margin-top: 100px;
-      gap: 50px;
     }
     @include laptop {
       margin-top: 40px;
+      gap: 50px;
     }
     @include tablet {
       justify-content: center;

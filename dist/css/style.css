@@ -571,19 +571,19 @@ section:not(:last-child) {
   gap: 16px
 }
 .rating[data-rating="1"] .rating__label:first-child svg {
-  color: var(--light)
+  color: var(--dark)
 }
 .rating[data-rating="2"] .rating__label:nth-child(-n+2) svg {
-  color: var(--light)
+  color: var(--dark)
 }
 .rating[data-rating="3"] .rating__label:nth-child(-n+3) svg {
-  color: var(--light)
+  color: var(--dark)
 }
 .rating[data-rating="4"] .rating__label:nth-child(-n+4) svg {
-  color: var(--light)
+  color: var(--dark)
 }
 .rating[data-rating="5"] .rating__label:nth-child(-n+5) svg {
-  color: var(--light)
+  color: var(--dark)
 }
 .rating__input {
   display: none
@@ -597,7 +597,7 @@ section:not(:last-child) {
 .rating__icon {
   width: 100%;
   height: 100%;
-  color: var(--dark)
+  color: var(--light)
 }
 .wrapper-input {
   position: relative;
@@ -1517,7 +1517,6 @@ section:not(:last-child) {
 }
 .sect__tab-nav {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   margin-top: 160px;
   gap: 110px;
@@ -5569,8 +5568,7 @@ html.with-fancybox body.hide-scrollbar {
     width: 245px
   }
   .sect__tab-nav {
-    margin-top: 100px;
-    gap: 50px
+    margin-top: 100px
   }
   .sect__tab-content {
     margin-top: 40px
@@ -5589,6 +5587,9 @@ html.with-fancybox body.hide-scrollbar {
   }
   .reviews__footer {
     padding-left: 0
+  }
+  .requisites {
+    padding-top: 50px
   }
   .reviews-main__profile {
     flex: 0 1 calc(100% - 315px)
@@ -5647,7 +5648,8 @@ html.with-fancybox body.hide-scrollbar {
     width: 305px!important
   }
   .sect__tab-nav {
-    margin-top: 40px
+    margin-top: 40px;
+    gap: 50px
   }
   .promo-video {
     height: 540px
