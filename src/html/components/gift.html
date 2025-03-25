@@ -14,22 +14,22 @@
         </p>
       </div>
       <div class="gift__wrapper">
-        <div class="gift__item">
+        <div data-price="3 000" class="gift__item _active">
           <img src="@img/mini-logo.svg" alt="icon" class="gift__item-icon">
           <h5 class="title gift__item-title">Подарочный сертификат</h5>
           <div class="title gift__item-price">3 000</div>
           <div class="gift__item-currency">рублей</div>
         </div>
-        <div class="gift__item">
+        <div data-price="5 000" class="gift__item">
           <img src="@img/mini-logo.svg" alt="icon" class="gift__item-icon">
           <h5 class="title gift__item-title">Подарочный сертификат</h5>
           <div class="title gift__item-price">5 000</div>
           <div class="gift__item-currency">рублей</div>
         </div>
-        <div class="gift__item">
+        <div class="gift__item" data-price="0">
           <img src="@img/mini-logo.svg" alt="icon" class="gift__item-icon">
           <h5 class="title gift__item-title">Подарочный сертификат</h5>
-          <div class="title gift__item-price _min">Ваша сумма</div>
+          <input type="number" id="gift-my-price" class="title gift__item-price _min" placeholder="Ваша сумма">
           <div class="gift__item-currency">рублей</div>
         </div>
       </div>

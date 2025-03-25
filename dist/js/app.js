@@ -3122,7 +3122,8 @@
     function extend(target, src) {
         if (target === void 0) target = {};
         if (src === void 0) src = {};
-        Object.keys(src).forEach((key => {
+        const noExtend = [ "__proto__", "constructor", "prototype" ];
+        Object.keys(src).filter((key => noExtend.indexOf(key) < 0)).forEach((key => {
             if (typeof target[key] === "undefined") target[key] = src[key]; else if (ssr_window_esm_isObject(src[key]) && ssr_window_esm_isObject(target[key]) && Object.keys(src[key]).length > 0) extend(target[key], src[key]);
         }));
     }
@@ -3370,7 +3371,7 @@
         while (elementsQueue.length > 0) {
             const elementToCheck = elementsQueue.shift();
             if (el === elementToCheck) return true;
-            elementsQueue.push(...elementToCheck.children, ...elementToCheck.shadowRoot?.children || [], ...elementToCheck.assignedElements?.() || []);
+            elementsQueue.push(...elementToCheck.children, ...elementToCheck.shadowRoot ? elementToCheck.shadowRoot.children : [], ...elementToCheck.assignedElements ? elementToCheck.assignedElements() : []);
         }
     }
     function elementIsChildOf(el, parent) {
@@ -4490,6 +4491,9 @@
             }
             return true;
         }
+        const browser = getBrowser();
+        const isSafari = browser.isSafari;
+        if (isVirtual && !initial && isSafari && swiper.isElement) swiper.virtual.update(false, false, slideIndex);
         swiper.setTransition(speed);
         swiper.setTranslate(translate);
         swiper.updateActiveIndex(slideIndex);
@@ -4604,13 +4608,14 @@
         }
         const normalizedTranslate = normalize(translate);
         const normalizedSnapGrid = snapGrid.map((val => normalize(val)));
+        const isFreeMode = params.freeMode && params.freeMode.enabled;
         let prevSnap = snapGrid[normalizedSnapGrid.indexOf(normalizedTranslate) - 1];
-        if (typeof prevSnap === "undefined" && params.cssMode) {
+        if (typeof prevSnap === "undefined" && (params.cssMode || isFreeMode)) {
             let prevSnapIndex;
             snapGrid.forEach(((snap, snapIndex) => {
                 if (normalizedTranslate >= snap) prevSnapIndex = snapIndex;
             }));
-            if (typeof prevSnapIndex !== "undefined") prevSnap = snapGrid[prevSnapIndex > 0 ? prevSnapIndex - 1 : prevSnapIndex];
+            if (typeof prevSnapIndex !== "undefined") prevSnap = isFreeMode ? snapGrid[prevSnapIndex] : snapGrid[prevSnapIndex > 0 ? prevSnapIndex - 1 : prevSnapIndex];
         }
         let prevIndex = 0;
         if (typeof prevSnap !== "undefined") {
@@ -4697,7 +4702,7 @@
         slideToClosest,
         slideToClickedSlide
     };
-    function loopCreate(slideRealIndex) {
+    function loopCreate(slideRealIndex, initial) {
         const swiper = this;
         const {params, slidesEl} = swiper;
         if (!params.loop || swiper.virtual && swiper.params.virtual.enabled) return;
@@ -4736,16 +4741,17 @@
         } else initSlides();
         swiper.loopFix({
             slideRealIndex,
-            direction: params.centeredSlides ? void 0 : "next"
+            direction: params.centeredSlides ? void 0 : "next",
+            initial
         });
     }
     function loopFix(_temp) {
-        let {slideRealIndex, slideTo = true, direction, setTranslate, activeSlideIndex, byController, byMousewheel} = _temp === void 0 ? {} : _temp;
+        let {slideRealIndex, slideTo = true, direction, setTranslate, activeSlideIndex, initial, byController, byMousewheel} = _temp === void 0 ? {} : _temp;
         const swiper = this;
         if (!swiper.params.loop) return;
         swiper.emit("beforeLoopFix");
         const {slides, allowSlidePrev, allowSlideNext, slidesEl, params} = swiper;
-        const {centeredSlides} = params;
+        const {centeredSlides, initialSlide} = params;
         swiper.allowSlidePrev = true;
         swiper.allowSlideNext = true;
         if (swiper.virtual && params.virtual.enabled) {
@@ -4766,16 +4772,17 @@
         loopedSlides += params.loopAdditionalSlides;
         swiper.loopedSlides = loopedSlides;
         const gridEnabled = swiper.grid && params.grid && params.grid.rows > 1;
-        if (slides.length < slidesPerView + loopedSlides) showWarning("Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled and not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters"); else if (gridEnabled && params.grid.fill === "row") showWarning("Swiper Loop Warning: Loop mode is not compatible with grid.fill = `row`");
+        if (slides.length < slidesPerView + loopedSlides || swiper.params.effect === "cards" && slides.length < slidesPerView + loopedSlides * 2) showWarning("Swiper Loop Warning: The number of slides is not enough for loop mode, it will be disabled or not function properly. You need to add more slides (or make duplicates) or lower the values of slidesPerView and slidesPerGroup parameters"); else if (gridEnabled && params.grid.fill === "row") showWarning("Swiper Loop Warning: Loop mode is not compatible with grid.fill = `row`");
         const prependSlidesIndexes = [];
         const appendSlidesIndexes = [];
-        let activeIndex = swiper.activeIndex;
+        const cols = gridEnabled ? Math.ceil(slides.length / params.grid.rows) : slides.length;
+        const isInitialOverflow = initial && cols - initialSlide < slidesPerView && !centeredSlides;
+        let activeIndex = isInitialOverflow ? initialSlide : swiper.activeIndex;
         if (typeof activeSlideIndex === "undefined") activeSlideIndex = swiper.getSlideIndex(slides.find((el => el.classList.contains(params.slideActiveClass)))); else activeIndex = activeSlideIndex;
         const isNext = direction === "next" || !direction;
         const isPrev = direction === "prev" || !direction;
         let slidesPrepended = 0;
         let slidesAppended = 0;
-        const cols = gridEnabled ? Math.ceil(slides.length / params.grid.rows) : slides.length;
         const activeColIndex = gridEnabled ? slides[activeSlideIndex].column : activeSlideIndex;
         const activeColIndexWithShift = activeColIndex + (centeredSlides && typeof setTranslate === "undefined" ? -slidesPerView / 2 + .5 : 0);
         if (activeColIndexWithShift < loopedSlides) {
@@ -4789,6 +4796,7 @@
             }
         } else if (activeColIndexWithShift + slidesPerView > cols - loopedSlides) {
             slidesAppended = Math.max(activeColIndexWithShift - (cols - loopedSlides * 2), slidesPerGroup);
+            if (isInitialOverflow) slidesAppended = Math.max(slidesAppended, slidesPerView - cols + initialSlide + 1);
             for (let i = 0; i < slidesAppended; i += 1) {
                 const index = i - Math.floor(i / cols) * cols;
                 if (gridEnabled) slides.forEach(((slide, slideIndex) => {
@@ -4800,6 +4808,10 @@
         requestAnimationFrame((() => {
             swiper.__preventObserver__ = false;
         }));
+        if (swiper.params.effect === "cards" && slides.length < slidesPerView + loopedSlides * 2) {
+            if (appendSlidesIndexes.includes(activeSlideIndex)) appendSlidesIndexes.splice(appendSlidesIndexes.indexOf(activeSlideIndex), 1);
+            if (prependSlidesIndexes.includes(activeSlideIndex)) prependSlidesIndexes.splice(prependSlidesIndexes.indexOf(activeSlideIndex), 1);
+        }
         if (isPrev) prependSlidesIndexes.forEach((index => {
             slides[index].swiperLoopMoveDOM = true;
             slidesEl.prepend(slides[index]);
@@ -4872,7 +4884,7 @@
     function loopDestroy() {
         const swiper = this;
         const {params, slidesEl} = swiper;
-        if (!params.loop || swiper.virtual && swiper.params.virtual.enabled) return;
+        if (!params.loop || !slidesEl || swiper.virtual && swiper.params.virtual.enabled) return;
         swiper.recalcSlides();
         const newSlidesOrder = [];
         swiper.slides.forEach((slideEl => {
@@ -5055,7 +5067,7 @@
                 data.isMoved = false;
                 return;
             }
-        } else if (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate()) return;
+        } else if (rtl && (pageX > touches.startX && -swiper.translate <= swiper.maxTranslate() || pageX < touches.startX && -swiper.translate >= swiper.minTranslate())) return; else if (!rtl && (pageX < touches.startX && swiper.translate <= swiper.maxTranslate() || pageX > touches.startX && swiper.translate >= swiper.minTranslate())) return;
         if (document.activeElement && document.activeElement.matches(data.focusableElements) && document.activeElement !== e.target && e.pointerType !== "mouse") document.activeElement.blur();
         if (document.activeElement) if (e.target === document.activeElement && e.target.matches(data.focusableElements)) {
             data.isMoved = true;
@@ -5126,7 +5138,7 @@
         }
         let loopFixed;
         (new Date).getTime();
-        if (data.isMoved && data.allowThresholdMove && prevTouchesDirection !== swiper.touchesDirection && isLoop && allowLoopFix && Math.abs(diff) >= 1) {
+        if (params._loopSwapReset !== false && data.isMoved && data.allowThresholdMove && prevTouchesDirection !== swiper.touchesDirection && isLoop && allowLoopFix && Math.abs(diff) >= 1) {
             Object.assign(touches, {
                 startX: pageX,
                 startY: pageY,
@@ -6046,7 +6058,7 @@
             if (swiper.params.watchOverflow) swiper.checkOverflow();
             if (swiper.params.grabCursor && swiper.enabled) swiper.setGrabCursor();
             if (swiper.params.loop && swiper.virtual && swiper.params.virtual.enabled) swiper.slideTo(swiper.params.initialSlide + swiper.virtual.slidesBefore, 0, swiper.params.runCallbacksOnInit, false, true); else swiper.slideTo(swiper.params.initialSlide, 0, swiper.params.runCallbacksOnInit, false, true);
-            if (swiper.params.loop) swiper.loopCreate();
+            if (swiper.params.loop) swiper.loopCreate(void 0, true);
             swiper.attachEvents();
             const lazyElements = [ ...swiper.el.querySelectorAll('[loading="lazy"]') ];
             if (swiper.isElement) lazyElements.push(...swiper.hostEl.querySelectorAll('[loading="lazy"]'));
@@ -6163,13 +6175,13 @@
             if (params.cache) swiper.virtual.cache[index] = slideEl;
             return slideEl;
         }
-        function update(force, beforeInit) {
+        function update(force, beforeInit, forceActiveIndex) {
             const {slidesPerView, slidesPerGroup, centeredSlides, loop: isLoop, initialSlide} = swiper.params;
             if (beforeInit && !isLoop && initialSlide > 0) return;
             const {addSlidesBefore, addSlidesAfter} = swiper.params.virtual;
             const {from: previousFrom, to: previousTo, slides, slidesGrid: previousSlidesGrid, offset: previousOffset} = swiper.virtual;
             if (!swiper.params.cssMode) swiper.updateActiveIndex();
-            const activeIndex = swiper.activeIndex || 0;
+            const activeIndex = typeof forceActiveIndex === "undefined" ? swiper.activeIndex || 0 : forceActiveIndex;
             let offsetProp;
             if (swiper.rtlTranslate) offsetProp = "right"; else offsetProp = swiper.isHorizontal() ? "left" : "top";
             let slidesAfter;
@@ -7907,6 +7919,8 @@
             mousePanStart.y = e.clientY;
             image.startX = newX;
             image.startY = newY;
+            image.currentX = newX;
+            image.currentY = newY;
         }
         function zoomIn(e) {
             const zoom = swiper.zoom;
@@ -7950,6 +7964,7 @@
                 touchX = image.touchesStart.x;
                 touchY = image.touchesStart.y;
             }
+            const prevScale = currentScale;
             const forceZoomRatio = typeof e === "number" ? e : null;
             if (currentScale === 1 && forceZoomRatio) {
                 touchX = void 0;
@@ -7975,8 +7990,13 @@
                 translateMinY = Math.min(slideHeight / 2 - scaledHeight / 2, 0);
                 translateMaxX = -translateMinX;
                 translateMaxY = -translateMinY;
-                translateX = diffX * zoom.scale;
-                translateY = diffY * zoom.scale;
+                if (prevScale > 0 && forceZoomRatio && typeof image.currentX === "number" && typeof image.currentY === "number") {
+                    translateX = image.currentX * zoom.scale / prevScale;
+                    translateY = image.currentY * zoom.scale / prevScale;
+                } else {
+                    translateX = diffX * zoom.scale;
+                    translateY = diffY * zoom.scale;
+                }
                 if (translateX < translateMinX) translateX = translateMinX;
                 if (translateX > translateMaxX) translateX = translateMaxX;
                 if (translateY < translateMinY) translateY = translateMinY;
@@ -7989,6 +8009,8 @@
                 gesture.originX = 0;
                 gesture.originY = 0;
             }
+            image.currentX = translateX;
+            image.currentY = translateY;
             gesture.imageWrapEl.style.transitionDuration = "300ms";
             gesture.imageWrapEl.style.transform = `translate3d(${translateX}px, ${translateY}px,0)`;
             gesture.imageEl.style.transitionDuration = "300ms";
@@ -8011,6 +8033,8 @@
             }
             zoom.scale = 1;
             currentScale = 1;
+            image.currentX = void 0;
+            image.currentY = void 0;
             image.touchesStart.x = void 0;
             image.touchesStart.y = void 0;
             gesture.imageWrapEl.style.transitionDuration = "300ms";
@@ -8984,6 +9008,10 @@
             initialized = true;
             const SwiperClass = swiper.constructor;
             if (thumbsParams.swiper instanceof SwiperClass) {
+                if (thumbsParams.swiper.destroyed) {
+                    initialized = false;
+                    return false;
+                }
                 swiper.thumbs.swiper = thumbsParams.swiper;
                 Object.assign(swiper.thumbs.swiper.originalParams, {
                     watchSlidesProgress: true,
@@ -9856,7 +9884,10 @@
             setTransition,
             perspective: () => true,
             overwriteParams: () => ({
+                _loopSwapReset: false,
                 watchSlidesProgress: true,
+                loopAdditionalSlides: swiper.params.cardsEffect.rotate ? 3 : 2,
+                centeredSlides: true,
                 virtualTranslate: !swiper.params.cssMode
             })
         });
@@ -16361,6 +16392,31 @@
             }
         }));
     }
+    function giftPrice() {
+        const items = document.querySelectorAll(".gift__item");
+        if (items.length) {
+            const inputPrice = document.querySelector("#gift-my-price");
+            const inputParent = inputPrice.closest(".gift__item");
+            const btn = document.querySelector(".gift__btn");
+            const inputModal = document.querySelector("#record-price");
+            items.forEach((item => {
+                item.addEventListener("click", (() => {
+                    items.forEach((i => i.classList.remove("_active")));
+                    item.classList.add("_active");
+                    if (+item.dataset.price <= 0) btn.setAttribute("disabled", ""); else btn.removeAttribute("disabled");
+                }));
+            }));
+            inputPrice.addEventListener("input", (e => {
+                if (e.target.value <= 0) btn.setAttribute("disabled", ""); else btn.removeAttribute("disabled");
+                inputParent.setAttribute("data-price", e.target.value || 0);
+            }));
+            btn.addEventListener("click", (() => {
+                const currentPrice = document.querySelector(".gift__item._active").dataset.price;
+                const value = `Сертификат на сумму: ${currentPrice} рублей`;
+                inputModal.value = value;
+            }));
+        }
+    }
     mediaAdaptive();
     spoller();
     tab();
@@ -16378,4 +16434,5 @@
     select_select();
     inputFile();
     more();
+    giftPrice();
 })();

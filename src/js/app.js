@@ -18,6 +18,7 @@ import headerScroll from "./files/headerScroll.js";
 import select from "./files/select.js";
 import inputFile from "./files/inputFile.js";
 import more from "./files/more.js";
+import giftPrice from "./files/gitfPrice.js";
 
 functions.mediaAdaptive();
 spoller();
@@ -36,3 +37,4 @@ headerScroll();
 select();
 inputFile();
 more();
+giftPrice();

@@ -1935,6 +1935,7 @@ section:not(:last-child) {
   max-width: 695px
 }
 .gift__item {
+  cursor: pointer;
   position: relative;
   display: flex;
   align-items: center;
@@ -1944,6 +1945,9 @@ section:not(:last-child) {
   text-align: center;
   border: 1px solid var(--cloudy);
   z-index: 1
+}
+.gift__item._active {
+  border-color: var(--dark)
 }
 .gift__item::before {
   position: absolute;
@@ -1967,7 +1971,34 @@ section:not(:last-child) {
   font-size: 48px;
   font-weight: 500;
   line-height: 30px;
-  margin-bottom: 14px
+  margin-bottom: 14px;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  outline: 0;
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  color: var(--dark);
+  width: 100%
+}
+.gift__item-price::-webkit-input-placeholder {
+  color: var(--dark)
+}
+.gift__item-price:-ms-input-placeholder {
+  color: var(--dark)
+}
+.gift__item-price::-ms-input-placeholder {
+  color: var(--dark)
+}
+.gift__item-price::placeholder {
+  color: var(--dark)
+}
+.gift__item-price[type=number]::-webkit-inner-spin-button,
+.gift__item-price[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0
 }
 .gift__item-price._min {
   font-size: 24px
@@ -1984,6 +2015,11 @@ section:not(:last-child) {
   font-weight: 300;
   width: 100%;
   padding: 15px!important
+}
+.gift__btn[disabled] {
+  pointer-events: none;
+  background-color: gray;
+  border-color: gray
 }
 .discount {
   padding: 90px 0 115px 0

@@ -53,6 +53,7 @@
     }
   }
   &__item {
+    cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
@@ -69,6 +70,9 @@
     }
     @include laptop-min {
       grid-column: 2 span;
+    }
+    &._active {
+      border-color: var(--dark);
     }
 
     &::before {
@@ -110,6 +114,22 @@
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 14px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    width: fit-content;
+    text-align: center;
+    color: var(--dark);
+    width: 100%;
+    &::placeholder {
+      color: var(--dark);
+    }
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
     @include tablet {
       font-size: 26px;
       font-weight: 500;
@@ -149,6 +169,12 @@
     @include mobile {
       max-width: none;
       width: 100%;
+    }
+
+    &[disabled] {
+      pointer-events: none;
+      background-color: gray;
+      border-color: gray;
     }
   }
 }

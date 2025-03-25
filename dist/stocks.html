@@ -9,11 +9,11 @@
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250316193840"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap&_v=20250325235729"
     rel="stylesheet"
   />
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap&_v=20250316193840" rel="stylesheet"> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250316193840" />
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap&_v=20250325235729" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250325235729" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -327,22 +327,22 @@
 						</p>
 					</div>
 					<div class="gift__wrapper">
-						<div class="gift__item">
+						<div data-price="3 000" class="gift__item _active">
 							<img src="img/mini-logo.svg" alt="icon" class="gift__item-icon">
 							<h5 class="title gift__item-title">Подарочный сертификат</h5>
 							<div class="title gift__item-price">3 000</div>
 							<div class="gift__item-currency">рублей</div>
 						</div>
-						<div class="gift__item">
+						<div data-price="5 000" class="gift__item">
 							<img src="img/mini-logo.svg" alt="icon" class="gift__item-icon">
 							<h5 class="title gift__item-title">Подарочный сертификат</h5>
 							<div class="title gift__item-price">5 000</div>
 							<div class="gift__item-currency">рублей</div>
 						</div>
-						<div class="gift__item">
+						<div class="gift__item" data-price="0">
 							<img src="img/mini-logo.svg" alt="icon" class="gift__item-icon">
 							<h5 class="title gift__item-title">Подарочный сертификат</h5>
-							<div class="title gift__item-price _min">Ваша сумма</div>
+							<input type="number" id="gift-my-price" class="title gift__item-price _min" placeholder="Ваша сумма">
 							<div class="gift__item-currency">рублей</div>
 						</div>
 					</div>
@@ -657,6 +657,7 @@
 							с вами в течении 20 минут.
 						</p>
 						<form action="#" class="modal-sect__form" id="form-record">
+							<input type="text" id="record-price" style="display: none;">
 							<div class="wrapper-input modal-sect__form-item">
 								<input type="text" placeholder="Имя" class="input" id="record-name" />
 							</div>
@@ -720,8 +721,8 @@
 		</div>
 	</div>
 
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250316193840" type="text/javascript"></script>
-	<script src="js/app.min.js?_v=20250316193840"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20250325235729" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20250325235729"></script>
 </body>
 
 </html>
